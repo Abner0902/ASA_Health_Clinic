@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */; };
+		C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */; };
+		C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */; };
+		C67BFF751EDE65FE002D680D /* PatientsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF741EDE65FE002D680D /* PatientsDetailViewController.swift */; };
+		C67BFF781EDE65FE002D680D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67BFF761EDE65FE002D680D /* Main.storyboard */; };
+		C67BFF7A1EDE65FE002D680D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67BFF791EDE65FE002D680D /* Assets.xcassets */; };
+		C67BFF7D1EDE65FE002D680D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67BFF7B1EDE65FE002D680D /* LaunchScreen.storyboard */; };
+		C67BFF861EDF0887002D680D /* RemindersDetailViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF841EDF0887002D680D /* RemindersDetailViewController .swift */; };
+		C67BFF871EDF0887002D680D /* RemindersMasterViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */; };
+		C67BFF911EDF09F0002D680D /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */; };
+		C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASA Health Clinic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C67BFF701EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASA_Health_Clinic.xcdatamodel; sourceTree = "<group>"; };
+		C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsMasterViewController.swift; sourceTree = "<group>"; };
+		C67BFF741EDE65FE002D680D /* PatientsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsDetailViewController.swift; sourceTree = "<group>"; };
+		C67BFF771EDE65FE002D680D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C67BFF791EDE65FE002D680D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C67BFF7C1EDE65FE002D680D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C67BFF7E1EDE65FE002D680D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C67BFF841EDF0887002D680D /* RemindersDetailViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersDetailViewController .swift"; sourceTree = "<group>"; };
+		C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersMasterViewController .swift"; sourceTree = "<group>"; };
+		C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMasterViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C67BFF671EDE65FE002D680D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C67BFF611EDE65FE002D680D = {
+			isa = PBXGroup;
+			children = (
+				C67BFF6C1EDE65FE002D680D /* ASA Health Clinic */,
+				C67BFF6B1EDE65FE002D680D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C67BFF6B1EDE65FE002D680D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C67BFF6C1EDE65FE002D680D /* ASA Health Clinic */ = {
+			isa = PBXGroup;
+			children = (
+				C67BFF8C1EDF093E002D680D /* Patients */,
+				C67BFF8D1EDF0957002D680D /* Reminders */,
+				C67BFF8E1EDF09D7002D680D /* Profile */,
+				C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */,
+				C67BFF761EDE65FE002D680D /* Main.storyboard */,
+				C67BFF791EDE65FE002D680D /* Assets.xcassets */,
+				C67BFF7B1EDE65FE002D680D /* LaunchScreen.storyboard */,
+				C67BFF7E1EDE65FE002D680D /* Info.plist */,
+				C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */,
+			);
+			path = "ASA Health Clinic";
+			sourceTree = "<group>";
+		};
+		C67BFF8C1EDF093E002D680D /* Patients */ = {
+			isa = PBXGroup;
+			children = (
+				C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */,
+				C67BFF741EDE65FE002D680D /* PatientsDetailViewController.swift */,
+			);
+			name = Patients;
+			sourceTree = "<group>";
+		};
+		C67BFF8D1EDF0957002D680D /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				C67BFF841EDF0887002D680D /* RemindersDetailViewController .swift */,
+				C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */,
+			);
+			name = Reminders;
+			sourceTree = "<group>";
+		};
+		C67BFF8E1EDF09D7002D680D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */,
+				C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C67BFF691EDE65FE002D680D /* ASA Health Clinic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C67BFF811EDE65FE002D680D /* Build configuration list for PBXNativeTarget "ASA Health Clinic" */;
+			buildPhases = (
+				C67BFF661EDE65FE002D680D /* Sources */,
+				C67BFF671EDE65FE002D680D /* Frameworks */,
+				C67BFF681EDE65FE002D680D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ASA Health Clinic";
+			productName = "ASA Health Clinic";
+			productReference = C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C67BFF621EDE65FE002D680D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = zhenyu;
+				TargetAttributes = {
+					C67BFF691EDE65FE002D680D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 979PNKQJUU;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C67BFF651EDE65FE002D680D /* Build configuration list for PBXProject "ASA Health Clinic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C67BFF611EDE65FE002D680D;
+			productRefGroup = C67BFF6B1EDE65FE002D680D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C67BFF691EDE65FE002D680D /* ASA Health Clinic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C67BFF681EDE65FE002D680D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C67BFF7D1EDE65FE002D680D /* LaunchScreen.storyboard in Resources */,
+				C67BFF7A1EDE65FE002D680D /* Assets.xcassets in Resources */,
+				C67BFF781EDE65FE002D680D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C67BFF661EDE65FE002D680D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */,
+				C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */,
+				C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */,
+				C67BFF861EDF0887002D680D /* RemindersDetailViewController .swift in Sources */,
+				C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */,
+				C67BFF751EDE65FE002D680D /* PatientsDetailViewController.swift in Sources */,
+				C67BFF911EDF09F0002D680D /* ProfileDetailViewController.swift in Sources */,
+				C67BFF871EDF0887002D680D /* RemindersMasterViewController .swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C67BFF761EDE65FE002D680D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C67BFF771EDE65FE002D680D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C67BFF7B1EDE65FE002D680D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C67BFF7C1EDE65FE002D680D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C67BFF7F1EDE65FE002D680D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C67BFF801EDE65FE002D680D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C67BFF821EDE65FE002D680D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 979PNKQJUU;
+				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ASA-Health-Clinic";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C67BFF831EDE65FE002D680D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 979PNKQJUU;
+				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ASA-Health-Clinic";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C67BFF651EDE65FE002D680D /* Build configuration list for PBXProject "ASA Health Clinic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67BFF7F1EDE65FE002D680D /* Debug */,
+				C67BFF801EDE65FE002D680D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C67BFF811EDE65FE002D680D /* Build configuration list for PBXNativeTarget "ASA Health Clinic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67BFF821EDE65FE002D680D /* Debug */,
+				C67BFF831EDE65FE002D680D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C67BFF701EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodel */,
+			);
+			currentVersion = C67BFF701EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodel */;
+			path = ASA_Health_Clinic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C67BFF621EDE65FE002D680D /* Project object */;
+}
