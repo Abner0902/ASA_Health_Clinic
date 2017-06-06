@@ -15,7 +15,6 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     var managedObjectContext: NSManagedObjectContext? = nil
 
 
-    //
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -104,6 +103,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
+                
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
@@ -114,7 +115,9 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         cell.textLabel!.text = event.timestamp!.description
     }
 
-    // MARK: - Fetched results controller
+    // MARK: - Fetched results controller 
+    
+    //should change the type to patient
 
     var fetchedResultsController: NSFetchedResultsController<Event> {
         if _fetchedResultsController != nil {
@@ -124,6 +127,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
         
         // Set the batch size to a suitable number.
+        //should not limit the batch size
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
@@ -133,7 +137,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "PatientMaster")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
@@ -142,6 +146,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         } catch {
              // Replace this implementation with code to handle the error appropriately.
              // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            
+            
              let nserror = error as NSError
              fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }

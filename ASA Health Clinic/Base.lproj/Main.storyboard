@@ -73,8 +73,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="H1p-Uh-vWS" kind="relationship" relationship="viewControllers" id="AGE-kY-YG4"/>
-                        <segue destination="Dfx-N2-JEO" kind="relationship" relationship="viewControllers" id="Xb7-c4-eeP"/>
-                        <segue destination="7y4-iZ-8mF" kind="relationship" relationship="viewControllers" id="dh1-zn-9Os"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f61-ie-sh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -415,8 +413,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gIA-2G-JSR"/>
         <segue reference="6S0-TO-JiA"/>
         <segue reference="9O3-ZO-geJ"/>
+        <segue reference="gIA-2G-JSR"/>
     </inferredMetricsTieBreakers>
 </document>
