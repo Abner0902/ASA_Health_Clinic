@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360BE8B67A4C22868D7DF77F /* Pods_ASA_Health_Clinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */; };
+		3C34773B1EE911C900A176B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C34773A1EE911C900A176B6 /* GoogleService-Info.plist */; };
 		C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */; };
 		C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */; };
 		C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C34773A1EE911C900A176B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASA Health Clinic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic.debug.xcconfig"; sourceTree = "<group>"; };
+		706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASA_Health_Clinic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASA Health Clinic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67BFF701EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASA_Health_Clinic.xcdatamodel; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersMasterViewController .swift"; sourceTree = "<group>"; };
 		C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMasterViewController.swift; sourceTree = "<group>"; };
+		E6A14BC88DC5C410E4BC6461 /* Pods-ASA Health Clinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASA Health Clinic.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360BE8B67A4C22868D7DF77F /* Pods_ASA_Health_Clinic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		465E05B8CFB65B9A7CE1C352 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */,
+				E6A14BC88DC5C410E4BC6461 /* Pods-ASA Health Clinic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C67BFF611EDE65FE002D680D = {
 			isa = PBXGroup;
 			children = (
 				C67BFF6C1EDE65FE002D680D /* ASA Health Clinic */,
 				C67BFF6B1EDE65FE002D680D /* Products */,
+				465E05B8CFB65B9A7CE1C352 /* Pods */,
+				DD9DD690ACE8599F54168448 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +93,7 @@
 				C67BFF7B1EDE65FE002D680D /* LaunchScreen.storyboard */,
 				C67BFF7E1EDE65FE002D680D /* Info.plist */,
 				C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */,
+				3C34773A1EE911C900A176B6 /* GoogleService-Info.plist */,
 			);
 			path = "ASA Health Clinic";
 			sourceTree = "<group>";
@@ -106,6 +125,14 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		DD9DD690ACE8599F54168448 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C67BFF811EDE65FE002D680D /* Build configuration list for PBXNativeTarget "ASA Health Clinic" */;
 			buildPhases = (
+				73FFAD96171EE2E9CB71EB90 /* [CP] Check Pods Manifest.lock */,
 				C67BFF661EDE65FE002D680D /* Sources */,
 				C67BFF671EDE65FE002D680D /* Frameworks */,
 				C67BFF681EDE65FE002D680D /* Resources */,
+				51BFE5E864571C56EE5AA010 /* [CP] Embed Pods Frameworks */,
+				A147D8DE6D896A7E896B772B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,7 +168,6 @@
 				TargetAttributes = {
 					C67BFF691EDE65FE002D680D = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 979PNKQJUU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -167,12 +196,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67BFF7D1EDE65FE002D680D /* LaunchScreen.storyboard in Resources */,
+				3C34773B1EE911C900A176B6 /* GoogleService-Info.plist in Resources */,
 				C67BFF7A1EDE65FE002D680D /* Assets.xcassets in Resources */,
 				C67BFF781EDE65FE002D680D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51BFE5E864571C56EE5AA010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73FFAD96171EE2E9CB71EB90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A147D8DE6D896A7E896B772B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C67BFF661EDE65FE002D680D /* Sources */ = {
@@ -309,9 +387,10 @@
 		};
 		C67BFF821EDE65FE002D680D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 979PNKQJUU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ASA-Health-Clinic";
@@ -322,9 +401,10 @@
 		};
 		C67BFF831EDE65FE002D680D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A14BC88DC5C410E4BC6461 /* Pods-ASA Health Clinic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 979PNKQJUU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ASA-Health-Clinic";
