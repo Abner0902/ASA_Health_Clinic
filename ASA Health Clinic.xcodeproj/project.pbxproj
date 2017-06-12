@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		360BE8B67A4C22868D7DF77F /* Pods_ASA_Health_Clinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */; };
-		3C34773B1EE911C900A176B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C34773A1EE911C900A176B6 /* GoogleService-Info.plist */; };
 		C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */; };
 		C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */; };
 		C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */; };
@@ -20,10 +19,14 @@
 		C67BFF871EDF0887002D680D /* RemindersMasterViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */; };
 		C67BFF911EDF09F0002D680D /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */; };
 		C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */; };
+		C6C4E10F1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */; };
+		C6C4E1121EEE635D00B4BA5F /* Patient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */; };
+		C6C4E1131EEE635D00B4BA5F /* Patient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */; };
+		C6C4E1151EEE68A000B4BA5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6C4E1141EEE68A000B4BA5F /* GoogleService-Info.plist */; };
+		C6C4E11B1EEE757800B4BA5F /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E11A1EEE757800B4BA5F /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C34773A1EE911C900A176B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASA Health Clinic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic.debug.xcconfig"; sourceTree = "<group>"; };
 		706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASA_Health_Clinic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASA Health Clinic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +42,11 @@
 		C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersMasterViewController .swift"; sourceTree = "<group>"; };
 		C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMasterViewController.swift; sourceTree = "<group>"; };
+		C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientsMasterTableViewCell.swift; sourceTree = "<group>"; };
+		C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C6C4E1141EEE68A000B4BA5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6C4E11A1EEE757800B4BA5F /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 		E6A14BC88DC5C410E4BC6461 /* Pods-ASA Health Clinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASA Health Clinic.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +101,7 @@
 				C67BFF7B1EDE65FE002D680D /* LaunchScreen.storyboard */,
 				C67BFF7E1EDE65FE002D680D /* Info.plist */,
 				C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */,
-				3C34773A1EE911C900A176B6 /* GoogleService-Info.plist */,
+				C6C4E1141EEE68A000B4BA5F /* GoogleService-Info.plist */,
 			);
 			path = "ASA Health Clinic";
 			sourceTree = "<group>";
@@ -101,8 +109,12 @@
 		C67BFF8C1EDF093E002D680D /* Patients */ = {
 			isa = PBXGroup;
 			children = (
+				C6C4E11A1EEE757800B4BA5F /* AddPatientViewController.swift */,
+				C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */,
+				C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */,
 				C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */,
 				C67BFF741EDE65FE002D680D /* PatientsDetailViewController.swift */,
+				C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */,
 			);
 			name = Patients;
 			sourceTree = "<group>";
@@ -168,6 +180,7 @@
 				TargetAttributes = {
 					C67BFF691EDE65FE002D680D = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 979PNKQJUU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -196,7 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67BFF7D1EDE65FE002D680D /* LaunchScreen.storyboard in Resources */,
-				3C34773B1EE911C900A176B6 /* GoogleService-Info.plist in Resources */,
+				C6C4E1151EEE68A000B4BA5F /* GoogleService-Info.plist in Resources */,
 				C67BFF7A1EDE65FE002D680D /* Assets.xcassets in Resources */,
 				C67BFF781EDE65FE002D680D /* Main.storyboard in Resources */,
 			);
@@ -262,9 +275,13 @@
 				C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */,
 				C67BFF861EDF0887002D680D /* RemindersDetailViewController .swift in Sources */,
 				C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */,
+				C6C4E10F1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift in Sources */,
+				C6C4E11B1EEE757800B4BA5F /* AddPatientViewController.swift in Sources */,
 				C67BFF751EDE65FE002D680D /* PatientsDetailViewController.swift in Sources */,
 				C67BFF911EDF09F0002D680D /* ProfileDetailViewController.swift in Sources */,
 				C67BFF871EDF0887002D680D /* RemindersMasterViewController .swift in Sources */,
+				C6C4E1121EEE635D00B4BA5F /* Patient+CoreDataClass.swift in Sources */,
+				C6C4E1131EEE635D00B4BA5F /* Patient+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +407,7 @@
 			baseConfigurationReference = 622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 979PNKQJUU;
 				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ASA-Health-Clinic";
@@ -404,7 +421,7 @@
 			baseConfigurationReference = E6A14BC88DC5C410E4BC6461 /* Pods-ASA Health Clinic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 979PNKQJUU;
 				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ASA-Health-Clinic";

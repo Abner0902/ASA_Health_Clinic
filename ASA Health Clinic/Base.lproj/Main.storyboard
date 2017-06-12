@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -102,9 +103,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="4GJ-WO-1TV">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD" customClass="PatientsMasterTableViewCell" customModule="ASA_Health_Clinic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="66" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -113,7 +119,7 @@
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
                                             <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
@@ -121,6 +127,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="patientNameLabel" destination="Arm-wq-HPj" id="NGY-S0-pvR"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
@@ -131,11 +138,90 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Patients" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yl9-QW-mjk">
+                            <connections>
+                                <segue destination="jn9-Fu-vl8" kind="presentation" identifier="addPatientSegue" id="Hwo-ky-tOi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-881" y="-1879"/>
+        </scene>
+        <!--Add Patient View Controller-->
+        <scene sceneID="T9y-vE-GYn">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="jn9-Fu-vl8" customClass="AddPatientViewController" customModule="ASA_Health_Clinic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LSV-QC-Rff"/>
+                        <viewControllerLayoutGuide type="bottom" id="REB-jD-KKe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bkb-hV-CTa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6R-2L-xep">
+                                <rect key="frame" x="141" y="28" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zq-Mr-OrN">
+                                <rect key="frame" x="322" y="28" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="Done:" destination="jn9-Fu-vl8" eventType="touchUpInside" id="UwF-x5-32c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oV-Gz-k6W">
+                                <rect key="frame" x="16" y="28" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="Cancel:" destination="jn9-Fu-vl8" eventType="touchUpInside" id="uYI-Bv-9Is"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yjL-52-AKa">
+                                <rect key="frame" x="58" y="81" width="259" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pma-4J-Kk9">
+                                <rect key="frame" x="58" y="141" width="259" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Phone number"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" hint="Full name"/>
+                        <constraints>
+                            <constraint firstItem="yjL-52-AKa" firstAttribute="top" secondItem="8oV-Gz-k6W" secondAttribute="bottom" constant="23" id="8FP-g1-jIn"/>
+                            <constraint firstItem="r6R-2L-xep" firstAttribute="centerX" secondItem="yjL-52-AKa" secondAttribute="centerX" id="8pL-rJ-lYr"/>
+                            <constraint firstItem="8oV-Gz-k6W" firstAttribute="top" secondItem="r6R-2L-xep" secondAttribute="top" id="HEN-9L-9CZ"/>
+                            <constraint firstItem="yjL-52-AKa" firstAttribute="leading" secondItem="pma-4J-Kk9" secondAttribute="leading" id="JIz-6W-eAZ"/>
+                            <constraint firstItem="8oV-Gz-k6W" firstAttribute="baseline" secondItem="8zq-Mr-OrN" secondAttribute="baseline" id="MjU-lr-btH"/>
+                            <constraint firstItem="yjL-52-AKa" firstAttribute="leading" secondItem="Bkb-hV-CTa" secondAttribute="leadingMargin" constant="42" id="RuG-JK-d6B"/>
+                            <constraint firstItem="r6R-2L-xep" firstAttribute="centerX" secondItem="Bkb-hV-CTa" secondAttribute="centerX" id="WJL-xE-Xec"/>
+                            <constraint firstItem="pma-4J-Kk9" firstAttribute="top" secondItem="yjL-52-AKa" secondAttribute="bottom" constant="30" id="bYp-Sy-tTt"/>
+                            <constraint firstItem="8zq-Mr-OrN" firstAttribute="trailing" secondItem="Bkb-hV-CTa" secondAttribute="trailingMargin" id="fa8-3z-CQ7"/>
+                            <constraint firstItem="yjL-52-AKa" firstAttribute="trailing" secondItem="pma-4J-Kk9" secondAttribute="trailing" id="k6B-Dk-IkV"/>
+                            <constraint firstItem="8oV-Gz-k6W" firstAttribute="top" secondItem="LSV-QC-Rff" secondAttribute="bottom" constant="8" symbolic="YES" id="kTX-ZL-u4t"/>
+                            <constraint firstItem="8oV-Gz-k6W" firstAttribute="leading" secondItem="Bkb-hV-CTa" secondAttribute="leadingMargin" id="nly-kx-8Sa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="8zq-Mr-OrN" id="w2F-R0-HJE"/>
+                        <outlet property="nameField" destination="yjL-52-AKa" id="dQ3-0m-xwl"/>
+                        <outlet property="phoneField" destination="pma-4J-Kk9" id="tsD-29-zuB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISa-eR-k9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="-1879.610194902549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -414,7 +500,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
-        <segue reference="9O3-ZO-geJ"/>
         <segue reference="gIA-2G-JSR"/>
+        <segue reference="9O3-ZO-geJ"/>
     </inferredMetricsTieBreakers>
 </document>

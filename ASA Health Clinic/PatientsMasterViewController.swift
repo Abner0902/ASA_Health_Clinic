@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PatientsMasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class PatientsMasterViewController: UITableViewController, NSFetchedResultsControllerDelegate, AddPatientDelegate {
 
     var detailViewController: PatientsDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
@@ -20,8 +20,9 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
+//        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
+        
+        //navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PatientsDetailViewController
@@ -38,23 +39,23 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newEvent.timestamp = NSDate()
-
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-    }
+//    func insertNewObject(_ sender: Any) {
+//        let context = self.fetchedResultsController.managedObjectContext
+//        let newEvent = Event(context: context)
+//             
+//        // If appropriate, configure the new managed object.
+//        newEvent.timestamp = NSDate()
+//
+//        // Save the context.
+//        do {
+//            try context.save()
+//        } catch {
+//            // Replace this implementation with code to handle the error appropriately.
+//            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//            let nserror = error as NSError
+//            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+//        }
+//    }
 
     // MARK: - Segues
 
@@ -67,13 +68,17 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
+        } else if segue.identifier == "addPatientSegue" {
+            //prepare for adding patient
+            let destinationVC: AddPatientViewController = segue.destination as! AddPatientViewController
+            destinationVC.delegate = self
         }
     }
 
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections?.count ?? 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -187,6 +192,12 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+    }
+    
+    // Mark: Add patient
+    func addPatient(name: String, phone: String) {
+        
+        
     }
 
     /*

@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>711361301124-fidgmj3fk1vojfbsn10fmoqohpld7utv.apps.googleusercontent.com</string>
+	<string>463515393708-nrt6clpugmbr91et9mbvlem9cde54cvu.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.711361301124-fidgmj3fk1vojfbsn10fmoqohpld7utv</string>
+	<string>com.googleusercontent.apps.463515393708-nrt6clpugmbr91et9mbvlem9cde54cvu</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBnypfkc4uVmijJN--YjUHvjEZg8CCEBI8</string>
+	<string>AIzaSyDiC4v6cOBMBirQO1STzkFOVDAvmH14PM8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>711361301124</string>
+	<string>463515393708</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.ASA-Health-Clinic</string>
 	<key>PROJECT_ID</key>
-	<string>asa-health-clinic</string>
+	<string>asa-health-clinic-cb951</string>
 	<key>STORAGE_BUCKET</key>
-	<string>asa-health-clinic.appspot.com</string>
+	<string>asa-health-clinic-cb951.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:711361301124:ios:bfc663e663ba364e</string>
+	<string>1:463515393708:ios:bfc663e663ba364e</string>
 	<key>DATABASE_URL</key>
-	<string>https://asa-health-clinic.firebaseio.com</string>
+	<string>https://asa-health-clinic-cb951.firebaseio.com</string>
 </dict>
 </plist>
