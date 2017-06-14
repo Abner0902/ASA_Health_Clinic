@@ -87,9 +87,9 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withEvent: event)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PatientCell", for: indexPath)
+        let patient = fetchedResultsController.object(at: indexPath)
+        configureCell(cell, withPatient: patient)
         return cell
     }
 
@@ -116,27 +116,27 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         }
     }
 
-    func configureCell(_ cell: UITableViewCell, withEvent event: Event) {
-        cell.textLabel!.text = event.timestamp!.description
+    func configureCell(_ cell: UITableViewCell, withPatient patient: Patient) {
+        cell.textLabel!.text = patient.name!
     }
 
     // MARK: - Fetched results controller 
     
     //should change the type to patient
 
-    var fetchedResultsController: NSFetchedResultsController<Event> {
+    var fetchedResultsController: NSFetchedResultsController<Patient> {
         if _fetchedResultsController != nil {
-            return _fetchedResultsController!
+            return _fetchedResultsController! 
         }
         
-        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        let fetchRequest: NSFetchRequest<Patient> = Patient.fetchRequest()
         
         // Set the batch size to a suitable number.
-        //should not limit the batch size
-        fetchRequest.fetchBatchSize = 20
+        // should not limit the batch size
+        // fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -159,7 +159,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         
         return _fetchedResultsController!
     }    
-    var _fetchedResultsController: NSFetchedResultsController<Event>? = nil
+    var _fetchedResultsController: NSFetchedResultsController<Patient>? = nil
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
@@ -183,9 +183,9 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
+                configureCell(tableView.cellForRow(at: indexPath!)!, withPatient: anObject as! Patient)
             case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
+                configureCell(tableView.cellForRow(at: indexPath!)!, withPatient: anObject as! Patient)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
         }
     }
@@ -196,6 +196,20 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     
     // Mark: Add patient
     func addPatient(name: String, phone: String) {
+        let context = self.fetchedResultsController.managedObjectContext
+        let newPatient = NSEntityDescription.insertNewObject(forEntityName: "Patient", into: context) as? Patient
+        
+        newPatient?.name = name
+        newPatient?.phone = phone
+        
+        //Save the ManagedObjectContext
+        do {
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+
         
         
     }
