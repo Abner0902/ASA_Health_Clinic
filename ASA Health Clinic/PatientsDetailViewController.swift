@@ -10,26 +10,19 @@ import UIKit
 
 class PatientsDetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet var patientDetailContainer: UIView!
+    
+    @IBOutlet var patientBookingContainer: UIView!
 
-    @IBOutlet var patientPhoneLabel: UILabel!
+    @IBOutlet var segmentControl: UISegmentedControl!
 
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                //label.text = detail.timestamp!.description
-                label.text = "Name: " + detail.name!
-                patientPhoneLabel.text = "Phone: " + detail.phone!
-                
-            }
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+        
+        patientBookingContainer.isHidden = true
+        //configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,10 +33,34 @@ class PatientsDetailViewController: UIViewController {
     var detailItem: Patient? {
         didSet {
             // Update the view.
-            configureView()
+            //configureView()
         }
     }
 
+    @IBAction func indexSelected(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex
+        {
+        case 0:
+            patientDetailContainer.isHidden = false
+            patientBookingContainer.isHidden = true
+        case 1:
+            patientDetailContainer.isHidden = true
+            patientBookingContainer.isHidden = false
+        default:
+            break; 
+        }
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller
+        if segue.identifier == "patientDetailSegue" {
+            // Pass the selected object to the new view controller.
+            let controller: DetailContainerViewController = segue.destination as! DetailContainerViewController
+            controller.detailItem = self.detailItem
+            
+        } else if segue.identifier == "patientBookingSegue" {
+            
+        }
+    }
 }
 

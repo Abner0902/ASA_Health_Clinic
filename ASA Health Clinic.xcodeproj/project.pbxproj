@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		360BE8B67A4C22868D7DF77F /* Pods_ASA_Health_Clinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */; };
+		C64B388F1EF24EE7006FEFFC /* DetailContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */; };
 		C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */; };
 		C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */; };
 		C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASA Health Clinic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic.debug.xcconfig"; sourceTree = "<group>"; };
 		706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASA_Health_Clinic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContainerViewController.swift; sourceTree = "<group>"; };
 		C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASA Health Clinic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67BFF701EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASA_Health_Clinic.xcdatamodel; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		C67BFF8C1EDF093E002D680D /* Patients */ = {
 			isa = PBXGroup;
 			children = (
+				C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */,
 				C6C4E11A1EEE757800B4BA5F /* AddPatientViewController.swift */,
 				C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */,
 				C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */,
@@ -273,6 +276,7 @@
 				C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */,
 				C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */,
 				C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */,
+				C64B388F1EF24EE7006FEFFC /* DetailContainerViewController.swift in Sources */,
 				C67BFF861EDF0887002D680D /* RemindersDetailViewController .swift in Sources */,
 				C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */,
 				C6C4E10F1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift in Sources */,

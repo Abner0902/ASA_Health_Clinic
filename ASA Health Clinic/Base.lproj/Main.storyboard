@@ -38,51 +38,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Patient Detail goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="292" width="335" height="39"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="MzH-mo-yoC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eHc-dz-ud6">
                                 <rect key="frame" x="92" y="72" width="191" height="29"/>
                                 <segments>
                                     <segment title="Patient Detail"/>
                                     <segment title="Bookings"/>
                                 </segments>
+                                <connections>
+                                    <action selector="indexSelected:" destination="JEX-9P-axG" eventType="valueChanged" id="EfZ-vn-wdS"/>
+                                </connections>
                             </segmentedControl>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cQr-Rf-QUp">
-                                <rect key="frame" x="20" y="339" width="335" height="41"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="s1J-dZ-tE1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PuI-hy-tq2">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="z2w-lg-EUJ" kind="embed" identifier="patientDetailSegue" id="pxg-dD-hLe"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XN6-cn-cfY">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="M58-Qq-UWa" kind="embed" identifier="patientBookingSegue" id="Cgj-z0-7d1"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="cQr-Rf-QUp" secondAttribute="leading" id="550-SX-Pjh"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="trailing" secondItem="cQr-Rf-QUp" secondAttribute="trailing" id="ALe-G1-0Yj"/>
-                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="cQr-Rf-QUp" secondAttribute="bottom" constant="287" id="ETu-t9-pv2"/>
                             <constraint firstItem="eHc-dz-ud6" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" symbolic="YES" id="EYv-5e-Fyl"/>
-                            <constraint firstItem="cQr-Rf-QUp" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="8" symbolic="YES" id="PVR-4z-6S0"/>
-                            <constraint firstItem="eHc-dz-ud6" firstAttribute="centerX" secondItem="0XM-y9-sOw" secondAttribute="centerX" id="ZNZ-iv-KKd"/>
                             <constraint firstItem="eHc-dz-ud6" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="iGC-kE-xqK"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="4" id="qeY-UW-8mn"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
-                        <outlet property="patientPhoneLabel" destination="cQr-Rf-QUp" id="clX-nh-WgN"/>
+                        <outlet property="patientBookingContainer" destination="XN6-cn-cfY" id="fLe-2h-LV5"/>
+                        <outlet property="patientDetailContainer" destination="PuI-hy-tq2" id="QRb-5M-nc0"/>
+                        <outlet property="segmentControl" destination="eHc-dz-ud6" id="5WT-ff-vm8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
@@ -522,6 +514,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otM-WH-IrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1964" y="1940"/>
+        </scene>
+        <!--Detail Container View Controller-->
+        <scene sceneID="yPg-gs-ZGm">
+            <objects>
+                <viewController id="z2w-lg-EUJ" customClass="DetailContainerViewController" customModule="ASA_Health_Clinic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8MN-Um-j90"/>
+                        <viewControllerLayoutGuide type="bottom" id="0sK-j5-PhP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eND-CN-Jj1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Patient Detail goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-OF-DJg">
+                                <rect key="frame" x="20" y="176" width="335" height="39"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Zcq-6p-AdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dCt-Zq-y5j">
+                                <rect key="frame" x="20" y="223" width="335" height="41"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="hWG-59-C3t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TVY-OF-DJg" firstAttribute="leading" secondItem="eND-CN-Jj1" secondAttribute="leadingMargin" constant="4" id="9ZL-tu-Qws"/>
+                            <constraint firstItem="dCt-Zq-y5j" firstAttribute="top" secondItem="TVY-OF-DJg" secondAttribute="bottom" constant="8" symbolic="YES" id="Jtr-0N-kiQ"/>
+                            <constraint firstItem="TVY-OF-DJg" firstAttribute="top" secondItem="eND-CN-Jj1" secondAttribute="top" constant="176" id="Kq4-RS-ZrC"/>
+                            <constraint firstItem="TVY-OF-DJg" firstAttribute="centerX" secondItem="eND-CN-Jj1" secondAttribute="centerX" id="SeF-tx-9Zp"/>
+                            <constraint firstItem="TVY-OF-DJg" firstAttribute="leading" secondItem="dCt-Zq-y5j" secondAttribute="leading" id="hKp-BM-ubP"/>
+                            <constraint firstItem="TVY-OF-DJg" firstAttribute="trailing" secondItem="dCt-Zq-y5j" secondAttribute="trailing" id="jp1-8d-bHy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="TVY-OF-DJg" id="fHb-fr-Tc5"/>
+                        <outlet property="phoneLabel" destination="dCt-Zq-y5j" id="gXA-92-alP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtE-VH-Elm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="-1244"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="70Q-Tk-bqc">
+            <objects>
+                <viewController id="M58-Qq-UWa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cY8-2R-xS2"/>
+                        <viewControllerLayoutGuide type="bottom" id="p3e-Ow-q8e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1mH-U5-qaz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookings goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdi-T0-Rap">
+                                <rect key="frame" x="77" y="180" width="220" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="qtm-q4-ewO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jdi-T0-Rap" firstAttribute="centerX" secondItem="1mH-U5-qaz" secondAttribute="centerX" id="XYX-uz-ncB"/>
+                            <constraint firstItem="Jdi-T0-Rap" firstAttribute="top" secondItem="1mH-U5-qaz" secondAttribute="top" constant="180" id="YSK-fm-9ZG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dW0-qx-UF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="-684.10794602698661"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
