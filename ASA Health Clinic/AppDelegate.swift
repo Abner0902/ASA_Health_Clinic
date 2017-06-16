@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let controller = masterNavigationController.topViewController as! PatientsMasterViewController
         controller.managedObjectContext = self.persistentContainer.viewContext
         
-        FIRApp.configure()
+        FirebaseApp.configure()
         return true
     }
 

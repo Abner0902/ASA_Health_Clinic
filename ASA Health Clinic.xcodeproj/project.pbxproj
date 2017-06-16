@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		360BE8B67A4C22868D7DF77F /* Pods_ASA_Health_Clinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */; };
+		C628B42E1EF3C21900446AD7 /* AddBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */; };
+		C628B4301EF3C26400446AD7 /* BookingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628B42F1EF3C26400446AD7 /* BookingContainerViewController.swift */; };
 		C64B388F1EF24EE7006FEFFC /* DetailContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */; };
 		C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */; };
 		C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		622D196F9828A24C87F157D0 /* Pods-ASA Health Clinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASA Health Clinic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic.debug.xcconfig"; sourceTree = "<group>"; };
 		706F234F2DF97461EB4E32BE /* Pods_ASA_Health_Clinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASA_Health_Clinic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookingViewController.swift; sourceTree = "<group>"; };
+		C628B42F1EF3C26400446AD7 /* BookingContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingContainerViewController.swift; sourceTree = "<group>"; };
 		C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContainerViewController.swift; sourceTree = "<group>"; };
 		C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASA Health Clinic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C628B4271EF3B54A00446AD7 /* Bookings */ = {
+			isa = PBXGroup;
+			children = (
+				C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */,
+				C628B42F1EF3C26400446AD7 /* BookingContainerViewController.swift */,
+			);
+			name = Bookings;
+			sourceTree = "<group>";
+		};
+		C628B4281EF3B58A00446AD7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 		C67BFF611EDE65FE002D680D = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +132,8 @@
 		C67BFF8C1EDF093E002D680D /* Patients */ = {
 			isa = PBXGroup;
 			children = (
-				C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */,
+				C628B4281EF3B58A00446AD7 /* Detail */,
+				C628B4271EF3B54A00446AD7 /* Bookings */,
 				C6C4E11A1EEE757800B4BA5F /* AddPatientViewController.swift */,
 				C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */,
 				C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */,
@@ -274,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */,
+				C628B4301EF3C26400446AD7 /* BookingContainerViewController.swift in Sources */,
 				C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */,
+				C628B42E1EF3C21900446AD7 /* AddBookingViewController.swift in Sources */,
 				C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */,
 				C64B388F1EF24EE7006FEFFC /* DetailContainerViewController.swift in Sources */,
 				C67BFF861EDF0887002D680D /* RemindersDetailViewController .swift in Sources */,

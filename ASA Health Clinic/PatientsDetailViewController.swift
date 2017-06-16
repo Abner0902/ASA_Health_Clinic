@@ -59,8 +59,14 @@ class PatientsDetailViewController: UIViewController {
             controller.detailItem = self.detailItem
             
         } else if segue.identifier == "patientBookingSegue" {
-            
+            //pass patient information to patient booking container view if needed
+            // Pass the selected object to the new view controller.
+            let controller: BookingContainerViewController = segue.destination as! BookingContainerViewController
+            controller.detailItem = self.detailItem
+
         }
     }
+    
+    
 }
 

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Booking" representedClassName="Booking" syncable="YES">
+        <attribute name="clinic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doctor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sms" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="Event" representedClassName="Event" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date">
             <userInfo/>
@@ -13,5 +20,6 @@
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
         <element name="Patient" positionX="261" positionY="198" width="128" height="75"/>
+        <element name="Booking" positionX="261" positionY="207" width="128" height="120"/>
     </elements>
 </model>
