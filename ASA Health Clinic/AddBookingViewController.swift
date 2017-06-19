@@ -31,6 +31,7 @@ class AddBookingViewController: UIViewController, UIPickerViewDataSource, UIPick
         // Do any additional setup after loading the view.
         configureDoctorPickerView()
         configureClinicPickerView()
+        configureDatePickerView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +71,11 @@ class AddBookingViewController: UIViewController, UIPickerViewDataSource, UIPick
     func configureClinicPickerView() {
         clinicPicker.dataSource = self
         clinicPicker.delegate = self
+    }
+    
+    func configureDatePickerView() {
+        let currentDate = Date()
+        dateTimePicker.minimumDate = currentDate
     }
     
     // MARK: - Picker view methods

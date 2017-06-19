@@ -7,30 +7,75 @@
 //
 
 import UIKit
+import Eureka
 
 protocol AddPatientDelegate {
     func addPatient(name: String, phone: String)
 }
 
-class AddPatientViewController: UIViewController, UITextFieldDelegate {
+class AddPatientViewController: FormViewController, UITextFieldDelegate {
     
-    
-    @IBOutlet var nameField: UITextField!
-    @IBOutlet var phoneField: UITextField!
-    
-    @IBOutlet var doneButton: UIButton!
     var delegate: AddPatientDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //create the input form
+        self.form
+            
+            +++ Section(header: "New Patient", footer: "")
+            
+            <<< TextRow() { row in
+                row.title = "Patient Name"
+                row.placeholder = "Enter name here"
+                row.tag = "name"
+                //add validation rules
+                row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnChange
+            }
+                .cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.titleLabel?.textColor = .red
+                    }
+            }
         
-        setupAddTargetIsNotEmptyTextFields()
-        
-        //disable the done button when text field is empty
-        if (nameField.text?.isEmpty)! {
-            self.disableButton()
-        }
+            <<< PhoneRow() { row in
+                
+                row.title = "Phone Number"
+                row.placeholder = "Enter phone number here"
+                row.tag = "phone"
+                //add validation rules
+                row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnChange
+                
+            } .cellUpdate { cell, row in
+                if !row.isValid {
+                    cell.titleLabel?.textColor = .red
+                }
+            }
+            
+            +++ Section()
+            
+            <<< ButtonRow() {
+                
+                $0.title = "Done"
+                $0.tag = "done"
+                
+            } .onCellSelection() { cell, row in
+                let nameValue = self.form.rowBy(tag: "name")?.baseValue
+                let phoneValue = self.form.rowBy(tag: "phone")?.baseValue
+                if ((nameValue != nil) && (phoneValue != nil) ) {
+                    
+                    self.dismiss(animated: true) { () -> Void in
+                        NSLog("Done clicked")
+                        
+                        self.delegate!.addPatient(name: nameValue as! String, phone: phoneValue as! String)
+                    }
+                } else {
+                    self.showAlert(msg: "Field Required")
+                }
+            }
+
 
         // Do any additional setup after loading the view.
     }
@@ -40,56 +85,24 @@ class AddPatientViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func Cancel(_ sender: Any) {
-        self.dismiss(animated: true) { () -> Void in
-            NSLog("Cancel clicked")
+    //show alert view
+    func showAlert(msg: String) {
+        let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+            NSLog("Alert ok clicked")
         }
-    }
-    
-    @IBAction func Done(_ sender: Any) {
-        self.dismiss(animated: true) { () -> Void in
-            NSLog("Done clicked")
-            
-            if let name = self.nameField.text, let phone = self.phoneField.text {
-                self.delegate!.addPatient(name: name, phone: phone)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+            self.dismiss(animated: true) { () -> Void in
+                NSLog("Alert Cancel clicked")
+                
             }
         }
-    }
-    
-    func disableButton() {
-        doneButton.isUserInteractionEnabled = false
-        doneButton.tintColor = .gray
-    }
-    
-    func enableButton() {
-        doneButton.isUserInteractionEnabled = true
-        doneButton.tintColor = .blue
-    }
-    
-    //add targets to check all text fields is not empty
-    func setupAddTargetIsNotEmptyTextFields() {
         
-        nameField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                                    for: .editingChanged)
-        phoneField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                                     for: .editingChanged)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
-    
-    func textFieldsIsNotEmpty(sender: UITextField) {
-        
-        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
-        
-        guard
-            let name = nameField.text, !name.isEmpty,
-            let phone = phoneField.text, !phone.isEmpty
-        else {
-            disableButton()
-            return
-        }
-        // enable done button if all conditions are met
-        enableButton()
-    }
-    
     /*
     // MARK: - Navigation
 

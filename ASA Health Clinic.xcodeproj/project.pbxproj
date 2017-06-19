@@ -11,6 +11,7 @@
 		C628B42E1EF3C21900446AD7 /* AddBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */; };
 		C628B4301EF3C26400446AD7 /* BookingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628B42F1EF3C26400446AD7 /* BookingContainerViewController.swift */; };
 		C64B388F1EF24EE7006FEFFC /* DetailContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */; };
+		C654E4D31EF6665500C6C0D4 /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654E4D21EF6665500C6C0D4 /* BookingTableViewCell.swift */; };
 		C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */; };
 		C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF6F1EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld */; };
 		C67BFF731EDE65FE002D680D /* PatientsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */; };
@@ -35,6 +36,7 @@
 		C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookingViewController.swift; sourceTree = "<group>"; };
 		C628B42F1EF3C26400446AD7 /* BookingContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingContainerViewController.swift; sourceTree = "<group>"; };
 		C64B388E1EF24EE7006FEFFC /* DetailContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContainerViewController.swift; sourceTree = "<group>"; };
+		C654E4D21EF6665500C6C0D4 /* BookingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
 		C67BFF6A1EDE65FE002D680D /* ASA Health Clinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ASA Health Clinic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67BFF6D1EDE65FE002D680D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67BFF701EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASA_Health_Clinic.xcdatamodel; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */,
 				C628B42F1EF3C26400446AD7 /* BookingContainerViewController.swift */,
+				C654E4D21EF6665500C6C0D4 /* BookingTableViewCell.swift */,
 			);
 			name = Bookings;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */,
+				C654E4D31EF6665500C6C0D4 /* BookingTableViewCell.swift in Sources */,
 				C628B4301EF3C26400446AD7 /* BookingContainerViewController.swift in Sources */,
 				C67BFF6E1EDE65FE002D680D /* AppDelegate.swift in Sources */,
 				C628B42E1EF3C21900446AD7 /* AddBookingViewController.swift in Sources */,

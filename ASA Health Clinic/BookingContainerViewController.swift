@@ -32,6 +32,8 @@ class BookingContainerViewController: UIViewController, AddBookingDelegate {
     func addBooking(doctor: String, clinic: String, date: Date) {
         //add booking to core data here
         NSLog("\(doctor) \(clinic) \(date)")
+        
+        setupSMSReminder()
     }
     
     // Mark: - Segues
@@ -42,6 +44,16 @@ class BookingContainerViewController: UIViewController, AddBookingDelegate {
             destinationVC.delegate = self
             
         }
+    }
+    
+    // Mark: - Table view
+    
+    
+    
+    //Mark: - SMS Reminder set up
+    
+    func setupSMSReminder() {
+        
     }
     
     /*
