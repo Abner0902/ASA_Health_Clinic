@@ -27,6 +27,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PatientsDetailViewController
         }
+        
+        appFirstLaunchSetup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -210,8 +212,63 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             print("Could not save \(error), \(error.userInfo)")
         }
 
+    }
+    
+    func appFirstLaunchSetup() {
+        let defaults = UserDefaults.standard
+            
+        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+            NSLog("App already launched : \(isAppAlreadyLaunchedOnce)")
+        }else{
+            //app launch first time
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            
+            setupClinicAndDoctorTable()
+        }
+    }
+    
+    func setupClinicAndDoctorTable() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let clinic1 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
         
+        clinic1?.address = "Clinic1"
+        clinic1?.phone = "0431739405"
         
+        let clinic2 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+        
+        clinic2?.address = "Clinic2"
+        clinic2?.phone = "0431739405"
+        
+        let clinic3 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+        
+        clinic3?.address = "Clinic3"
+        clinic3?.phone = "0431739405"
+        
+        let doctor1 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+        
+        doctor1?.name = "Doctor1"
+        
+        let doctor2 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+        
+        doctor2?.name = "Doctor2"
+        
+        let doctor3 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+        
+        doctor3?.name = "Doctor3"
+        
+        clinic1?.addDoctor(doctor1!)
+        clinic2?.addDoctor(doctor2!)
+        clinic3?.addDoctor(doctor3!)
+        
+        //Save the ManagedObjectContext
+        do {
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+
     }
 
     /*
