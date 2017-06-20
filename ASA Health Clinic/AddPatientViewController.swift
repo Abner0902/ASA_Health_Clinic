@@ -72,7 +72,7 @@ class AddPatientViewController: FormViewController, UITextFieldDelegate {
                         self.delegate!.addPatient(name: nameValue as! String, phone: phoneValue as! String)
                     }
                 } else {
-                    self.showAlert(msg: "Field Required")
+                    Alert().showAlert(msg: "Field Required", view: self)
                 }
             }
 
@@ -85,24 +85,6 @@ class AddPatientViewController: FormViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //show alert view
-    func showAlert(msg: String) {
-        let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
-            NSLog("Alert ok clicked")
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
-            self.dismiss(animated: true) { () -> Void in
-                NSLog("Alert Cancel clicked")
-                
-            }
-        }
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 

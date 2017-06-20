@@ -11,7 +11,7 @@ import Eureka
 import CoreData
 
 protocol AddBookingDelegate {
-    func addBooking(doctor: String, clinic: String, date: Date)
+    func addBooking(doctor: String, clinic: String, date: Date, clinic_ph: String)
 }
 
 class AddBookingViewController: FormViewController{
@@ -34,6 +34,7 @@ class AddBookingViewController: FormViewController{
         for option in clinics {
             form.last! <<< ListCheckRow<String>(option.address){ listRow in
                 listRow.title = option.address
+                listRow.tag = option.phone! + option.address!
                 listRow.selectableValue = option.address
                 listRow.value = nil
             }
@@ -43,11 +44,12 @@ class AddBookingViewController: FormViewController{
         
         form +++ Section("Date and Time")
         
-            <<< DateTimeRow("Booking Date") {
-                $0.title = $0.tag
-                $0.minimumDate = Date()
-                $0.value = Date().addingTimeInterval(60*60*24)
-                $0.dateFormatter?.dateFormat = "dd/MM/yyyy HH:mm"
+        <<< DateTimeRow("Booking Date") {
+            $0.title = "Booking Date"
+            $0.tag = "Booking Date"
+            $0.minimumDate = Date()
+            $0.value = Date().addingTimeInterval(60*60*24)
+            $0.dateFormatter?.dateFormat = "dd/MM/yyyy HH:mm"
         }
         
         form +++ Section()
@@ -58,14 +60,30 @@ class AddBookingViewController: FormViewController{
             $0.tag = "done"
                 
         } .onCellSelection() { cell, row in
+            let alert = Alert()
+            
             // pass all selected value to the booking container view
+            let clinic = (self.form[0] as! SelectableSection<ListCheckRow<String>>).selectedRow()?.baseValue
+            let clinic_ph = (self.form[0] as! SelectableSection<ListCheckRow<String>>).selectedRow()?.tag
             
-            
-            
+            if clinic != nil {
+                let doctor = (self.form[1] as! SelectableSection<ListCheckRow<String>>).selectedRow()?.baseValue
+                
+                if doctor != nil {
+                    let date = self.form.rowBy(tag: "Booking Date")?.baseValue
+                    self.dismiss(animated: true) { () -> Void in
+                        NSLog("Done clicked")
+                        self.delegate?.addBooking(doctor: doctor as! String, clinic: clinic as! String, date: date as! Date, clinic_ph: clinic_ph!)
+                    }
+                } else {
+                   alert.showAlert(msg: "Field Required!", view: self)
+                }
+            } else {
+                alert.showAlert(msg: "Field Required!", view: self)
+            }
             
             
         }
-
     }
 
     override func didReceiveMemoryWarning() {

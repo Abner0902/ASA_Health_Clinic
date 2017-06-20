@@ -14,6 +14,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     var detailViewController: PatientsDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
+    @IBOutlet var patientTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PatientsDetailViewController
         }
         
+        patientTableView.tableFooterView = UIView()
+        
         appFirstLaunchSetup()
     }
 
@@ -40,24 +43,6 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-//    func insertNewObject(_ sender: Any) {
-//        let context = self.fetchedResultsController.managedObjectContext
-//        let newEvent = Event(context: context)
-//             
-//        // If appropriate, configure the new managed object.
-//        newEvent.timestamp = NSDate()
-//
-//        // Save the context.
-//        do {
-//            try context.save()
-//        } catch {
-//            // Replace this implementation with code to handle the error appropriately.
-//            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//            let nserror = error as NSError
-//            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-//        }
-//    }
 
     // MARK: - Segues
 
@@ -74,6 +59,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             //prepare for adding patient
             let destinationVC: AddPatientViewController = segue.destination as! AddPatientViewController
             destinationVC.delegate = self
+        } else if segue.identifier == "editPatientSegue" {
+            
         }
     }
 
@@ -123,8 +110,6 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     }
 
     // MARK: - Fetched results controller 
-    
-    //should change the type to patient
 
     var fetchedResultsController: NSFetchedResultsController<Patient> {
         if _fetchedResultsController != nil {
