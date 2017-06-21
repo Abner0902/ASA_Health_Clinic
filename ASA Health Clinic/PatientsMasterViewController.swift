@@ -9,13 +9,24 @@
 import UIKit
 import CoreData
 
-class PatientsMasterViewController: UITableViewController, NSFetchedResultsControllerDelegate, AddPatientDelegate {
+extension PatientsMasterViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+}
+
+class PatientsMasterViewController: UITableViewController, NSFetchedResultsControllerDelegate, AddPatientDelegate, UpdatePatientDelegate {
+    
+    var filteredPatients = [Patient]()
+    var patients = [Patient]()
 
     var detailViewController: PatientsDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
     @IBOutlet var patientTableView: UITableView!
 
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,13 +40,30 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PatientsDetailViewController
         }
         
+        patients = fetchedResultsController.fetchedObjects!
+        
         patientTableView.tableFooterView = UIView()
+        patientTableView.allowsSelectionDuringEditing = true
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
         
         appFirstLaunchSetup()
     }
+    
+    //helper method for search bar
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        filteredPatients = patients.filter { patient in
+            return (patient.name?.lowercased().contains(searchText))!
+        }
+        
+        tableView.reloadData()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+        //clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
@@ -47,7 +75,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "patientDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow {
             let object = fetchedResultsController.object(at: indexPath)
                 let controller = (segue.destination as! UINavigationController).topViewController as! PatientsDetailViewController
@@ -59,8 +87,13 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
             //prepare for adding patient
             let destinationVC: AddPatientViewController = segue.destination as! AddPatientViewController
             destinationVC.delegate = self
-        } else if segue.identifier == "editPatientSegue" {
-            
+        } else if segue.identifier == "editPatientSegue"{
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let object = fetchedResultsController.object(at: indexPath)
+                let destinationVC: UpdatePatientViewController = segue.destination as! UpdatePatientViewController
+                destinationVC.delegate = self
+                destinationVC.currentPatient = object
+            }
         }
     }
 
@@ -71,13 +104,22 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = fetchedResultsController.sections![section]
-        return sectionInfo.numberOfObjects
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredPatients.count
+        } else {
+            let sectionInfo = fetchedResultsController.sections![section]
+            return sectionInfo.numberOfObjects
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PatientCell", for: indexPath)
-        let patient = fetchedResultsController.object(at: indexPath)
+        let patient: Patient
+        if searchController.isActive && searchController.searchBar.text != "" {
+            patient = filteredPatients[indexPath.row]
+        } else {
+            patient = fetchedResultsController.object(at: indexPath)
+        }
         configureCell(cell, withPatient: patient)
         return cell
     }
@@ -103,6 +145,18 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //check the table view is in edit mode or not
+        if (tableView.isEditing == true) {
+            //in edit then perform edit segue
+            performSegue(withIdentifier: "editPatientSegue", sender: self)
+        } else {
+            //not in edit then perform view detal segue
+            performSegue(withIdentifier: "patientDetailSegue", sender: self)
+        }
+        
     }
 
     func configureCell(_ cell: UITableViewCell, withPatient patient: Patient) {
@@ -181,7 +235,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         tableView.endUpdates()
     }
     
-    // Mark: Add patient
+    // Mark: - Delegate methods
+    //Add patient
     func addPatient(name: String, phone: String) {
         let context = self.fetchedResultsController.managedObjectContext
         let newPatient = NSEntityDescription.insertNewObject(forEntityName: "Patient", into: context) as? Patient
@@ -196,7 +251,22 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         } catch let error as NSError {
             print("Could not save \(error), \(error.userInfo)")
         }
-
+    }
+    
+    //Upadate patient
+    func updatePatient(name: String, phone: String, patientToUpdate: Patient) {
+        let context = self.fetchedResultsController.managedObjectContext
+        
+        patientToUpdate.setValue(name, forKey: "name")
+        patientToUpdate.setValue(phone, forKey: "phone")
+        
+        //Save the ManagedObjectContext
+        do {
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
     
     func appFirstLaunchSetup() {

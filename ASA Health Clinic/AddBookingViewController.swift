@@ -112,20 +112,6 @@ class AddBookingViewController: FormViewController{
         }
     }
 
-    
-//    @IBAction func done(_ sender: Any) {
-//        self.dismiss(animated: true) { () -> Void in
-//            NSLog("Done clicked")
-//            //pass booking information here
-//            let doctor = self.doctorPickerDataSource[self.doctorPicker.selectedRow(inComponent: 0)]
-//            let clinic = self.clinicDataSource[self.clinicPicker.selectedRow(inComponent: 0)]
-//            
-//            let date = self.dateTimePicker.date
-//            
-//            self.delegate?.addBooking(doctor: doctor, clinic: clinic, date: date)
-//        }
-//    }
-    
     func fetchClinics() -> [Clinic]{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -170,26 +156,6 @@ class AddBookingViewController: FormViewController{
             print(error)
         }
     }
-            
-    //show alert view
-    func showAlert(msg: String) {
-        let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
-            NSLog("Alert ok clicked")
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
-            self.dismiss(animated: true) { () -> Void in
-                NSLog("Alert Cancel clicked")
-                
-            }
-        }
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     
     /*
     // MARK: - Navigation

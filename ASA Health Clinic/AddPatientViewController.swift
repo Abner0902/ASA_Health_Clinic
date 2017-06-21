@@ -13,16 +13,20 @@ protocol AddPatientDelegate {
     func addPatient(name: String, phone: String)
 }
 
-class AddPatientViewController: FormViewController, UITextFieldDelegate {
+class AddPatientViewController: FormViewController {
     
     var delegate: AddPatientDelegate?
+    
+    var currentPatient: Patient?
+    
+    //gesture for tapping on background
+    //var tapBGGesture: UITapGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //create the input form
         self.form
-            
             +++ Section(header: "New Patient", footer: "")
             
             <<< TextRow() { row in
@@ -58,6 +62,19 @@ class AddPatientViewController: FormViewController, UITextFieldDelegate {
             
             <<< ButtonRow() {
                 
+                $0.title = "Cancel"
+                $0.tag = "cancel"
+                
+            } .onCellSelection() { cell, row in
+                    self.dismiss(animated: true) { () -> Void in
+                            NSLog("Cancel clicked")
+                    }
+            }
+
+            +++ Section()
+            
+            <<< ButtonRow() {
+                
                 $0.title = "Done"
                 $0.tag = "done"
                 
@@ -79,13 +96,41 @@ class AddPatientViewController: FormViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //set up the BG tap gesture
+        //setupBGTapGesture()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+//    func setupBGTapGesture() {
+//        tapBGGesture = UITapGestureRecognizer(target: self, action: #selector(self.settingsBGTapped(_:)))
+//        tapBGGesture.delegate = self
+//        tapBGGesture.numberOfTapsRequired = 1
+//        tapBGGesture.cancelsTouchesInView = true
+//        self.view.window!.addGestureRecognizer(tapBGGesture)
+//    }
+    
+//    func settingsBGTapped(_ recognizer: UITapGestureRecognizer){
+//        if recognizer.state == UIGestureRecognizerState.ended{
+//            guard let presentedView = presentedViewController?.view else {
+//                return
+//            }
+//            
+//            if !(presentedView.bounds).contains(recognizer.location(in: presentedView)) {
+//                self.dismiss(animated: true, completion: { () -> Void in
+//                    
+//                })
+//            }
+//        }
+//    }
+    
+    
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

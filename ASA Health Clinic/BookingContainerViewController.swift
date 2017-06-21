@@ -9,22 +9,22 @@
 import UIKit
 import CoreData
 
-class BookingContainerViewController: UIViewController, UITableViewDataSource, AddBookingDelegate {
+class BookingContainerViewController: UIViewController, UITableViewDataSource, AddBookingDelegate, UpdateBookingDelegate {
     
     @IBOutlet weak var addBookingButton: UIButton!
+    
     var appDelegate: AppDelegate!
     var managedObjectContext: NSManagedObjectContext
-
     var bookings: NSMutableArray
+    
     @IBOutlet weak var bookingTableView: UITableView!
     
+    //initializer
     required init?(coder aDecoder: NSCoder) {
         
         appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.persistentContainer.viewContext
         bookings = NSMutableArray()
-
-        
         super.init(coder: aDecoder)
     }
     
@@ -33,9 +33,6 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         
         managedObjectContext = appDelegate.persistentContainer.viewContext
         // Do any additional setup after loading the view.
-        //self.bookingTableView.register(BookingTableViewCell.self, forCellReuseIdentifier: "patientBookingCell")
-        
-        //self.bookingTableView.register(UINib(nibName: "BookingTableViewCell", bundle: nil), forCellReuseIdentifier: "patientBookingCell")
         
         bookingTableView.tableFooterView = UIView()
         bookingTableView.dataSource = self
@@ -44,9 +41,12 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
     override func viewWillAppear(_ animated: Bool) {
         
         if detailItem != nil {
+            //fetch all bookings in the array
             bookings.addObjects(from: (detailItem?.has?.allObjects)!)
+            //sort the array
             let sortDescriptor = NSSortDescriptor (key: "dateTime" , ascending: true)
             bookings.sort(using: [sortDescriptor])
+            //enable the add button
             addBookingButton.isEnabled = true
         } else {
             addBookingButton.isEnabled = false
@@ -64,13 +64,33 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
             //configureView()
         }
     }
+    // Mark: Delegate Methods
+    //Update booking method
+    func updateBooking(doctor: String, clinic: String, date: Date, clinic_ph: String, bookingToUpdate: Booking, rowToUpdate: IndexPath) {
+        
+        bookingToUpdate.setValue(doctor, forKey: "doctor")
+        bookingToUpdate.setValue(clinic, forKey: "clinic_add")
+        bookingToUpdate.setValue(date as NSDate, forKey: "dateTime")
+        bookingToUpdate.setValue(clinic_ph, forKey: "clinic_ph")
+        
+        //Save the ManagedObjectContext
+        do {
+            try managedObjectContext.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        
+        //set up the sms reminder
+        updateSMSReminder()
+        configureCell(bookingTableView.cellForRow(at: rowToUpdate) as! BookingTableViewCell, withBooking: bookingToUpdate)
+    }
     
+    // AddBooking delegate method
     func addBooking(doctor: String, clinic: String, date: Date, clinic_ph: String) {
         //add booking to core data here
-        NSLog("\(doctor) \(clinic) \(date)")
-        
         let newBooking = NSEntityDescription.insertNewObject(forEntityName: "Booking", into: managedObjectContext) as? Booking
-        
+        //configure the new booking
         newBooking?.dateTime = date as NSDate
         newBooking?.clinic_add = clinic
         newBooking?.doctor = doctor
@@ -88,7 +108,10 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
             print("Could not save \(error), \(error.userInfo)")
         }
         
+        //set up the sms reminder
         setupSMSReminder()
+        
+        //add booking to table view
         bookings.add(newBooking!)
         let indexPath = IndexPath(row: bookings.count - 1, section: 1)
         bookingTableView.insertRows(at: [indexPath], with: .fade)
@@ -106,6 +129,12 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
             let destinationVC: AddBookingViewController = segue.destination as! AddBookingViewController
             destinationVC.delegate = self
         } else if segue.identifier == "editBookingSegue" {
+            let destinationVC: UpdateBookingDetailViewController = segue.destination as! UpdateBookingDetailViewController
+            destinationVC.delegate = self
+            if let indexPath = bookingTableView.indexPathForSelectedRow {
+                destinationVC.currentBooking = bookings.object(at: indexPath.row) as? Booking
+                destinationVC.selectedRow = indexPath
+            }
             
         }
     }
@@ -140,6 +169,7 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
             cell.dateLabel.text = "Date"
             cell.doctorLabel.text = "Doctor"
             cell.addressLabel.text = "Clinic"
+            cell.StatusLabel.text = "Status"
             return cell
         } else {
             let booking = bookings[indexPath.row]
@@ -174,7 +204,7 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
     
     func configureCell(_ cell: BookingTableViewCell, withBooking booking: Booking) {
         let dateString = (booking.dateTime! as Date).description
-        cell.dateLabel.text = dateString.substring(to: dateString.index(dateString.endIndex, offsetBy: -5))
+        cell.dateLabel.text = dateString.substring(to: dateString.index(dateString.endIndex, offsetBy: -9))
         
         let doctorString = booking.doctor!
         cell.doctorLabel.text = doctorString
@@ -187,12 +217,15 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         }
     }
     
-    //Mark: - SMS Reminder set up
+    //Mark: - SMS Reminder
     
     func setupSMSReminder() {
         
     }
     
+    func updateSMSReminder() {
+        
+    }
     /*
     // MARK: - Navigation
 

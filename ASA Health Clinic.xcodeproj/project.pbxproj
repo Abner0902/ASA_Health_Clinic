@@ -30,6 +30,8 @@
 		C67BFF871EDF0887002D680D /* RemindersMasterViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */; };
 		C67BFF911EDF09F0002D680D /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */; };
 		C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */; };
+		C6AEA64A1EFA04FD008BB781 /* UpdatePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */; };
+		C6AEA64C1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */; };
 		C6C4E10F1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */; };
 		C6C4E1121EEE635D00B4BA5F /* Patient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */; };
 		C6C4E1131EEE635D00B4BA5F /* Patient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */; };
@@ -64,6 +66,8 @@
 		C67BFF851EDF0887002D680D /* RemindersMasterViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersMasterViewController .swift"; sourceTree = "<group>"; };
 		C67BFF8F1EDF09F0002D680D /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMasterViewController.swift; sourceTree = "<group>"; };
+		C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePatientViewController.swift; sourceTree = "<group>"; };
+		C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateBookingDetailViewController.swift; sourceTree = "<group>"; };
 		C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientsMasterTableViewCell.swift; sourceTree = "<group>"; };
 		C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				C6749DA31EF8D2CC0052E752 /* Booking+CoreDataClass.swift */,
 				C6749DA41EF8D2CC0052E752 /* Booking+CoreDataProperties.swift */,
 				C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */,
+				C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */,
 			);
 			name = Bookings;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				C67BFF721EDE65FE002D680D /* PatientsMasterViewController.swift */,
 				C67BFF741EDE65FE002D680D /* PatientsDetailViewController.swift */,
 				C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */,
+				C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */,
 			);
 			name = Patients;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				C6749DA21EF8CD910052E752 /* Alert.swift in Sources */,
 				C654E4EA1EF7A6E800C6C0D4 /* Clinic+CoreDataProperties.swift in Sources */,
 				C628B42E1EF3C21900446AD7 /* AddBookingViewController.swift in Sources */,
+				C6AEA64A1EFA04FD008BB781 /* UpdatePatientViewController.swift in Sources */,
 				C6749DA51EF8D2CC0052E752 /* Booking+CoreDataClass.swift in Sources */,
 				C654E4F11EF7A94900C6C0D4 /* Doctor+CoreDataClass.swift in Sources */,
 				C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */,
@@ -366,6 +373,7 @@
 				C67BFF871EDF0887002D680D /* RemindersMasterViewController .swift in Sources */,
 				C6C4E1121EEE635D00B4BA5F /* Patient+CoreDataClass.swift in Sources */,
 				C6C4E1131EEE635D00B4BA5F /* Patient+CoreDataProperties.swift in Sources */,
+				C6AEA64C1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
