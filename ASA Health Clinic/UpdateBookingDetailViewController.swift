@@ -47,6 +47,7 @@ class UpdateBookingDetailViewController: FormViewController {
                 } else {
                     listRow.value = nil
                 }
+                listRow.cell.textLabel?.numberOfLines = 0
             }
         }
         

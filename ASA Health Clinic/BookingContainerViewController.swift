@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class BookingContainerViewController: UIViewController, UITableViewDataSource, AddBookingDelegate, UpdateBookingDelegate {
+class BookingContainerViewController: UIViewController, UITableViewDelegate ,UITableViewDataSource, AddBookingDelegate, UpdateBookingDelegate {
     
     @IBOutlet weak var addBookingButton: UIButton!
     
@@ -36,6 +36,7 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         
         bookingTableView.tableFooterView = UIView()
         bookingTableView.dataSource = self
+        bookingTableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +76,7 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         
         //Save the ManagedObjectContext
         do {
+            updateBookingInFireBase()
             try managedObjectContext.save()
             
         } catch let error as NSError {
@@ -84,6 +86,11 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         //set up the sms reminder
         updateSMSReminder()
         configureCell(bookingTableView.cellForRow(at: rowToUpdate) as! BookingTableViewCell, withBooking: bookingToUpdate)
+    }
+    
+    //update booking in firebase
+    func updateBookingInFireBase() {
+        
     }
     
     // AddBooking delegate method
@@ -102,6 +109,7 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         
         //Save the ManagedObjectContext
         do {
+            addBookingInFireBase()
             try managedObjectContext.save()
             
         } catch let error as NSError {
@@ -113,8 +121,12 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         
         //add booking to table view
         bookings.add(newBooking!)
-        let indexPath = IndexPath(row: bookings.count - 1, section: 1)
+        let indexPath = IndexPath(row: bookings.count - 1, section: 0)
         bookingTableView.insertRows(at: [indexPath], with: .fade)
+    }
+    
+    func addBookingInFireBase() {
+        
     }
     
 //    func getCellIndexPaths() -> [IndexPath] {
@@ -142,22 +154,19 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
     // Mark: - Table view
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            if detailItem == nil {
+       
+        if detailItem == nil {
                 return 0
-            } else {
-                if detailItem?.has?.count != 0 {
+        } else {
+            if detailItem?.has?.count != 0 {
                     
-                    return (detailItem?.has?.count)!
-                } else {
+                return (detailItem?.has?.count)!
+            } else {
                     return 0
-                }
             }
         }
     }
@@ -165,17 +174,10 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "patientBookingCell", for: indexPath) as! BookingTableViewCell
-        if indexPath.section == 0 {
-            cell.dateLabel.text = "Date"
-            cell.doctorLabel.text = "Doctor"
-            cell.addressLabel.text = "Clinic"
-            cell.StatusLabel.text = "Status"
-            return cell
-        } else {
-            let booking = bookings[indexPath.row]
-            configureCell(cell, withBooking: booking as! Booking)
-            return cell
-        }
+        let booking = bookings[indexPath.row]
+        configureCell(cell, withBooking: booking as! Booking)
+        tableView.rowHeight = 70
+        return cell
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -202,6 +204,26 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 50
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "bookingHeaderCell") as! BookingHeaderCell
+        if section == 0 {
+            headerCell.backgroundColor = UIColor.lightGray
+            headerCell.dateLabel.text = "Date"
+            headerCell.doctorLabel.text = "Doctor"
+            headerCell.addressLabel.text = "Clinic Address"
+            headerCell.StatusLabel.text = "Status"
+        }
+        return headerCell
+    }
+    
     func configureCell(_ cell: BookingTableViewCell, withBooking booking: Booking) {
         let dateString = (booking.dateTime! as Date).description
         cell.dateLabel.text = dateString.substring(to: dateString.index(dateString.endIndex, offsetBy: -9))
@@ -209,6 +231,8 @@ class BookingContainerViewController: UIViewController, UITableViewDataSource, A
         let doctorString = booking.doctor!
         cell.doctorLabel.text = doctorString
         cell.addressLabel.text = booking.clinic_add
+        cell.addressLabel.sizeToFit()
+        cell.addressLabel.numberOfLines = 3
         
         if !booking.status {
             cell.StatusLabel.text = "Not Completed"

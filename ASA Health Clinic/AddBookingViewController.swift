@@ -29,7 +29,7 @@ class AddBookingViewController: FormViewController{
         form
             
         +++ SelectableSection<ListCheckRow<String>>("Clinic", selectionType: .singleSelection(enableDeselection: true))
-            
+    
         clinics = fetchClinics()
         for option in clinics {
             form.last! <<< ListCheckRow<String>(option.address){ listRow in
@@ -37,6 +37,7 @@ class AddBookingViewController: FormViewController{
                 listRow.tag = option.phone! + option.address!
                 listRow.selectableValue = option.address
                 listRow.value = nil
+                listRow.cell.textLabel?.numberOfLines = 0
             }
         }
         

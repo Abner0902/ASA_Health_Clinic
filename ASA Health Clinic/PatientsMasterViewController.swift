@@ -246,11 +246,17 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         
         //Save the ManagedObjectContext
         do {
+            addPatientToFireBase(patient: newPatient!)
             try context.save()
             
         } catch let error as NSError {
             print("Could not save \(error), \(error.userInfo)")
         }
+    }
+    
+    //Firebase
+    func addPatientToFireBase(patient: Patient) {
+        
     }
     
     //Upadate patient
@@ -262,11 +268,17 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         
         //Save the ManagedObjectContext
         do {
+            updatePatientInFireBase()
             try context.save()
             
         } catch let error as NSError {
             print("Could not save \(error), \(error.userInfo)")
         }
+    }
+    
+    //update patient in firebase
+    func updatePatientInFireBase() {
+        
     }
     
     func appFirstLaunchSetup() {
@@ -287,34 +299,34 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         let context = appDelegate.persistentContainer.viewContext
         let clinic1 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
         
-        clinic1?.address = "Clinic1"
-        clinic1?.phone = "0431739405"
+        clinic1?.address = "Room 1402, Chuang’s Tower, 30-32 Connaught Road, Central, Hong Kong"
+        clinic1?.phone = "85228269261"
         
-        let clinic2 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
-        
-        clinic2?.address = "Clinic2"
-        clinic2?.phone = "0431739405"
-        
-        let clinic3 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
-        
-        clinic3?.address = "Clinic3"
-        clinic3?.phone = "0431739405"
+//        let clinic2 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+//        
+//        clinic2?.address = "Clinic2"
+//        clinic2?.phone = "0431739405"
+//        
+//        let clinic3 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+//        
+//        clinic3?.address = "Clinic3"
+//        clinic3?.phone = "0431739405"
         
         let doctor1 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
         
-        doctor1?.name = "Doctor1"
+        doctor1?.name = "Andy Kwok"
         
         let doctor2 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
         
-        doctor2?.name = "Doctor2"
+        doctor2?.name = "Stephen Wong"
         
-        let doctor3 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
-        
-        doctor3?.name = "Doctor3"
+//        let doctor3 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+//        
+//        doctor3?.name = "Doctor3"
         
         clinic1?.addDoctor(doctor1!)
-        clinic2?.addDoctor(doctor2!)
-        clinic3?.addDoctor(doctor3!)
+        clinic1?.addDoctor(doctor2!)
+//        clinic3?.addDoctor(doctor3!)
         
         //Save the ManagedObjectContext
         do {

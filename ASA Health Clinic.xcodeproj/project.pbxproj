@@ -32,6 +32,7 @@
 		C67BFF921EDF09F0002D680D /* ProfileMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */; };
 		C6AEA64A1EFA04FD008BB781 /* UpdatePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */; };
 		C6AEA64C1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */; };
+		C6AEA64E1EFBA0DE008BB781 /* BookingHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA64D1EFBA0DE008BB781 /* BookingHeaderCell.swift */; };
 		C6C4E10F1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */; };
 		C6C4E1121EEE635D00B4BA5F /* Patient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */; };
 		C6C4E1131EEE635D00B4BA5F /* Patient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */; };
@@ -68,6 +69,7 @@
 		C67BFF901EDF09F0002D680D /* ProfileMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMasterViewController.swift; sourceTree = "<group>"; };
 		C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePatientViewController.swift; sourceTree = "<group>"; };
 		C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateBookingDetailViewController.swift; sourceTree = "<group>"; };
+		C6AEA64D1EFBA0DE008BB781 /* BookingHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingHeaderCell.swift; sourceTree = "<group>"; };
 		C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientsMasterTableViewCell.swift; sourceTree = "<group>"; };
 		C6C4E1101EEE635D00B4BA5F /* Patient+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C6C4E1111EEE635D00B4BA5F /* Patient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				C6749DA41EF8D2CC0052E752 /* Booking+CoreDataProperties.swift */,
 				C628B42D1EF3C21900446AD7 /* AddBookingViewController.swift */,
 				C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */,
+				C6AEA64D1EFBA0DE008BB781 /* BookingHeaderCell.swift */,
 			);
 			name = Bookings;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				C6AEA64A1EFA04FD008BB781 /* UpdatePatientViewController.swift in Sources */,
 				C6749DA51EF8D2CC0052E752 /* Booking+CoreDataClass.swift in Sources */,
 				C654E4F11EF7A94900C6C0D4 /* Doctor+CoreDataClass.swift in Sources */,
+				C6AEA64E1EFBA0DE008BB781 /* BookingHeaderCell.swift in Sources */,
 				C67BFF711EDE65FE002D680D /* ASA_Health_Clinic.xcdatamodeld in Sources */,
 				C64B388F1EF24EE7006FEFFC /* DetailContainerViewController.swift in Sources */,
 				C6749DA81EF911050052E752 /* BookingContainerViewController.swift in Sources */,
