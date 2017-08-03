@@ -117,7 +117,7 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
         }
         
         //set up the sms reminder
-        setupSMSReminder()
+        setupSMSReminder(booking: newBooking!)
         
         //add booking to table view
         bookings.add(newBooking!)
@@ -243,9 +243,61 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     
     //Mark: - SMS Reminder
     
-    func setupSMSReminder() {
+    func setupSMSReminder(booking: Booking) {
+        
+        let message = self.createMessageContent(booking: booking)
+        
+        self.scheduleSMS(message: message)
+        
         
     }
+    
+    func scheduleSMS(message: String) {
+        let todoEndpoint = "https://api3.hksmspro.com/service/smsapi.asmx/SendSMS?Username=quadrinity&Password=quadrinity&Message=test&Hex=&Telephone=61431739405&UserDefineNo=&Sender=&Subject=&Base64Attachments=&Filename=&MessageAt=0"
+        
+        let escapedURL = todoEndpoint.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
+        
+        
+        guard let url = URL(string: escapedURL!) else {
+            print("Error: cannot create URL")
+            return
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        // make the request
+        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+            // do stuff with response, data & error here
+            print(error as Any)
+            print(response as Any)
+            
+//            let xmlParser = XMLParser()
+            
+            
+        })
+        task.resume()
+    }
+    
+    func createMessageContent(booking: Booking) -> String {
+        
+        let bookingTime = booking.dateTime
+        let doctorName = booking.doctor
+        let clinicAddress = booking.clinic_add
+        let clinicPhone = booking.clinic_ph
+        
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-mm-dd HH:mm"
+        
+        let message = "你好! 我們是ASA物理治療中心。你的預約詳情如下：預約時間：\(dateFormater.string(from: bookingTime! as Date)) 醫生：\(doctorName ?? "") 診所地址：\(clinicAddress ?? "") 如想更改預約時間或有任何查詢，請電：\(String(describing: clinicPhone!))."
+        
+        
+        NSLog("\(message)")
+        return message
+    }
+    
     
     func updateSMSReminder() {
         

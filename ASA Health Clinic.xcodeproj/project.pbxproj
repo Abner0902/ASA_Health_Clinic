@@ -240,6 +240,7 @@
 				C67BFF681EDE65FE002D680D /* Resources */,
 				51BFE5E864571C56EE5AA010 /* [CP] Embed Pods Frameworks */,
 				A147D8DE6D896A7E896B772B /* [CP] Copy Pods Resources */,
+				C67BC5151F2B04AE00B45CC6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -344,6 +345,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASA Health Clinic/Pods-ASA Health Clinic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C67BC5151F2B04AE00B45CC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

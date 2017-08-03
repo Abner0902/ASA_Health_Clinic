@@ -6,6 +6,7 @@ target 'ASA Health Clinic' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Eureka'
+  pod "HockeySDK"
   # Pods for ASA Health Clinic
 
 end

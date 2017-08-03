@@ -56,9 +56,9 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     //helper method for search bar
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         filteredPatients = patients.filter { patient in
-            return (patient.name?.lowercased().contains(searchText))!
+            
+            return (patient.name?.lowercased().contains(searchText.lowercased()))!
         }
-        
         tableView.reloadData()
     }
 
@@ -105,6 +105,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive && searchController.searchBar.text != "" {
+            
             return filteredPatients.count
         } else {
             let sectionInfo = fetchedResultsController.sections![section]

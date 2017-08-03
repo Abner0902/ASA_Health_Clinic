@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import HockeySDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -29,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         controller.managedObjectContext = self.persistentContainer.viewContext
         
         FirebaseApp.configure()
+        BITHockeyManager.shared().configure(withIdentifier: "6eb81873168e4bd8b663d60546ab0541")
+        // Do some additional configuration if needed here
+        BITHockeyManager.shared().start()
+        BITHockeyManager.shared().authenticator.authenticateInstallation()
+        BITHockeyManager.shared().testIdentifier()
         return true
     }
 
