@@ -93,6 +93,20 @@ class UpdateBookingDetailViewController: FormViewController {
             
             <<< ButtonRow() {
                 
+                $0.title = "Cancel"
+                $0.tag = "cancel"
+                
+                } .onCellSelection() { cell, row in
+                    self.dismiss(animated: true) { () -> Void in
+                        NSLog("Cancel clicked")
+                    }
+        }
+
+        
+        form +++ Section()
+            
+            <<< ButtonRow() {
+                
                 $0.title = "Done"
                 $0.tag = "done"
                 
@@ -148,8 +162,7 @@ class UpdateBookingDetailViewController: FormViewController {
     }
     
     func fetchClinics() -> [Clinic]{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = ManagedContext().getManagedObject()
         
         let clinicFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Clinic")
         let sortDescriptor = NSSortDescriptor(key: "address", ascending: true)
@@ -168,8 +181,7 @@ class UpdateBookingDetailViewController: FormViewController {
     }
     
     func fetchDoctors(selectedClinic: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = ManagedContext().getManagedObject()
         
         let doctorFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Doctor")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)

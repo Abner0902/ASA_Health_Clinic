@@ -40,10 +40,10 @@ class ProfileMasterViewController: UITableViewController, NSFetchedResultsContro
 
     func insertNewObject(_ sender: Any) {
         let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newEvent.timestamp = NSDate()
+//        let newEvent = Event(context: context)
+//             
+//        // If appropriate, configure the new managed object.
+//        newEvent.timestamp = NSDate()
 
         // Save the context.
         do {

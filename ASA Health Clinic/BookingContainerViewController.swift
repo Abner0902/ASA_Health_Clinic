@@ -8,22 +8,25 @@
 
 import UIKit
 import CoreData
+import Eureka
 
-class BookingContainerViewController: UIViewController, UITableViewDelegate ,UITableViewDataSource, AddBookingDelegate, UpdateBookingDelegate {
+class BookingContainerViewController: UIViewController, UITableViewDelegate ,UITableViewDataSource, AddBookingDelegate, UpdateBookingDelegate, SetFilterDelegate {
     
     @IBOutlet weak var addBookingButton: UIButton!
     
     var appDelegate: AppDelegate!
     var managedObjectContext: NSManagedObjectContext
     var bookings: NSMutableArray
+    var filteredBookings = [Booking]()
+    var fileterActive = false
+    var filterOption = 2
+    //let btnFilter = UIButton(type: .system)
     
     @IBOutlet weak var bookingTableView: UITableView!
     
     //initializer
     required init?(coder aDecoder: NSCoder) {
-        
-        appDelegate = UIApplication.shared.delegate as! AppDelegate
-        managedObjectContext = appDelegate.persistentContainer.viewContext
+        managedObjectContext = ManagedContext().getManagedObject()
         bookings = NSMutableArray()
         super.init(coder: aDecoder)
     }
@@ -31,13 +34,36 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        managedObjectContext = appDelegate.persistentContainer.viewContext
+        managedObjectContext = ManagedContext().getManagedObject()
         // Do any additional setup after loading the view.
+        
+        self.loadFilterForm()
         
         bookingTableView.tableFooterView = UIView()
         bookingTableView.dataSource = self
         bookingTableView.delegate = self
     }
+    
+    func loadFilterForm() {
+        
+//        
+//        btnFilter.frame =  CGRect(x: 6, y: 0, width: 100, height: 30)
+//        //btnFilter.tintColor = UIColor.black
+//        btnFilter.setImage(UIImage(named:"filter.png"), for: .normal)
+//        btnFilter.imageEdgeInsets = UIEdgeInsets(top: 3,left: 60,bottom: 2,right: 10)
+//        btnFilter.titleEdgeInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 80)
+//        btnFilter.setTitle("Filter", for: .normal)
+//
+//        //btnFilter.layer.borderWidth = 1.0
+//        //btnFilter.backgroundColor = UIColor.red //--> set the background color and check
+//        //btnFilter.layer.borderColor = UIColor.white.cgColor
+//        btnFilter.addTarget(self, action: #selector(BookingContainerViewController.showFilterOptions), for: UIControlEvents.touchUpInside)
+//        self.view.addSubview(btnFilter)
+    }
+//    
+//    func showFilterOptions() {
+//        
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -47,10 +73,13 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
             //sort the array
             let sortDescriptor = NSSortDescriptor (key: "dateTime" , ascending: true)
             bookings.sort(using: [sortDescriptor])
+            filteredBookings = filteredBookings.sorted(by: { $0.dateTime! as Date > $1.dateTime! as Date})
             //enable the add button
             addBookingButton.isEnabled = true
+            //btnFilter.isEnabled = true
         } else {
             addBookingButton.isEnabled = false
+            //btnFilter.isEnabled = false
         }
     }
 
@@ -148,6 +177,15 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
                 destinationVC.selectedRow = indexPath
             }
             
+        }else if segue.identifier == "filterPopoverSegue" {
+            let destinationVC: FilterViewController = segue.destination as! FilterViewController
+            
+            if let popoverPresentationController = segue.destination.popoverPresentationController, let sourceView = sender as? UIView {
+                popoverPresentationController.sourceRect = sourceView.bounds
+            }
+            
+            destinationVC.delegate = self
+            destinationVC.option = self.filterOption
         }
     }
     
@@ -158,10 +196,14 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+        if fileterActive {
+            return filteredBookings.count
+        }
+        
         if detailItem == nil {
-                return 0
+            return 0
         } else {
+        
             if detailItem?.has?.count != 0 {
                     
                 return (detailItem?.has?.count)!
@@ -174,8 +216,18 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "patientBookingCell", for: indexPath) as! BookingTableViewCell
-        let booking = bookings[indexPath.row]
-        configureCell(cell, withBooking: booking as! Booking)
+        
+        //detect filter selection
+        let booking: Booking
+        if fileterActive {
+            booking = filteredBookings[indexPath.row]
+        } else {
+            booking = bookings[indexPath.row] as! Booking
+        }
+        
+        
+        
+        configureCell(cell, withBooking: booking)
         tableView.rowHeight = 70
         return cell
     }
@@ -225,9 +277,10 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     }
     
     func configureCell(_ cell: BookingTableViewCell, withBooking booking: Booking) {
-        let dateString = (booking.dateTime! as Date).description
-        cell.dateLabel.text = dateString.substring(to: dateString.index(dateString.endIndex, offsetBy: -9))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         
+        cell.dateLabel.text = dateFormatter.string(from: (booking.dateTime! as Date))
         let doctorString = booking.doctor!
         cell.doctorLabel.text = doctorString
         cell.addressLabel.text = booking.clinic_add
@@ -248,12 +301,17 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
         let message = self.createMessageContent(booking: booking)
         
         self.scheduleSMS(message: message)
-        
-        
     }
     
     func scheduleSMS(message: String) {
-        let todoEndpoint = "https://api3.hksmspro.com/service/smsapi.asmx/SendSMS?Username=quadrinity&Password=quadrinity&Message=test&Hex=&Telephone=61431739405&UserDefineNo=&Sender=&Subject=&Base64Attachments=&Filename=&MessageAt=0"
+        let phoneStr = detailItem?.phone
+        var todoEndpoint = ""
+        if phoneStr?.substring(to: (phoneStr?.index((phoneStr?.startIndex)!, offsetBy: 3))!) == "852" {
+            todoEndpoint = "https://api3.hksmspro.com/service/smsapi.asmx/SendSMS?Username=quadrinity&Password=quadrinity&Message=test&Hex=&Telephone=" + "\(detailItem?.phone ?? "")" + "&UserDefineNo=&Sender=&Subject=&Base64Attachments=&Filename=&MessageAt=0"
+        } else {
+            todoEndpoint = "https://api3.hksmspro.com/service/smsapi.asmx/SendSMS?Username=quadrinity&Password=quadrinity&Message=test&Hex=&Telephone=852" + "\(detailItem?.phone ?? "")" + "&UserDefineNo=&Sender=&Subject=&Base64Attachments=&Filename=&MessageAt=0"
+        }
+        
         
         let escapedURL = todoEndpoint.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
         
@@ -264,8 +322,6 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
         }
         
         let urlRequest = URLRequest(url: url)
-        
-        
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         // make the request
@@ -298,10 +354,71 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
         return message
     }
     
-    
     func updateSMSReminder() {
         
     }
+    
+    func setFilter(option: String) {
+        //clear filter
+        fileterActive = true
+        filteredBookings.removeAll()
+        
+        var startDate = Date()
+        var endDate = Date()
+        
+        switch option.lowercased() {
+        case "all":
+            fileterActive = false
+            filterOption = 2
+            break
+        case "today":
+            filterOption = 3
+            break
+        case "one week ago":
+            startDate = Date().addingTimeInterval(-60*60*24*7)
+            filterOption = 0
+            break
+        case "one month ago":
+            startDate = Date().addingTimeInterval(-60*60*24*7*30)
+            filterOption = 1
+            break
+        case "within one week":
+            endDate = Date().addingTimeInterval(60*60*24*7)
+            filterOption = 4
+            break
+        case "within one month":
+            endDate = Date().addingTimeInterval(60*60*24*7*30)
+            filterOption = 5
+            break
+        default:
+            break
+        }
+        
+        if fileterActive {
+             addDataToFileredBooking(startDate: startDate, endDate: endDate)
+        }
+        
+        bookingTableView.reloadData()
+    }
+    
+    func addDataToFileredBooking(startDate: Date, endDate: Date) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        for booking in bookings {
+            let bookingDate = ((booking as! Booking).dateTime)! as Date
+            
+            if Calendar.current.isDateInToday(startDate) && Calendar.current.isDateInToday(endDate) && dateFormatter.string(from: bookingDate) == dateFormatter.string(from: startDate) {
+                //the booking date is today
+                filteredBookings.append(booking as! Booking)
+            } else if(bookingDate >= startDate && bookingDate <= endDate) {
+                //the booking date is in the specific time period
+                filteredBookings.append(booking as! Booking)
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

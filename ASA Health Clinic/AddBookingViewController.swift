@@ -49,9 +49,24 @@ class AddBookingViewController: FormViewController{
             $0.title = "Booking Date"
             $0.tag = "Booking Date"
             $0.minimumDate = Date()
-            $0.value = Date().addingTimeInterval(60*60*24)
+            $0.minuteInterval = 15
+            $0.value = Date()
             $0.dateFormatter?.dateFormat = "dd/MM/yyyy HH:mm"
         }
+        
+        form +++ Section()
+        
+        <<< ButtonRow() {
+                
+            $0.title = "Cancel"
+            $0.tag = "cancel"
+            
+            } .onCellSelection() { cell, row in
+                self.dismiss(animated: true) { () -> Void in
+                    NSLog("Cancel clicked")
+                }
+        }
+
         
         form +++ Section()
             
@@ -82,8 +97,6 @@ class AddBookingViewController: FormViewController{
             } else {
                 alert.showAlert(msg: "Field Required!", view: self)
             }
-            
-            
         }
     }
 
@@ -114,8 +127,7 @@ class AddBookingViewController: FormViewController{
     }
 
     func fetchClinics() -> [Clinic]{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = ManagedContext().getManagedObject()
 
         let clinicFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Clinic")
         let sortDescriptor = NSSortDescriptor(key: "address", ascending: true)
@@ -134,8 +146,7 @@ class AddBookingViewController: FormViewController{
     }
     
     func fetchDoctors(selectedClinic: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = ManagedContext().getManagedObject()
         
         let doctorFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Doctor")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)

@@ -296,8 +296,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     }
     
     func setupClinicAndDoctorTable() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        let context = ManagedContext().getManagedObject()
         let clinic1 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
         
         clinic1?.address = "Room 1402, Chuang’s Tower, 30-32 Connaught Road, Central, Hong Kong"
