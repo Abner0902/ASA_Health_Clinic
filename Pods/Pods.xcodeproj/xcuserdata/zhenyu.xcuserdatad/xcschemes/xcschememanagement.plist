@@ -14,12 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>HockeySDK-HockeySDKResources.xcscheme</key>
+		<key>Pods-ASA Health Clinic.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ASA Health Clinic.xcscheme</key>
+		<key>SearchTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>35AC48C67309DB4C783BB23450BC59DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>675A114988AE198732ED4AD726408964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD5EF43577560554A0B577D7E01EF22F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB9AD825427F216B54E693242E671FA1</key>
+		<key>86D618A0DCBB05018D86EDD65A44859D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

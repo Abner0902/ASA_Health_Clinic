@@ -14,14 +14,12 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
-  - HockeySDK (4.1.5):
-    - HockeySDK/DefaultLib (= 4.1.5)
-  - HockeySDK/DefaultLib (4.1.5)
+  - SearchTextField (1.1.2)
 
 DEPENDENCIES:
   - Eureka
   - Firebase/Core
-  - HockeySDK
+  - SearchTextField
 
 SPEC CHECKSUMS:
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
@@ -30,8 +28,8 @@ SPEC CHECKSUMS:
   FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  HockeySDK: 606b537bbfbe454ee440e92cc93bc634b3c77151
+  SearchTextField: 98d9d9577ab9cbf0a306e300911224d28c4c43f5
 
-PODFILE CHECKSUM: a7825ff7d3f335b5d49003c6a85b60a241bac3fa
+PODFILE CHECKSUM: ced4878ce905cc35454e749828e384cee908509c
 
 COCOAPODS: 1.2.1

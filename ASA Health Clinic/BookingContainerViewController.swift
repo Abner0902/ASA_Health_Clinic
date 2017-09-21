@@ -225,8 +225,6 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
             booking = bookings[indexPath.row] as! Booking
         }
         
-        
-        
         configureCell(cell, withBooking: booking)
         tableView.rowHeight = 70
         return cell

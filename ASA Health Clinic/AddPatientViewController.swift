@@ -17,7 +17,7 @@ class AddPatientViewController: FormViewController {
     
     var delegate: AddPatientDelegate?
     
-    var currentPatient: Patient?
+    var patientName: String?
     
     //gesture for tapping on background
     //var tapBGGesture: UITapGestureRecognizer!
@@ -33,6 +33,11 @@ class AddPatientViewController: FormViewController {
                 row.title = "Patient Name"
                 row.placeholder = "Enter name here"
                 row.tag = "name"
+                
+                if patientName != nil {
+                    row.value = patientName!
+                    row.disabled = true
+                }
                 //add validation rules
                 row.add(rule: RuleRequired())
                 row.validationOptions = .validatesOnChange
