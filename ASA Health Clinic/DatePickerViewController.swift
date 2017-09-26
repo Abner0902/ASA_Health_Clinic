@@ -17,10 +17,16 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var delegate: SetDateDelegate?
+    var dateStr: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let date = dateFormatter.date(from: dateStr)
+        
+        datePicker.date = date!
         datePicker.addTarget(self, action: #selector(DatePickerViewController.datePickerChanged(_:)), for: .valueChanged)
 
         // Do any additional setup after loading the view.

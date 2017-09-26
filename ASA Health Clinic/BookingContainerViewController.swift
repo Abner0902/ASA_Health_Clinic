@@ -75,7 +75,7 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
             bookings.sort(using: [sortDescriptor])
             filteredBookings = filteredBookings.sorted(by: { $0.dateTime! as Date > $1.dateTime! as Date})
             //enable the add button
-            addBookingButton.isEnabled = true
+            addBookingButton.isEnabled = false
             //btnFilter.isEnabled = true
         } else {
             addBookingButton.isEnabled = false
@@ -165,19 +165,20 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     // Mark: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addBookingSegue" {
-                
-            let destinationVC: AddBookingViewController = segue.destination as! AddBookingViewController
-            destinationVC.delegate = self
-        } else if segue.identifier == "editBookingSegue" {
-            let destinationVC: UpdateBookingDetailViewController = segue.destination as! UpdateBookingDetailViewController
-            destinationVC.delegate = self
-            if let indexPath = bookingTableView.indexPathForSelectedRow {
-                destinationVC.currentBooking = bookings.object(at: indexPath.row) as? Booking
-                destinationVC.selectedRow = indexPath
-            }
-            
-        }else if segue.identifier == "filterPopoverSegue" {
+//        if segue.identifier == "addBookingSegue" {
+//                
+//            let destinationVC: AddBookingViewController = segue.destination as! AddBookingViewController
+//            destinationVC.delegate = self
+//        } else if segue.identifier == "editBookingSegue" {
+//            let destinationVC: UpdateBookingDetailViewController = segue.destination as! UpdateBookingDetailViewController
+//            destinationVC.delegate = self
+//            if let indexPath = bookingTableView.indexPathForSelectedRow {
+//                destinationVC.currentBooking = bookings.object(at: indexPath.row) as? Booking
+//                destinationVC.selectedRow = indexPath
+//            }
+//            
+//        }else 
+        if segue.identifier == "filterPopoverSegue" {
             let destinationVC: FilterViewController = segue.destination as! FilterViewController
             
             if let popoverPresentationController = segue.destination.popoverPresentationController, let sourceView = sender as? UIView {
@@ -232,6 +233,7 @@ class BookingContainerViewController: UIViewController, UITableViewDelegate ,UIT
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
+        //return false
         return true
     }
     

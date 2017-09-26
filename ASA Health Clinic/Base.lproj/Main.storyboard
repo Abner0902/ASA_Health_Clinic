@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eHc-dz-ud6">
-                                <rect key="frame" x="256" y="72" width="191" height="29"/>
+                                <rect key="frame" x="256.5" y="72" width="191" height="29"/>
                                 <segments>
                                     <segment title="Patient Detail"/>
                                     <segment title="Bookings"/>
@@ -50,13 +50,13 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuI-hy-tq2">
-                                <rect key="frame" x="0.0" y="108" width="702.5" height="660"/>
+                                <rect key="frame" x="0.0" y="108" width="703" height="660"/>
                                 <connections>
                                     <segue destination="z2w-lg-EUJ" kind="embed" identifier="patientDetailSegue" id="pxg-dD-hLe"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN6-cn-cfY">
-                                <rect key="frame" x="0.0" y="108" width="702.5" height="660"/>
+                                <rect key="frame" x="0.0" y="108" width="703" height="660"/>
                                 <connections>
                                     <segue destination="M58-Qq-UWa" kind="embed" identifier="patientBookingSegue" id="Cgj-z0-7d1"/>
                                 </connections>
@@ -466,7 +466,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="b97-hy-dfb">
-                                <rect key="frame" x="20" y="375.5" width="662.5" height="17"/>
+                                <rect key="frame" x="20" y="375.5" width="663" height="17"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -575,7 +575,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0sK-j5-PhP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eND-CN-Jj1">
-                        <rect key="frame" x="0.0" y="0.0" width="702.5" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Patient Detail goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-OF-DJg">
@@ -627,7 +627,7 @@
                         <viewControllerLayoutGuide type="bottom" id="p3e-Ow-q8e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1mH-U5-qaz">
-                        <rect key="frame" x="0.0" y="0.0" width="702.5" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXS-H1-h6x">
@@ -766,7 +766,6 @@
                                             <outlet property="addressLabel" destination="7g4-vp-v2E" id="Rce-Fn-WPv"/>
                                             <outlet property="dateLabel" destination="QZc-qx-KyK" id="TZZ-0P-VED"/>
                                             <outlet property="doctorLabel" destination="glp-QG-ztI" id="0sn-iG-4hZ"/>
-                                            <segue destination="c8d-gg-sB7" kind="presentation" identifier="editBookingSegue" id="pA8-cy-p2L"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

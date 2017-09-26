@@ -55,4 +55,16 @@ class PatientManager: NSObject {
         
         return [Patient]()
     }
+    
+    func getPatientByName(name: String) -> Patient{
+        let patients = getAllPatient()
+        
+        for patient in patients {
+            if patient.name == name {
+                return patient
+            }
+        }
+        
+        return Patient()
+    }
 }

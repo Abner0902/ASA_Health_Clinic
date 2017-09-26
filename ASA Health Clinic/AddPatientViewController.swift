@@ -13,9 +13,15 @@ protocol AddPatientDelegate {
     func addPatient(name: String, phone: String)
 }
 
+protocol CancelAddPatientDelegate {
+    func cleatText()
+}
+
+
 class AddPatientViewController: FormViewController {
     
     var delegate: AddPatientDelegate?
+    var cancelDelegate: CancelAddPatientDelegate?
     
     var patientName: String?
     
@@ -73,6 +79,7 @@ class AddPatientViewController: FormViewController {
             } .onCellSelection() { cell, row in
                     self.dismiss(animated: true) { () -> Void in
                             NSLog("Cancel clicked")
+                        self.cancelDelegate?.cleatText()
                     }
             }
 

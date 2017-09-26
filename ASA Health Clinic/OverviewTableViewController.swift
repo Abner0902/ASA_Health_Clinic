@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import SearchTextField
 
-class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDoctorDelegate, UITextFieldDelegate, AddPatientDelegate {
+class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDoctorDelegate, UITextFieldDelegate, AddPatientDelegate, CancelAddPatientDelegate {
     
     var timeSlots = [String]()
     
@@ -28,6 +28,10 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
     var patientToAdd: String?
     
     var currentTextField: UITextField = UITextField()
+    
+    let bookingManager: BookingManager = BookingManager()
+    
+    var clinics = [Clinic]()
 
     @IBOutlet var overviewTable: UITableView!
     override func viewDidLoad() {
@@ -44,6 +48,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         self.setDoctor()
         
         self.loadPatient()
+        clinics = bookingManager.getAllClinics()
         
         
         self.overviewTable.contentInset = UIEdgeInsetsMake(0, 0, 120, 0)
@@ -54,16 +59,15 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        patients.removeAll()
-//        self.loadPatient()
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd/MM/yyyy"
 //        
-//        for textField in self.view.subviews where textField is UITextField {
-//            textField.resignFirstResponder()
-//            textField.endEditing(true)
-//        }
-//        
-//    }
+//        dateStr = dateFormatter.string(from: Date())
+
+        
+    }
     
     func loadTimeSlots() {
         let dateFormatter = DateFormatter()
@@ -87,7 +91,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         for patient in patientManager.getAllPatient() {
 
             patients.append(patient.name!)
-
+            
         }
     }
     
@@ -117,6 +121,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
         print("TextField should begin editing method called")
+        
         return true;
     }
     
@@ -130,25 +135,98 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         print("TextField should end editing method called")
         textField.resignFirstResponder()
         
+        
+        
         //add patient if the name is not in patient list
         //call add patient form
+        
         let bookingName = textField.text
         
-        if !checkPatientName(name: bookingName!) && bookingName != nil && bookingName?.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
-            
-            //show add patient form
-            patientToAdd = bookingName
-            performSegue(withIdentifier: "addPatientSegueForOverview", sender: self)
-            
-            
-            //add booking after adding the patient
-        } else if checkPatientName(name: bookingName!) {
-            //add booking for exist patient
-            
+        var row = (Double)(currentTextField.tag) / 10
+        row.round()
+        let time = timeSlots[Int(row)]
+        
+        let slot = (currentTextField.tag) % 10
+        
+        let status: Bool
+        
+        if slot == 1 {
+            status = false
+        } else {
+            status = true
         }
         
-        return true;
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+        if bookingManager.checkBookingIsAvailable(clinic: clinics[0], doctor: doctorStr!, date: dateStr!, time: time, slot: status) {
+            if bookingName != nil && bookingName?.trimmingCharacters(in: .whitespacesAndNewlines) != ""  {
+                if !checkPatientName(name: bookingName!) {
+                    //show add patient form
+                    patientToAdd = bookingName
+                    performSegue(withIdentifier: "addPatientSegueForOverview", sender: self)
+                } else {
+                    var status = false
+                    if slot == 2 {
+                        status = true
+                    } else {
+                        status = false
+                    }
+                    bookingManager.addBooking(doctor: doctorStr!, clinic: clinics[0].address!, date: dateformatter.date(from: (dateStr?.appending(" ").appending(time))!)!, clinic_ph: clinics[0].phone!, patient: PatientManager().getPatientByName(name: bookingName!), status: status)
+                    
+                    //the patient can be more than one
+                    NSLog("Add booking executed")
+                }
+            }
+        } else {
+            
+            if bookingName == bookingManager.getBookingNameByTimeSlot(clinic: clinics[0].address!, doctor: doctorStr!, dateStr: dateStr!, timeStr: time, status: status) {
+                textField.resignFirstResponder()
+                
+                return true
+            }
+            
+            //show dialogue to update current one if cancel update than restore the original one
+            NSLog("Booking time slot is not available")
+            
+            let msg = "Do you want to change current booking?"
+            
+            let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+            let yesAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+                NSLog("Alert yes clicked")
+                
+                //remove current one and add new one
+                
+                self.bookingManager.removeBookingByTimeSlot(clinic: self.clinics[0].address!, doctor: self.doctorStr!, dateStr: self.dateStr!, timeStr: time, status: status)
+                
+                if bookingName != nil && bookingName?.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    self.bookingManager.addBooking(doctor: self.doctorStr!, clinic: self.clinics[0].address!, date: dateformatter.date(from: (self.dateStr?.appending(" ").appending(time))!)!, clinic_ph: self.clinics[0].phone!, patient: PatientManager().getPatientByName(name: bookingName!), status: status)
+                }
+                
+                textField.resignFirstResponder()
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+                
+                textField.text = self.bookingManager.getBookingNameByTimeSlot(clinic: self.clinics[0].address!, doctor: self.doctorStr!, dateStr: self.dateStr!, timeStr: time, status: status)
+                
+                textField.resignFirstResponder()
+                
+                self.dismiss(animated: true) { () -> Void in
+                    NSLog("Alert Cancel clicked")
+                    
+                    
+                }
+            }
+            
+            alertController.addAction(yesAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        return true
     }
+    
     
     func checkPatientName(name: String) -> Bool{
         for patient in patients {
@@ -245,20 +323,32 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
             
             cell.bookingOneText.delegate = self
             cell.bookingTwoText.delegate = self
+            
+            cell.bookingOneText.tag = (indexPath.row) * 10 + 1
+            cell.bookingTwoText.tag = (indexPath.row) * 10 + 2
+            
+            //need to pass clinic address to check
             self.loadBooking(cell: cell)
             return cell
         }
     }
     
-    func loadBooking(cell: UITableViewCell) {
-        if doctorSelected && dateSelected {
-            
-        } else if doctorSelected && !dateSelected{
-            
-        } else if !doctorSelected && dateSelected {
-            
-        } else {
-            
+    func loadBooking(cell: TimeSlotTableViewCell) {
+        let bookingManager: BookingManager = BookingManager()
+        
+        let bookings = bookingManager.getAllBookings()
+        
+        for booking in bookings {
+            //need to check clinic address
+            if(booking.doctor == doctorStr) {
+                if (bookingManager.getDateFormatter().string(from: booking.dateTime! as Date) == dateStr?.appending(" ").appending(cell.timeLabel.text!)){
+                    if (booking.status == false){
+                        cell.bookingOneText.text = booking.belongsTo?.name
+                    } else {
+                        cell.bookingTwoText.text = booking.belongsTo?.name
+                    }
+                }
+            }
         }
     }
     
@@ -324,6 +414,8 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
             if let button:UIButton = sender as! UIButton? {
                 print(button.tag) //optional
                 destination?.delegate = self
+                
+                destination?.dateStr = self.dateStr
             }
         } else if (segue.identifier == "selectDoctorSegue") {
             let destination = segue .destination as? DoctorPickerViewController
@@ -339,6 +431,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         } else if (segue.identifier == "addPatientSegueForOverview") {
             let destination = segue .destination as? AddPatientViewController
             destination?.delegate = self
+            destination?.cancelDelegate = self
             destination?.patientName = patientToAdd
         }
     }
@@ -351,5 +444,12 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
     func setDoctor(doctor: String) {
         self.doctorStr = doctor
         overviewTable.reloadData()
+    }
+    
+    func cleatText() {
+        DispatchQueue.main.async {
+            self.currentTextField.text = ""
+        }
+        
     }
 }

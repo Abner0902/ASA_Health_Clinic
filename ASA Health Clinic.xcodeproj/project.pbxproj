@@ -715,6 +715,7 @@
 				C6EA472C1F6F9515002E6D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

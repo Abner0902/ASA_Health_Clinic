@@ -17,6 +17,7 @@ protocol AddBookingDelegate {
 class AddBookingViewController: FormViewController{
     
     var delegate: AddBookingDelegate?
+    
     var clinics: [Clinic] = []
     var filteredDoctors: [Doctor] = []
     
@@ -30,7 +31,7 @@ class AddBookingViewController: FormViewController{
             
         +++ SelectableSection<ListCheckRow<String>>("Clinic", selectionType: .singleSelection(enableDeselection: true))
     
-        clinics = fetchClinics()
+        clinics = BookingManager().getAllClinics()
         for option in clinics {
             form.last! <<< ListCheckRow<String>(option.address){ listRow in
                 listRow.title = option.address
@@ -64,6 +65,7 @@ class AddBookingViewController: FormViewController{
             } .onCellSelection() { cell, row in
                 self.dismiss(animated: true) { () -> Void in
                     NSLog("Cancel clicked")
+                    
                 }
         }
 
@@ -126,25 +128,6 @@ class AddBookingViewController: FormViewController{
         }
     }
 
-    func fetchClinics() -> [Clinic]{
-        let context = ManagedContext().getManagedObject()
-
-        let clinicFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Clinic")
-        let sortDescriptor = NSSortDescriptor(key: "address", ascending: true)
-        
-        clinicFetch.sortDescriptors = [sortDescriptor]
-
-        do {
-            let fetchedResults = try context.fetch(clinicFetch) as? [NSManagedObject]
-            if let results = fetchedResults {
-                return results as! [Clinic]
-            }
-        } catch {
-            print(error)
-        }
-        return []
-    }
-    
     func fetchDoctors(selectedClinic: Any) {
         let context = ManagedContext().getManagedObject()
         
