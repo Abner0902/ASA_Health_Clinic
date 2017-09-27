@@ -37,6 +37,10 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        appFirstLaunchSetup()
+        //dismiss keyboard
+        self.hideKeyboardWhenTappedAround()
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         
@@ -48,6 +52,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         self.setDoctor()
         
         self.loadPatient()
+        NSLog("Patient count: \(patients.count)")
         clinics = bookingManager.getAllClinics()
         
         
@@ -65,8 +70,8 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
 //        dateFormatter.dateFormat = "dd/MM/yyyy"
 //        
 //        dateStr = dateFormatter.string(from: Date())
-
-        
+        patients.removeAll()
+        self.loadPatient()
     }
     
     func loadTimeSlots() {
@@ -172,7 +177,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
                     } else {
                         status = false
                     }
-                    bookingManager.addBooking(doctor: doctorStr!, clinic: clinics[0].address!, date: dateformatter.date(from: (dateStr?.appending(" ").appending(time))!)!, clinic_ph: clinics[0].phone!, patient: PatientManager().getPatientByName(name: bookingName!), status: status)
+                    bookingManager.addBooking(doctor: doctorStr!, clinic: clinics[0].address!, date: dateformatter.date(from: (dateStr?.appending(" ").appending(time))!)!, clinic_ph: clinics[0].phone!, patient: PatientManager().getPatientByName(name: bookingName!)!, status: status)
                     
                     //the patient can be more than one
                     NSLog("Add booking executed")
@@ -200,7 +205,7 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
                 self.bookingManager.removeBookingByTimeSlot(clinic: self.clinics[0].address!, doctor: self.doctorStr!, dateStr: self.dateStr!, timeStr: time, status: status)
                 
                 if bookingName != nil && bookingName?.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
-                    self.bookingManager.addBooking(doctor: self.doctorStr!, clinic: self.clinics[0].address!, date: dateformatter.date(from: (self.dateStr?.appending(" ").appending(time))!)!, clinic_ph: self.clinics[0].phone!, patient: PatientManager().getPatientByName(name: bookingName!), status: status)
+                    self.bookingManager.addBooking(doctor: self.doctorStr!, clinic: self.clinics[0].address!, date: dateformatter.date(from: (self.dateStr?.appending(" ").appending(time))!)!, clinic_ph: self.clinics[0].phone!, patient: PatientManager().getPatientByName(name: bookingName!)!, status: status)
                 }
                 
                 textField.resignFirstResponder()
@@ -334,6 +339,8 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
     }
     
     func loadBooking(cell: TimeSlotTableViewCell) {
+        cell.bookingOneText.text = ""
+        cell.bookingTwoText.text = ""
         let bookingManager: BookingManager = BookingManager()
         
         let bookings = bookingManager.getAllBookings()
@@ -446,10 +453,79 @@ class OverviewTableViewController: UITableViewController, SetDateDelegate, SetDo
         overviewTable.reloadData()
     }
     
-    func cleatText() {
+    func clearText() {
         DispatchQueue.main.async {
             self.currentTextField.text = ""
         }
         
+    }
+    
+    func appFirstLaunchSetup() {
+        let defaults = UserDefaults.standard
+        
+        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+            NSLog("App already launched : \(isAppAlreadyLaunchedOnce)")
+        }else{
+            //app launch first time
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            
+            setupClinicAndDoctorTable()
+        }
+    }
+    
+    func setupClinicAndDoctorTable() {
+        let context = ManagedContext().getManagedObject()
+        let clinic1 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+        
+        clinic1?.address = "Room 1402, Chuang’s Tower, 30-32 Connaught Road, Central, Hong Kong"
+        clinic1?.phone = "85228269261"
+        
+        //        let clinic2 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+        //
+        //        clinic2?.address = "Clinic2"
+        //        clinic2?.phone = "0431739405"
+        //
+        //        let clinic3 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+        //
+        //        clinic3?.address = "Clinic3"
+        //        clinic3?.phone = "0431739405"
+        
+        let doctor1 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+        
+        doctor1?.name = "Andy Kwok"
+        
+        let doctor2 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+        
+        doctor2?.name = "Stephen Wong"
+        
+        //        let doctor3 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+        //
+        //        doctor3?.name = "Doctor3"
+        
+        clinic1?.addDoctor(doctor1!)
+        clinic1?.addDoctor(doctor2!)
+        //        clinic3?.addDoctor(doctor3!)
+        
+        //Save the ManagedObjectContext
+        do {
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        
+    }
+
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

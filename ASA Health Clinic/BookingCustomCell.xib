@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Custom"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customBookingCell" id="Jay-51-tT6" customClass="CustomCell" customModule="ASA_Health_Clinic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="531" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jay-51-tT6" id="dk2-mC-cK4">
+                <rect key="frame" x="0.0" y="0.0" width="531" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9s-Ri-xNQ">
+                        <rect key="frame" x="8" y="5" width="346" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqZ-ai-OyE">
+                        <rect key="frame" x="467" y="6" width="56" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-P9-gwn">
+                        <rect key="frame" x="415" y="6" width="56" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="6NK-NH-9BA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-V7-hO9">
+                        <rect key="frame" x="373" y="6" width="56" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="vV9-BG-4X4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJZ-nj-oYQ">
+                        <rect key="frame" x="313" y="6" width="52" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="m3M-PN-jam"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ofc-V7-hO9" firstAttribute="baseline" secondItem="Xpb-P9-gwn" secondAttribute="baseline" id="0CP-pD-4kz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xpb-P9-gwn" secondAttribute="trailing" constant="52" id="73G-Qb-lOK"/>
+                    <constraint firstItem="Xpb-P9-gwn" firstAttribute="top" secondItem="kqZ-ai-OyE" secondAttribute="top" id="BOY-MR-hra"/>
+                    <constraint firstItem="kqZ-ai-OyE" firstAttribute="leading" secondItem="ofc-V7-hO9" secondAttribute="trailing" constant="38" id="EXj-ve-aap"/>
+                    <constraint firstItem="gJZ-nj-oYQ" firstAttribute="baseline" secondItem="ofc-V7-hO9" secondAttribute="baseline" id="Gn6-mc-kqK"/>
+                    <constraint firstItem="C9s-Ri-xNQ" firstAttribute="top" secondItem="dk2-mC-cK4" secondAttribute="topMargin" constant="-3" id="ItP-mr-LvN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="C9s-Ri-xNQ" secondAttribute="bottom" constant="2.5" id="T9B-dn-edE"/>
+                    <constraint firstItem="ofc-V7-hO9" firstAttribute="leading" secondItem="C9s-Ri-xNQ" secondAttribute="trailing" constant="19" id="TSs-5g-xo8"/>
+                    <constraint firstItem="ofc-V7-hO9" firstAttribute="firstBaseline" secondItem="Xpb-P9-gwn" secondAttribute="firstBaseline" id="VYO-4B-OCk"/>
+                    <constraint firstItem="Xpb-P9-gwn" firstAttribute="leading" secondItem="gJZ-nj-oYQ" secondAttribute="trailing" constant="50" id="XYz-DT-Fw2"/>
+                    <constraint firstItem="ofc-V7-hO9" firstAttribute="leading" secondItem="gJZ-nj-oYQ" secondAttribute="trailing" constant="8" symbolic="YES" id="YaX-oY-o1R"/>
+                    <constraint firstItem="C9s-Ri-xNQ" firstAttribute="leading" secondItem="dk2-mC-cK4" secondAttribute="leadingMargin" id="dFY-mK-t4h"/>
+                    <constraint firstItem="gJZ-nj-oYQ" firstAttribute="baseline" secondItem="Xpb-P9-gwn" secondAttribute="baseline" id="god-JK-61v"/>
+                    <constraint firstItem="gJZ-nj-oYQ" firstAttribute="firstBaseline" secondItem="Xpb-P9-gwn" secondAttribute="firstBaseline" id="k0b-vs-E2B"/>
+                    <constraint firstItem="ofc-V7-hO9" firstAttribute="top" secondItem="Xpb-P9-gwn" secondAttribute="top" id="nhP-mv-cMr"/>
+                    <constraint firstItem="gJZ-nj-oYQ" firstAttribute="firstBaseline" secondItem="ofc-V7-hO9" secondAttribute="firstBaseline" id="pmD-kb-niK"/>
+                    <constraint firstItem="gJZ-nj-oYQ" firstAttribute="top" secondItem="ofc-V7-hO9" secondAttribute="top" id="vHg-qO-EFE"/>
+                    <constraint firstItem="kqZ-ai-OyE" firstAttribute="trailing" secondItem="dk2-mC-cK4" secondAttribute="trailingMargin" id="vcr-5H-P4o"/>
+                    <constraint firstItem="gJZ-nj-oYQ" firstAttribute="centerY" secondItem="dk2-mC-cK4" secondAttribute="centerY" id="y7H-nq-R6a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bookingDateButton" destination="C9s-Ri-xNQ" id="jTm-eG-rEy"/>
+                <outlet property="cancelButton" destination="gJZ-nj-oYQ" id="xIO-tZ-Aht"/>
+                <outlet property="choiceOne" destination="Xpb-P9-gwn" id="dM4-mz-Kze"/>
+                <outlet property="choiceTwo" destination="ofc-V7-hO9" id="z1y-vK-g5O"/>
+                <outlet property="statusButton" destination="kqZ-ai-OyE" id="wgk-2G-Wbg"/>
+            </connections>
+            <point key="canvasLocation" x="68.5" y="-16"/>
+        </tableViewCell>
+    </objects>
+</document>

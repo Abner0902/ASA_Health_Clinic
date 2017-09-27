@@ -14,7 +14,7 @@ protocol AddPatientDelegate {
 }
 
 protocol CancelAddPatientDelegate {
-    func cleatText()
+    func clearText()
 }
 
 
@@ -79,7 +79,7 @@ class AddPatientViewController: FormViewController {
             } .onCellSelection() { cell, row in
                     self.dismiss(animated: true) { () -> Void in
                             NSLog("Cancel clicked")
-                        self.cancelDelegate?.cleatText()
+                        self.cancelDelegate?.clearText()
                     }
             }
 
@@ -95,10 +95,15 @@ class AddPatientViewController: FormViewController {
                 let phoneValue = self.form.rowBy(tag: "phone")?.baseValue
                 if ((nameValue != nil) && (phoneValue != nil) ) {
                     
-                    self.dismiss(animated: true) { () -> Void in
-                        NSLog("Done clicked")
+                    if PatientManager().isSamePatient(name: nameValue as! String, phone: phoneValue as! String) {
+                        Alert().showAlert(msg: "Patient already exists", view: self)
+                    } else {
+                    
+                        self.dismiss(animated: true) { () -> Void in
+                            NSLog("Done clicked")
                         
-                        self.delegate!.addPatient(name: nameValue as! String, phone: phoneValue as! String)
+                            self.delegate!.addPatient(name: nameValue as! String, phone: phoneValue as! String)
+                        }
                     }
                 } else {
                     Alert().showAlert(msg: "Field Required", view: self)

@@ -29,6 +29,8 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        managedObjectContext = ManagedContext().getManagedObject()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
 
@@ -50,7 +52,16 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
-        appFirstLaunchSetup()
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        if patients.count != 0 {
+            self.patientTableView.selectRow(at: indexPath, animated: false, scrollPosition: UITableViewScrollPosition.none)
+            self.tableView(self.patientTableView, didSelectRowAt: indexPath)
+        }
+        
+        //appFirstLaunchSetup()
+        
+        
     }
     
     //helper method for search bar
@@ -239,20 +250,7 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     // Mark: - Delegate methods
     //Add patient
     func addPatient(name: String, phone: String) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let newPatient = NSEntityDescription.insertNewObject(forEntityName: "Patient", into: context) as? Patient
-        
-        newPatient?.name = name
-        newPatient?.phone = phone
-        
-        //Save the ManagedObjectContext
-        do {
-            addPatientToFireBase(patient: newPatient!)
-            try context.save()
-            
-        } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
-        }
+        PatientManager().addPatient(name: name, phone: phone)
     }
     
     //Firebase
@@ -282,61 +280,61 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         
     }
     
-    func appFirstLaunchSetup() {
-        let defaults = UserDefaults.standard
-            
-        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
-            NSLog("App already launched : \(isAppAlreadyLaunchedOnce)")
-        }else{
-            //app launch first time
-            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
-            
-            setupClinicAndDoctorTable()
-        }
-    }
-    
-    func setupClinicAndDoctorTable() {
-        let context = ManagedContext().getManagedObject()
-        let clinic1 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
-        
-        clinic1?.address = "Room 1402, Chuang’s Tower, 30-32 Connaught Road, Central, Hong Kong"
-        clinic1?.phone = "85228269261"
-        
-//        let clinic2 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+//    func appFirstLaunchSetup() {
+//        let defaults = UserDefaults.standard
+//            
+//        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+//            NSLog("App already launched : \(isAppAlreadyLaunchedOnce)")
+//        }else{
+//            //app launch first time
+//            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+//            
+//            setupClinicAndDoctorTable()
+//        }
+//    }
+//    
+//    func setupClinicAndDoctorTable() {
+//        let context = ManagedContext().getManagedObject()
+//        let clinic1 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
 //        
-//        clinic2?.address = "Clinic2"
-//        clinic2?.phone = "0431739405"
+//        clinic1?.address = "Room 1402, Chuang’s Tower, 30-32 Connaught Road, Central, Hong Kong"
+//        clinic1?.phone = "85228269261"
 //        
-//        let clinic3 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+////        let clinic2 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+////        
+////        clinic2?.address = "Clinic2"
+////        clinic2?.phone = "0431739405"
+////        
+////        let clinic3 = NSEntityDescription.insertNewObject(forEntityName: "Clinic", into: context) as? Clinic
+////        
+////        clinic3?.address = "Clinic3"
+////        clinic3?.phone = "0431739405"
 //        
-//        clinic3?.address = "Clinic3"
-//        clinic3?.phone = "0431739405"
-        
-        let doctor1 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
-        
-        doctor1?.name = "Andy Kwok"
-        
-        let doctor2 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
-        
-        doctor2?.name = "Stephen Wong"
-        
-//        let doctor3 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+//        let doctor1 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
 //        
-//        doctor3?.name = "Doctor3"
-        
-        clinic1?.addDoctor(doctor1!)
-        clinic1?.addDoctor(doctor2!)
-//        clinic3?.addDoctor(doctor3!)
-        
-        //Save the ManagedObjectContext
-        do {
-            try context.save()
-            
-        } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-
-    }
+//        doctor1?.name = "Andy Kwok"
+//        
+//        let doctor2 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+//        
+//        doctor2?.name = "Stephen Wong"
+//        
+////        let doctor3 = NSEntityDescription.insertNewObject(forEntityName: "Doctor", into: context) as? Doctor
+////        
+////        doctor3?.name = "Doctor3"
+//        
+//        clinic1?.addDoctor(doctor1!)
+//        clinic1?.addDoctor(doctor2!)
+////        clinic3?.addDoctor(doctor3!)
+//        
+//        //Save the ManagedObjectContext
+//        do {
+//            try context.save()
+//            
+//        } catch let error as NSError {
+//            print("Could not save \(error), \(error.userInfo)")
+//        }
+//
+//    }
 
     /*
      // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.

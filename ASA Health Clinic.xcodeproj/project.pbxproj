@@ -34,6 +34,8 @@
 		C6AEA64A1EFA04FD008BB781 /* UpdatePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */; };
 		C6AEA64C1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */; };
 		C6AEA64E1EFBA0DE008BB781 /* BookingHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEA64D1EFBA0DE008BB781 /* BookingHeaderCell.swift */; };
+		C6BB25971F7A099400453FEF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB25961F7A099400453FEF /* CustomCell.swift */; };
+		C6BB25991F7A0A3400453FEF /* BookingCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BB25981F7A0A3400453FEF /* BookingCustomCell.xib */; };
 		C6BED7071F45721B00D90019 /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BED7061F45721B00D90019 /* OverviewTableViewController.swift */; };
 		C6BED7091F4576B700D90019 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BED7081F4576B700D90019 /* DateTableViewCell.swift */; };
 		C6BED70B1F4578F900D90019 /* DoctorNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BED70A1F4578F900D90019 /* DoctorNameTableViewCell.swift */; };
@@ -90,6 +92,8 @@
 		C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePatientViewController.swift; sourceTree = "<group>"; };
 		C6AEA64B1EFA2ADC008BB781 /* UpdateBookingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateBookingDetailViewController.swift; sourceTree = "<group>"; };
 		C6AEA64D1EFBA0DE008BB781 /* BookingHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingHeaderCell.swift; sourceTree = "<group>"; };
+		C6BB25961F7A099400453FEF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C6BB25981F7A0A3400453FEF /* BookingCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingCustomCell.xib; sourceTree = "<group>"; };
 		C6BED7061F45721B00D90019 /* OverviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewController.swift; sourceTree = "<group>"; };
 		C6BED7081F4576B700D90019 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		C6BED70A1F4578F900D90019 /* DoctorNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorNameTableViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 				C67BFF741EDE65FE002D680D /* PatientsDetailViewController.swift */,
 				C6C4E10E1EEE620B00B4BA5F /* PatientsMasterTableViewCell.swift */,
 				C6AEA6491EFA04FD008BB781 /* UpdatePatientViewController.swift */,
+				C6BB25961F7A099400453FEF /* CustomCell.swift */,
+				C6BB25981F7A0A3400453FEF /* BookingCustomCell.xib */,
 			);
 			name = Patients;
 			sourceTree = "<group>";
@@ -338,7 +344,7 @@
 					C67BFF691EDE65FE002D680D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = JVG32US5DQ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C6EA47231F6F9514002E6D54 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -373,6 +379,7 @@
 			files = (
 				C67BFF7D1EDE65FE002D680D /* LaunchScreen.storyboard in Resources */,
 				C6C4E1151EEE68A000B4BA5F /* GoogleService-Info.plist in Resources */,
+				C6BB25991F7A0A3400453FEF /* BookingCustomCell.xib in Resources */,
 				C67BFF7A1EDE65FE002D680D /* Assets.xcassets in Resources */,
 				C67BFF781EDE65FE002D680D /* Main.storyboard in Resources */,
 			);
@@ -465,6 +472,7 @@
 				C6BED7091F4576B700D90019 /* DateTableViewCell.swift in Sources */,
 				C654E4EA1EF7A6E800C6C0D4 /* Clinic+CoreDataProperties.swift in Sources */,
 				C628B42E1EF3C21900446AD7 /* AddBookingViewController.swift in Sources */,
+				C6BB25971F7A099400453FEF /* CustomCell.swift in Sources */,
 				C6AEA64A1EFA04FD008BB781 /* UpdatePatientViewController.swift in Sources */,
 				C6749DA51EF8D2CC0052E752 /* Booking+CoreDataClass.swift in Sources */,
 				C654E4F11EF7A94900C6C0D4 /* Doctor+CoreDataClass.swift in Sources */,
@@ -629,15 +637,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = JVG32US5DQ;
 				INFOPLIST_FILE = "ASA Health Clinic/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.quadrinity.ASA-Health-Clinic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4a3ef35b-8d59-416a-b894-f14452dae35a";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;

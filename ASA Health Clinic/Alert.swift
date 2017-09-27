@@ -12,7 +12,7 @@ class Alert: NSObject {
 
     //show alert view
     func showAlert(msg: String, view: UIViewController) {
-        let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Notice", message: msg, preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
             NSLog("Alert ok clicked")
         }

@@ -23,16 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
-
-        let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
-        let controller = masterNavigationController.topViewController as! PatientsMasterViewController
-        if #available(iOS 10.0, *) {
-            controller.managedObjectContext = self.persistentContainer.viewContext
-        } else {
-            controller.managedObjectContext = self.managedObjectContext
-        }
+    
         
-        
+        tabBarController.selectedIndex = 1
         FirebaseApp.configure()
         // Do some additional configuration if needed here
         return true

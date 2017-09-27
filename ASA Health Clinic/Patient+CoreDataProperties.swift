@@ -2,7 +2,7 @@
 //  Patient+CoreDataProperties.swift
 //  ASA Health Clinic
 //
-//  Created by zhenyu on 20/6/17.
+//  Created by zhenyu on 26/9/17.
 //  Copyright © 2017 zhenyu. All rights reserved.
 //
 
@@ -18,6 +18,7 @@ extension Patient {
 
     @NSManaged public var name: String?
     @NSManaged public var phone: String?
+    @NSManaged public var note: String?
     @NSManaged public var has: NSSet?
 
 }

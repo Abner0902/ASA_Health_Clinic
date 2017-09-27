@@ -20,6 +20,7 @@ class PatientManager: NSObject {
         
         newPatient?.name = name
         newPatient?.phone = phone
+        newPatient?.note = ""
         
         //Save the ManagedObjectContext
         do {
@@ -56,7 +57,7 @@ class PatientManager: NSObject {
         return [Patient]()
     }
     
-    func getPatientByName(name: String) -> Patient{
+    func getPatientByName(name: String) -> Patient?{
         let patients = getAllPatient()
         
         for patient in patients {
@@ -65,6 +66,16 @@ class PatientManager: NSObject {
             }
         }
         
-        return Patient()
+        return nil
+    }
+    
+    func isSamePatient(name: String, phone: String) -> Bool{
+        let patient = getPatientByName(name: name)
+        
+        if patient != nil {
+            return true
+        } else {
+            return false
+        }
     }
 }

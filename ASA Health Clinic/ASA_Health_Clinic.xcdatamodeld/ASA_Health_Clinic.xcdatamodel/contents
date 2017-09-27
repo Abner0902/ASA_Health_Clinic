@@ -3,6 +3,7 @@
     <entity name="Booking" representedClassName="Booking" syncable="YES">
         <attribute name="clinic_add" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="clinic_ph" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="complete" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="doctor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sms" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -26,14 +27,15 @@
     </entity>
     <entity name="Patient" representedClassName="Patient" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="has" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Booking" inverseName="belongsTo" inverseEntity="Booking" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Booking" positionX="261" positionY="207" width="128" height="150"/>
+        <element name="Booking" positionX="261" positionY="207" width="128" height="165"/>
         <element name="Clinic" positionX="261" positionY="243" width="128" height="90"/>
         <element name="Doctor" positionX="270" positionY="252" width="128" height="75"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Patient" positionX="261" positionY="198" width="128" height="90"/>
+        <element name="Patient" positionX="261" positionY="198" width="128" height="105"/>
     </elements>
 </model>

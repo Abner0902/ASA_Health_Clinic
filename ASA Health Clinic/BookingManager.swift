@@ -24,6 +24,7 @@ class BookingManager: NSObject {
         newBooking?.clinic_ph = clinic_ph.substring(to: clinic_ph.index(clinic_ph.startIndex, offsetBy: 10))
         newBooking?.status = status
         newBooking?.sms = false
+        newBooking?.complete = "?"
         
         patient.addToHas(newBooking!)
         
@@ -189,7 +190,6 @@ class BookingManager: NSObject {
                 
                 context.delete(booking as NSManagedObject)
             }
-            
         }
         
         do {
@@ -198,5 +198,17 @@ class BookingManager: NSObject {
             NSLog("Delete booking failed")
         }
 
+    }
+    
+    func updateBookingByStatus(status: String, booking: Booking) {
+        let context = managedContext.getManagedObject()
+        
+        booking.setValue(status, forKey: "complete")
+        
+        do {
+            try context.save()
+        } catch {
+            NSLog("update booking failed")
+        }
     }
 }

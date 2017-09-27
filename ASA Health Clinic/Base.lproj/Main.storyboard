@@ -38,51 +38,10 @@
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eHc-dz-ud6">
-                                <rect key="frame" x="256.5" y="72" width="191" height="29"/>
-                                <segments>
-                                    <segment title="Patient Detail"/>
-                                    <segment title="Bookings"/>
-                                </segments>
-                                <connections>
-                                    <action selector="indexSelected:" destination="JEX-9P-axG" eventType="valueChanged" id="EfZ-vn-wdS"/>
-                                </connections>
-                            </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuI-hy-tq2">
-                                <rect key="frame" x="0.0" y="108" width="703" height="660"/>
-                                <connections>
-                                    <segue destination="z2w-lg-EUJ" kind="embed" identifier="patientDetailSegue" id="pxg-dD-hLe"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN6-cn-cfY">
-                                <rect key="frame" x="0.0" y="108" width="703" height="660"/>
-                                <connections>
-                                    <segue destination="M58-Qq-UWa" kind="embed" identifier="patientBookingSegue" id="Cgj-z0-7d1"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="XN6-cn-cfY" firstAttribute="trailing" secondItem="PuI-hy-tq2" secondAttribute="trailing" id="a8r-CT-mxA"/>
-                            <constraint firstItem="PuI-hy-tq2" firstAttribute="leading" secondItem="XN6-cn-cfY" secondAttribute="leading" id="cVR-3b-K68"/>
-                            <constraint firstItem="eHc-dz-ud6" firstAttribute="centerX" secondItem="XN6-cn-cfY" secondAttribute="centerX" id="ct9-26-J8K"/>
-                            <constraint firstItem="eHc-dz-ud6" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" symbolic="YES" id="e6M-HF-m96"/>
-                            <constraint firstItem="PuI-hy-tq2" firstAttribute="bottom" secondItem="GAO-Cl-Wes" secondAttribute="top" id="fbg-ak-EvZ"/>
-                            <constraint firstItem="XN6-cn-cfY" firstAttribute="top" secondItem="eHc-dz-ud6" secondAttribute="bottom" constant="8" symbolic="YES" id="lf9-Zv-koZ"/>
-                            <constraint firstItem="XN6-cn-cfY" firstAttribute="bottom" secondItem="GAO-Cl-Wes" secondAttribute="top" id="oD8-VR-KoY"/>
-                            <constraint firstItem="PuI-hy-tq2" firstAttribute="top" secondItem="XN6-cn-cfY" secondAttribute="top" id="oeh-e6-MWe"/>
-                            <constraint firstAttribute="trailing" secondItem="PuI-hy-tq2" secondAttribute="trailing" id="szU-Dh-2O2"/>
-                            <constraint firstItem="XN6-cn-cfY" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="u6Q-9c-Y8Q"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
-                    <connections>
-                        <outlet property="patientBookingContainer" destination="XN6-cn-cfY" id="fLe-2h-LV5"/>
-                        <outlet property="patientDetailContainer" destination="PuI-hy-tq2" id="QRb-5M-nc0"/>
-                        <outlet property="segmentControl" destination="eHc-dz-ud6" id="5WT-ff-vm8"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Patient Detail" id="mOI-FS-AaM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
@@ -575,11 +534,11 @@
                         <viewControllerLayoutGuide type="bottom" id="0sK-j5-PhP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eND-CN-Jj1">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Patient Detail goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-OF-DJg">
-                                <rect key="frame" x="24" y="176" width="655" height="39"/>
+                                <rect key="frame" x="24" y="176" width="976" height="39"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Zcq-6p-AdM"/>
@@ -589,7 +548,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dCt-Zq-y5j">
-                                <rect key="frame" x="24" y="223" width="655" height="41"/>
+                                <rect key="frame" x="24" y="223" width="976" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="hWG-59-C3t"/>
@@ -627,24 +586,24 @@
                         <viewControllerLayoutGuide type="bottom" id="p3e-Ow-q8e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1mH-U5-qaz">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXS-H1-h6x">
-                                <rect key="frame" x="661" y="0.0" width="22" height="22"/>
+                                <rect key="frame" x="982" y="20" width="22" height="22"/>
                                 <connections>
                                     <segue destination="jyo-Eb-biS" kind="presentation" identifier="addBookingSegue" id="3hS-ZL-D7s"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="di6-Gf-nW0">
-                                <rect key="frame" x="0.0" y="27" width="703" height="633"/>
+                                <rect key="frame" x="0.0" y="47" width="1024" height="721"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookingHeaderCell" id="SU1-uO-qyU" customClass="BookingHeaderCell" customModule="ASA_Health_Clinic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SU1-uO-qyU" id="jpW-xO-JWK">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRq-bE-v51">
@@ -666,7 +625,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-tl-j8V">
-                                                    <rect key="frame" x="553" y="0.0" width="120" height="35"/>
+                                                    <rect key="frame" x="874" y="0.0" width="120" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="E6U-jz-bx8"/>
                                                     </constraints>
@@ -675,7 +634,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pX-nE-hqT">
-                                                    <rect key="frame" x="315" y="0.0" width="216" height="35"/>
+                                                    <rect key="frame" x="315" y="0.0" width="537" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -705,10 +664,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="patientBookingCell" id="aFC-zT-HnJ" customClass="BookingTableViewCell" customModule="ASA_Health_Clinic">
-                                        <rect key="frame" x="0.0" y="72" width="703" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aFC-zT-HnJ" id="GIh-Wl-oto">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZc-qx-KyK">
@@ -730,7 +689,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoh-j3-ON9">
-                                                    <rect key="frame" x="553" y="0.0" width="120" height="35"/>
+                                                    <rect key="frame" x="874" y="0.0" width="120" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="b0n-XJ-lDu"/>
                                                     </constraints>
@@ -739,7 +698,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-vp-v2E">
-                                                    <rect key="frame" x="315" y="0.0" width="216" height="35"/>
+                                                    <rect key="frame" x="315" y="0.0" width="537" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

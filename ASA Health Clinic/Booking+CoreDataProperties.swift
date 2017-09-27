@@ -2,7 +2,7 @@
 //  Booking+CoreDataProperties.swift
 //  ASA Health Clinic
 //
-//  Created by zhenyu on 20/6/17.
+//  Created by zhenyu on 26/9/17.
 //  Copyright © 2017 zhenyu. All rights reserved.
 //
 
@@ -22,6 +22,7 @@ extension Booking {
     @NSManaged public var doctor: String?
     @NSManaged public var sms: Bool
     @NSManaged public var status: Bool
+    @NSManaged public var complete: String?
     @NSManaged public var belongsTo: Patient?
 
 }
