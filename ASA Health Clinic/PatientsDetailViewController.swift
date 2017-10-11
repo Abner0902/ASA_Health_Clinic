@@ -26,6 +26,7 @@ class PatientsDetailViewController: FormViewController {
     let DEFAULT = "?"
 
     var bookings = [Booking]()
+    var upcomingBooking: Booking?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,20 +75,21 @@ class PatientsDetailViewController: FormViewController {
         
             
         var text: String = "No Booking upcoming"
-        if bookings.count != 0 {
-            text = bookingManager.getDateFormatter().string(from: bookings[0].dateTime! as Date)
+        if bookings.count != 0 && self.getUpcomingBooking(){
+            
+            text = bookingManager.getDateFormatter().string(from: upcomingBooking!.dateTime! as Date)
                 form +++ Section(UPCOMING_BOOKING_STR)
 
                 <<< CustomRow() { row in
                     row.cell.bookingDateButton.setTitle(text, for: .normal)
                     
-                    row.cell.statusButton.setTitle(bookings[0].complete!, for: .normal)
+                    row.cell.statusButton.setTitle(upcomingBooking?.complete!, for: .normal)
                     
                     row.cell.choiceOne.isHidden = true
                     row.cell.choiceTwo.isHidden = true
                     row.tag = UPCOMING_BOOKING_STR
                     
-                    row.cell.booking = bookings[0]
+                    row.cell.booking = upcomingBooking
                 }
         } else {
             form +++ Section(UPCOMING_BOOKING_STR)
@@ -121,18 +123,8 @@ class PatientsDetailViewController: FormViewController {
                 $0.placeholder = "Additional note"
                 $0.value = detailItem?.note
             }.onCellHighlightChanged { cell, row in
-                let context = ManagedContext().getManagedObject()
-                
-                self.detailItem?.setValue(row.value, forKey: "note")
-                
-                do {
-                    //updatePatientInFireBase()
-                    try context.save()
-                    
-                } catch let error as NSError {
-                    print("Could not save \(error), \(error.userInfo)")
-                }
-            }
+                self.patientManager.updatePatientNote(patient: self.detailItem!, note: row.value!)
+        }
     }
 
 //    @IBAction func indexSelected(_ sender: Any) {
@@ -168,6 +160,23 @@ class PatientsDetailViewController: FormViewController {
     func addObservers() {
         let observerKeyLocation = "pickedConuntry"
         self.addObserver(self, forKeyPath: observerKeyLocation, options: .new, context: nil)
+    }
+    
+    func getUpcomingBooking() -> Bool{
+        let currentDate = Date()
+        
+        for booking in bookings {
+            if (booking.dateTime! as Date) > currentDate {
+                
+                NSLog("\(booking)")
+                
+                upcomingBooking = booking
+                
+                return true
+            }
+        }
+        
+        return false
     }
 }
 

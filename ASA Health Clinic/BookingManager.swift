@@ -30,7 +30,7 @@ class BookingManager: NSObject {
         
         //Save the ManagedObjectContext
         do {
-            //addBookingInFireBase()
+            FireBaseDBManager().addBookingToPatient(patient: patient, booking: newBooking!)
             try managedObjectContext.save()
             
         } catch let error as NSError {
@@ -38,7 +38,7 @@ class BookingManager: NSObject {
         }
         
         //set up the sms reminder
-        //setupSMSReminder(booking: newBooking!, patient: patient)
+        setupSMSReminder(booking: newBooking!, patient: patient)
         
     }
     
@@ -188,16 +188,16 @@ class BookingManager: NSObject {
             let date = dateFormatter.string(from: booking.dateTime! as Date)
             if (date == compareDate && booking.clinic_add == clinic && booking.doctor == doctor && booking.status == status) {
                 
+                FireBaseDBManager().deleteBooking(booking: booking)
                 context.delete(booking as NSManagedObject)
+                
+                do {
+                    try context.save()
+                } catch {
+                    NSLog("Delete booking failed")
+                }
             }
         }
-        
-        do {
-           try context.save()
-        } catch {
-            NSLog("Delete booking failed")
-        }
-
     }
     
     func updateBookingByStatus(status: String, booking: Booking) {
@@ -206,6 +206,7 @@ class BookingManager: NSObject {
         booking.setValue(status, forKey: "complete")
         
         do {
+            FireBaseDBManager().updateBookingComplete(status: status, forBooking: booking)
             try context.save()
         } catch {
             NSLog("update booking failed")

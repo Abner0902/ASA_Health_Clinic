@@ -7,27 +7,51 @@
 //
 
 import UIKit
+import JBDatePicker
 
 protocol SetDateDelegate {
     func setDate(date: String)
 }
 
-class DatePickerViewController: UIViewController {
+class DatePickerViewController: UIViewController, JBDatePickerViewDelegate {
 
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
-    var delegate: SetDateDelegate?
+    
+    
+    @IBOutlet var datePicker: JBDatePickerView!
+    
+    
     var dateStr: String!
+    var delegate: SetDateDelegate?
+    
+    var dateToSelect: Date?
+    
+    let converter = TypeConverter()
+    
+    
+    
+    var weekDaysViewHeightRatio: CGFloat {
+        return 0.15
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let date = dateFormatter.date(from: dateStr)
+        datePicker.delegate = self
         
-        datePicker.date = date!
-        datePicker.addTarget(self, action: #selector(DatePickerViewController.datePickerChanged(_:)), for: .valueChanged)
+        //get presented month
+        navigationBar.topItem?.title = datePicker.presentedMonthView?.monthDescription
+        
+        //set title color
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        
+        //remove hairline under navigationbar
+        navigationBar.setBackgroundImage(UIImage(named: "GreenPixel"), for: .default)
+        navigationBar.shadowImage = UIImage(named: "TransparentPixel")
+        
+//        datePicker
+//        datePicker.addTarget(self, action: #selector(DatePickerViewController.datePickerChanged(_:)), for: .valueChanged)
 
         // Do any additional setup after loading the view.
     }
@@ -37,19 +61,56 @@ class DatePickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func datePickerChanged(_ sender: UIDatePicker) {
-        //get selected date
-        let selectedDate = datePicker.date
+    
+    var dateToShow: Date {
         
-        //format date string
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let dateStr = dateFormatter.string(from: selectedDate)
+        dateToSelect = converter.stringToDateIncludingWeekday(str: dateStr)
         
-        self.delegate?.setDate(date: dateStr)
+        if let date = dateToSelect {
+            return date
+        }
+        else{
+            return Date()
+        }
+    }
+
+    
+    // MARK: - JBDatePickerViewDelegate implementation
+    
+    func didSelectDay(_ dayView: JBDatePickerDayView) {
+        print("date selected: \(String(describing: dayView.date))")
+        
+        self.dismiss(animated: true) { () -> Void in
+            self.delegate?.setDate(date: self.converter.dateToStringIncludingWeekday(date: self.datePicker.selectedDateView.date!))
+        }
     }
     
+    func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {
+        self.navigationBar.topItem?.title = datePicker.presentedMonthView.monthDescription
+        
+    }
+    
+//    func shouldAllowSelectionOfDay(_ date: Date?) -> Bool {
+//        
+//        guard let date = date else {return true}
+//        let comparison = NSCalendar.current.compare(date, to: Date(), toGranularity: .day)
+//        
+//            if comparison == .orderedAscending {
+//                return false
+//            }
+//        return true
+//         
+//    }
 
+    @IBAction func nextMonth(_ sender: Any) {
+        
+        datePicker.loadNextView()
+    }
+    
+    @IBAction func previousMonth(_ sender: Any) {
+        datePicker.loadPreviousView()
+    }
+    
     /*
     // MARK: - Navigation
 

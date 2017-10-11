@@ -22,6 +22,12 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
 
     var detailViewController: PatientsDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    
+    var patientToSelect: Patient? {
+        get {
+            return (self.tabBarController!.viewControllers![1] as! OverviewTableViewController).patientToView
+        }
+    }
 
     @IBOutlet var patientTableView: UITableView!
 
@@ -52,16 +58,40 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
-        
-        let indexPath = IndexPath(row: 0, section: 0)
-        if patients.count != 0 {
-            self.patientTableView.selectRow(at: indexPath, animated: false, scrollPosition: UITableViewScrollPosition.none)
-            self.tableView(self.patientTableView, didSelectRowAt: indexPath)
-        }
+        self.preSetTable()
         
         //appFirstLaunchSetup()
         
         
+    }
+    
+    func preSetTable() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        if patients.count != 0 && patientToSelect == nil {
+            selectTableRow(indexPath: indexPath)
+        } else if patients.count != 0, let patient = patientToSelect {
+            
+            let index = getPatientRowByName(name: patient.name!)
+            
+            let indexPath = IndexPath(row: index, section: 0)
+            selectTableRow(indexPath: indexPath)
+        }
+
+    }
+    
+    func selectTableRow(indexPath: IndexPath) {
+        self.patientTableView.selectRow(at: indexPath, animated: false, scrollPosition: UITableViewScrollPosition.none)
+        self.tableView(self.patientTableView, didSelectRowAt: indexPath)
+    }
+    
+    func getPatientRowByName(name: String) -> Int{
+        for patient in patients {
+            if patient.name == name {
+                return patients.index(of: patient)!
+            }
+        }
+        
+        return 0
     }
     
     //helper method for search bar
@@ -72,10 +102,16 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
         }
         tableView.reloadData()
     }
+    
+    func updatePatient(name: String, phone: String, patientToUpdate: Patient){
+        PatientManager().updatePatient(name: name, phone: phone, patientToUpdate: patientToUpdate)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         //clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        
+        self.preSetTable()
     }
 
     override func didReceiveMemoryWarning() {
@@ -144,18 +180,9 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let context = fetchedResultsController.managedObjectContext
-            context.delete(fetchedResultsController.object(at: indexPath))
-                
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                
-                
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
+            let patientToDelete = fetchedResultsController.object(at: indexPath)
+            
+            PatientManager().deletePatient(patientToDelete: patientToDelete, context: context)
         }
     }
     
@@ -251,33 +278,6 @@ class PatientsMasterViewController: UITableViewController, NSFetchedResultsContr
     //Add patient
     func addPatient(name: String, phone: String) {
         PatientManager().addPatient(name: name, phone: phone)
-    }
-    
-    //Firebase
-    func addPatientToFireBase(patient: Patient) {
-        
-    }
-    
-    //Upadate patient
-    func updatePatient(name: String, phone: String, patientToUpdate: Patient) {
-        let context = self.fetchedResultsController.managedObjectContext
-        
-        patientToUpdate.setValue(name, forKey: "name")
-        patientToUpdate.setValue(phone, forKey: "phone")
-        
-        //Save the ManagedObjectContext
-        do {
-            updatePatientInFireBase()
-            try context.save()
-            
-        } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-    }
-    
-    //update patient in firebase
-    func updatePatientInFireBase() {
-        
     }
     
 //    func appFirstLaunchSetup() {

@@ -24,12 +24,64 @@ class PatientManager: NSObject {
         
         //Save the ManagedObjectContext
         do {
-            //addPatientToFireBase(patient: newPatient!)
+            FireBaseDBManager().insertToPatient(patient: newPatient!)
             try context.save()
             
         } catch let error as NSError {
             print("Could not save \(error), \(error.userInfo)")
         }
+    }
+    
+    func addPatient(patient: Patient) {
+        
+        let context = managedContext.getManagedObject()
+        var newPatient = NSEntityDescription.insertNewObject(forEntityName: "Patient", into: context) as? Patient
+        
+        newPatient = patient
+        
+        do {
+            
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    func updatePatient(name: String, phone: String, patientToUpdate: Patient) {
+        let context = managedContext.getManagedObject()
+        let oldPaitient = patientToUpdate
+        patientToUpdate.setValue(name, forKey: "name")
+        patientToUpdate.setValue(phone, forKey: "phone")
+        
+        //Save the ManagedObjectContext
+        do {
+            //update patient in firebase
+            FireBaseDBManager().updatePatient(oldPatient: oldPaitient, newPatient: patientToUpdate)
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    func deletePatient(patientToDelete: Patient, context: NSManagedObjectContext) {
+        context.delete(patientToDelete)
+        
+        do {
+            
+            //delete patient in Firebase
+            FireBaseDBManager().deletePatient(patient: patientToDelete)
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            
+            
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+
     }
     
     //fetch all patients
@@ -55,6 +107,21 @@ class PatientManager: NSObject {
         }
         
         return [Patient]()
+    }
+    
+    func updatePatientNote(patient: Patient, note: String) {
+        let context = ManagedContext().getManagedObject()
+        
+        patient.setValue(note, forKey: "note")
+        
+        do {
+            FireBaseDBManager().updatePatientNote(patient: patient, note: note)
+            try context.save()
+            
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+
     }
     
     func getPatientByName(name: String) -> Patient?{

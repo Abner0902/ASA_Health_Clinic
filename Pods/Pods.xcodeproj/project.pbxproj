@@ -7,225 +7,445 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02F07D843F3B3151880D1E67205C11A0 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F4D38046614F13BFBFF174288B70B /* Core.swift */; };
-		04A9A536DFAF3C5EC723F92EED127215 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1B47E69854F5412ACB5E4C6D2D06 /* SegmentedRow.swift */; };
-		0B2FCAF300C1B74DA6343E48B7D5F3F6 /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF1FDCB6CE02D73DA98A2CDF0EACF1 /* PickerInlineRow.swift */; };
-		0C19B0ADBDDF9D1F35443473DD32F58C /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0DC51CB4F41A473C5E7B6E9B151E /* Form.swift */; };
-		0F47F6ABDFD61B71965C06B833435E53 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982F5F1F56740A916179BB11B59CBD47 /* Protocols.swift */; };
-		144A795542A55FCA27F839FD8B3848AD /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4944F865AA09D4EC5474D1F00759AA /* CellType.swift */; };
-		14EB7CFB026E245B5D9597E22FD651E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		17048D78835182A0B4E9D7926DA75DAD /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596B61C9437E175AEFE0B6BAAB3D293 /* PopoverSelectorRow.swift */; };
-		1772EAFC71C30BD931A9585212CA03AC /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FBE8E0F5A6AB9A2625694B0598401A /* Row.swift */; };
-		17A3FB1B471D1C1A61BCFBBF5831D845 /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678E90E3B168DB1AEE458561E2BB3A7 /* RowControllerType.swift */; };
-		1ACA00A9EC125081B88B9228462431B8 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B560111794D53CA88FDB7AF04AC1827F /* ButtonRowWithPresent.swift */; };
-		1C5B941F79B39828B27EAAD3C9AF7B4B /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43CB6F053D58562673C95D6324FE8D /* PickerRow.swift */; };
-		1D4CD70DC32B037FCD6320FE079695D5 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57D3098FE910E284CAFFA505E20325 /* CheckRow.swift */; };
-		1EEFBE2820F6BEAC9BAD184673293C9E /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0447B2BDEDDA95C71EB9568ABD35E /* NavigationAccessoryView.swift */; };
-		2189F5569BACCE66FD41F5E58FF351B8 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B5FC35E804A55D981F3C9F55B23DA /* DateInlineRow.swift */; };
-		23E6887F5ADC8D4917BC12B079864E1D /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CAC6F6550EED7B310653FE1C06AC2 /* FieldRow.swift */; };
-		25A70264F9301E7603D9883777DE8050 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE520D6208ACA59922F452B9C1BE5025 /* SelectorViewController.swift */; };
-		25B4E7F73B40192A7ED366F580C8E31A /* Pods-ASA Health Clinic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F8C3DE67DE24B1C42A6845220241 /* Pods-ASA Health Clinic-dummy.m */; };
-		265A3BCF8B426717E8EE1CAD4341F99A /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022699BA0C532520067CC71A8129ADC3 /* DateFieldRow.swift */; };
-		28500C67AF0CB1EB34B53FFA93C3D27F /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917435224893E82FA9BE5C6C9FECE508 /* ListCheckRow.swift */; };
-		29DBA0C923DE13772022DB52DBAF3CEE /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C87B26BC0C32BBEC9DB1474D218394 /* PushRow.swift */; };
-		2A179EA67ECDDBB23F30CF0B0A71A617 /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE772293B0601D1B816007D2CFABD200 /* ActionSheetRow.swift */; };
-		306BD477167820D6CDECDCE1D7445ECD /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214CED6AB54ECB27CA37F6BA8107EA20 /* SliderRow.swift */; };
-		3A278685CB21EB79D6F55374922701BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		3E89604392C5EBDC5E27937AA57C5AC0 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C188D2A6BFE8EF5BE2F73E5D01B1782 /* SwitchRow.swift */; };
-		3F0D960DBEF20736A7A505A9250942F1 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F2B09C9B05410D3775A6D818C55CDC0 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45B6B95E4A3B3A9C5E8D6F8BE6E3F3BD /* Pods-ASA Health Clinic-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F144B61807245ADA7A98EFEE00BBCA /* Pods-ASA Health Clinic-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		488217E153BA99BBB3566A4BFD2177B3 /* SearchTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51AAE9089D2F3D0A0707685E8BCF7709 /* SearchTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EA524A2BD2D970745B89DAADDF7719E /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD074D7972E7B7BA9A8ACB822F4A75 /* PresenterRowType.swift */; };
-		51F62349D05FCB3B6E1E8AD406DEEFE7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A2AC7AFB88BAF7BB781E827E841751 /* Section.swift */; };
-		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D1FC53A7EBEF9B06DC774E3CF6EEDD /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57F029A6EAD66812E9B0C1319AFE527B /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCCBFE95CC771FFE8049DA53ADB6C4D /* LabelRow.swift */; };
-		59947C008333007F823B0922EE87F96B /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4460D1B65136D4D794F078351BA42902 /* MultipleSelectorViewController.swift */; };
-		5A380E0127635057397F45AFBD13B255 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2F882D021DB4DEC9FB82CD6D24B3 /* Eureka-dummy.m */; };
-		5D647533060C688C633E15C86553B868 /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15950A16CE5DE5CD4448BD3BDF93A99A /* DatePickerRow.swift */; };
-		654744F1D8E5A8DB4711E81DC6CC99C3 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4429B0642E5B706B268B7C90892ECBB8 /* AlertRow.swift */; };
-		6F9F25DE63532C8DE5077822E6316111 /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30000B2CE634CF124E0B9BE1A964382D /* DateRow.swift */; };
-		74BD9203C17A8DE34342BC761EA83E92 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80877EA1B2FD1BECD78636B7624DBCE /* SearchTextField.swift */; };
-		76110C1B9D1144D99D2C179DC74121DD /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622B75A73C7FE2DC29169A7FB13D9882 /* MultipleSelectorRow.swift */; };
-		7B19019174C42D7D481C1B120272443B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87613BF624928B03ABFD54486747A2C2 /* Operators.swift */; };
-		7CE512D69EDD58D7DDD7B66BE6592EED /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701EDE43E7BAF1ED5D36E2712F00B7F /* DateInlineFieldRow.swift */; };
-		7D4103D396B2519600255CA676DE1D62 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4548C892C3CE997BAF4BF78A504B952C /* BaseRow.swift */; };
-		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DAD9D12AB98801CD35293F8F78FF3B1 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		827BD4C80F28C2F7E9521461DA5CBDAE /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A310BCB669AE7B85D666601D8584E /* RuleURL.swift */; };
+		0083F26FD1186BBB612FFA4187BD32D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		01172B05F6100D760B41B50743043DC3 /* table_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = C69F2AB3BE0920C2B8905D3F19FBC8E9 /* table_builder.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		02F07D843F3B3151880D1E67205C11A0 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E76617428200D719A7151ADC94C948 /* Core.swift */; };
+		03718F446187F6B6DCD7102DF0FA950D /* filter_block.cc in Sources */ = {isa = PBXBuildFile; fileRef = BDB15E30F984365E43411E9B118466FB /* filter_block.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		04A9A536DFAF3C5EC723F92EED127215 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4019B7C8AF30AC86E55FDC4308C422 /* SegmentedRow.swift */; };
+		05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		0B2FCAF300C1B74DA6343E48B7D5F3F6 /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C70FAFAFB6D79DCE9BE8D1DDC9A5 /* PickerInlineRow.swift */; };
+		0BA4D54443387CF1A167625FE36106A3 /* port_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 42E868BF9DB5CA366DE064759841BF0C /* port_posix.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		0C19B0ADBDDF9D1F35443473DD32F58C /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3458591286F0A203578220DD26E51B /* Form.swift */; };
+		0F47F6ABDFD61B71965C06B833435E53 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF85E6690B355644DF44169D2CA920 /* Protocols.swift */; };
+		103B81B64D962998B6529C5337838ABE /* merger.cc in Sources */ = {isa = PBXBuildFile; fileRef = 65B78C0AB5CFC2DB778DD547C3D6D6EB /* merger.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		118CFE0AAF1AE251D69C8AC1775FAB55 /* JBDatePickerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B6AF726A0189F4EBF5BD77F866574 /* JBDatePickerEnums.swift */; };
+		144A795542A55FCA27F839FD8B3848AD /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112ACF7F2F8A3B61A6611FF9E6888DDB /* CellType.swift */; };
+		146661DAA790C18C6FD756AEAFE42503 /* JBDatePickerWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653FCA1B91756EC538B144D277F1C6A /* JBDatePickerWeekView.swift */; };
+		17048D78835182A0B4E9D7926DA75DAD /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2576E246C1770CE9A91F224391B78 /* PopoverSelectorRow.swift */; };
+		1772EAFC71C30BD931A9585212CA03AC /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A5CC364237DAEDEB37907909C0884E /* Row.swift */; };
+		17A3FB1B471D1C1A61BCFBBF5831D845 /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279EC155AB6C1BFB1B3BC7750C93BA64 /* RowControllerType.swift */; };
+		19E045482C9D7F419F49E2C72BA14758 /* table.cc in Sources */ = {isa = PBXBuildFile; fileRef = 1271417E711BE67DF4455B338D317066 /* table.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		1ACA00A9EC125081B88B9228462431B8 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600195A3C98084BCFBACE7598AF9629 /* ButtonRowWithPresent.swift */; };
+		1BF604E8E4855A66F3881F2D8F02DF75 /* leveldb-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501EDC2CD44F7B53C8DB9F9E247841B /* leveldb-library-dummy.m */; };
+		1C5172100CE7433A48E417D8A9E4812F /* testharness.cc in Sources */ = {isa = PBXBuildFile; fileRef = C2A4EF6CF203CED78AF5701BD1600347 /* testharness.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		1C5B941F79B39828B27EAAD3C9AF7B4B /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7411D79E06AF1F32C8A98430945500 /* PickerRow.swift */; };
+		1D4CD70DC32B037FCD6320FE079695D5 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6FC3263A25675C2738D6271BFD5EFD /* CheckRow.swift */; };
+		1E4FC7304D41CF6C829D3BC645676925 /* JBDatePickerWeekDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793C8DFD1441DDA71859C8FEDE8D79 /* JBDatePickerWeekDaysView.swift */; };
+		1EA9996D9020398F975487C9103E140E /* block.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5FC75C0EEA67A6C4902C7E3F7713B50A /* block.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		1EEFBE2820F6BEAC9BAD184673293C9E /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6EA8B1D8011A82EE3C5CDEDE0DCAB /* NavigationAccessoryView.swift */; };
+		2189F5569BACCE66FD41F5E58FF351B8 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA664E7F0F833774915B1511F6694E1 /* DateInlineRow.swift */; };
+		23E6887F5ADC8D4917BC12B079864E1D /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C7A9FCE19E79F821DDD90A7CC369D0 /* FieldRow.swift */; };
+		25A70264F9301E7603D9883777DE8050 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2D69D3C3D0C1235EE2D4E2EB71611 /* SelectorViewController.swift */; };
+		265A3BCF8B426717E8EE1CAD4341F99A /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351FFD24E949B7F5EAA7C618A88113D /* DateFieldRow.swift */; };
+		266DE0A813CE465574D1595647AB1CA2 /* JBDatePickerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C213BAEB4B052378F4739CFA38617082 /* JBDatePickerDayView.swift */; };
+		27684AEE3CE8EC92BD10A75EDA95E9CF /* filter_policy.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB1FC835AF15B5E5249B8D27C37415 /* filter_policy.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		28500C67AF0CB1EB34B53FFA93C3D27F /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21676E7817B1CB0859276143DD370AF2 /* ListCheckRow.swift */; };
+		29DBA0C923DE13772022DB52DBAF3CEE /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA54555F8044F24F7CA51A40821CC4E /* PushRow.swift */; };
+		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CF9C9FC497D478551F58DFA89B487C /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A179EA67ECDDBB23F30CF0B0A71A617 /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53FD838D75AFAD14CB4D82B88E96B1D /* ActionSheetRow.swift */; };
+		2B90CB94CFE6F6CCEBE0EB676A71BD13 /* cache.cc in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D25ACC0379D31BA737C675D1EF38 /* cache.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		2C25559C91E2B7B7E6A12BB7FBD24DE6 /* log_writer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 89E0AD4F1440F2F05568A161787FB1DE /* log_writer.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		2C287B1151ADCDAD33C30EC8928CC90E /* Pods-ASA Health Clinic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F8C3DE67DE24B1C42A6845220241 /* Pods-ASA Health Clinic-dummy.m */; };
+		2DEAA2FC7CA49FF6EF86A4635AA81214 /* JBFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589D51802498FDC29CF59076A553365D /* JBFont.swift */; };
+		306BD477167820D6CDECDCE1D7445ECD /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C0A2D34AA46B8F93010B65A6F53F2C /* SliderRow.swift */; };
+		3722B0A47A23CB1CD0BF97ACC92BCB06 /* log_reader.cc in Sources */ = {isa = PBXBuildFile; fileRef = 08A5ECCD5B1EF060CDEDB11E09BD7002 /* log_reader.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 5890600BC837FCB01A0ABE9BE20260E9 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 062384012632ABC2F76D0E7A507CE9CF /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
+		3ACFA6137866703C21475E04A029CB9E /* leveldb-library-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FC58633ACB080F58F886F508DB4C27 /* leveldb-library-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E387084411D1D4DEE888C969BEDF409 /* slice.h in Headers */ = {isa = PBXBuildFile; fileRef = 098B373AC64EF639636C2C268D49E8A6 /* slice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E89604392C5EBDC5E27937AA57C5AC0 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD78487A88DBF3602B352C86EC527A /* SwitchRow.swift */; };
+		3F0D960DBEF20736A7A505A9250942F1 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87D453840C8F843898017A629E8B0688 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40AE193577948028931B056CB5BE1ADF /* builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3C943B847B42F4CA0C1A6B22EC0E86A1 /* builder.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		42FDBB7475BC1A17F60A13CCDE6096C7 /* block_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 52CA219C9C0ADF6E8C472AC7DE118C5A /* block_builder.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91705A74DFBE1A7C48C6876A6BC51206 /* nanopb-dummy.m */; };
+		4EA524A2BD2D970745B89DAADDF7719E /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02360D159EDC4058B91AEBE8D423B2 /* PresenterRowType.swift */; };
+		4EE0A86B88D2F153FAA07930D1621379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4F5F8058B183F5789CF8CD6C03809E11 /* leveldb_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = FE1608D7C136DD37D4A56CC401DCD3D3 /* leveldb_main.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		51B84030D06E6B1C3375FB71F0612364 /* arena.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E219277C03F523F71FC8E24E70A33 /* arena.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		51F62349D05FCB3B6E1E8AD406DEEFE7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D60B28C8BD154ADED265F9A3E8201A /* Section.swift */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C798CB0703DA8B28AE03C97588166CCF /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5447DE2944F0605CB9A6B9239F9D4760 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		54890BD1E2AF8DB9B6E358500A55023D /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 191E3382DB71F144B83EA03E80523BD9 /* cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 5C9FF905621225087F31F3CF69A3BB06 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = F06A6472E3087F5C286AC977258E92CA /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		571D656B418A4D5523F19C3F977FE268 /* version_edit.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2CE7E2B6664B7F09016ABBB30966D /* version_edit.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		57F029A6EAD66812E9B0C1319AFE527B /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2A6AD4C56521E40290BA53C39079D /* LabelRow.swift */; };
+		59947C008333007F823B0922EE87F96B /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ECDAD8A87F6F8D54EFBB61F330C611 /* MultipleSelectorViewController.swift */; };
+		59D2E01C5C229CA54BE5DCE9C4881AF0 /* JBDatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00704CC06D10A4F7D3D8B6A2725B044 /* JBDatePickerSelectionView.swift */; };
+		5A380E0127635057397F45AFBD13B255 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BA5D3D0B554F5601F27359C2092D2A /* Eureka-dummy.m */; };
+		5B04F9D7ED4A892CEA1593A2D9857000 /* two_level_iterator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0668DACB2471A12278B66D455CC6A /* two_level_iterator.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		5D647533060C688C633E15C86553B868 /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA6E383367C93760B2D7BB91FD48EA5 /* DatePickerRow.swift */; };
+		5E2E110C874BB451DB4FE2A2A77665F6 /* Pods-ASA Health Clinic-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F144B61807245ADA7A98EFEE00BBCA /* Pods-ASA Health Clinic-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E7B49E285BBD4B124883D9A7CC31FC4 /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = 640CECBD35DC43CC7EB6FD93C548E967 /* env.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A759ACB33F1B36E8DF5820C4501E1A /* env.cc in Sources */ = {isa = PBXBuildFile; fileRef = CB5BFA95CEB2D32A2BED61B4B3633A2E /* env.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		654744F1D8E5A8DB4711E81DC6CC99C3 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66DEBDAD69C862093EB72A58AE3075 /* AlertRow.swift */; };
+		67A755AD63A1DFFDA48EDC07290352C3 /* histogram.cc in Sources */ = {isa = PBXBuildFile; fileRef = A0D9D22A6238F9285221849E5877696E /* histogram.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		6C4F51DAD5CA08C061556297785DF320 /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = A1777E6E848084C30218DBE955D2F9E8 /* table.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F238FE66F71E88653786B278656014B /* c.cc in Sources */ = {isa = PBXBuildFile; fileRef = F94BD1B5756C97CEB5496D9D156DA28B /* c.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		6F9F25DE63532C8DE5077822E6316111 /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA1242009B43E60C34C2BF31E0860D /* DateRow.swift */; };
+		71011C9C5D422DB07D9BEEF2422227B0 /* JBDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C79FE0092D680B308B99B93A2B974B /* JBDateExtension.swift */; };
+		76110C1B9D1144D99D2C179DC74121DD /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74476DA4AED0BE10C4CDDFAB5E71B3D0 /* MultipleSelectorRow.swift */; };
+		7724AB82912200ABE007D11912B87A38 /* coding.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE4D7BB0EB5CB293324D6A4981D38C /* coding.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		7B19019174C42D7D481C1B120272443B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82E495C5F52B4AB22CF57954C425E2F /* Operators.swift */; };
+		7CE512D69EDD58D7DDD7B66BE6592EED /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D5691E414E2C2EDBF55705EDFCC40 /* DateInlineFieldRow.swift */; };
+		7D4103D396B2519600255CA676DE1D62 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B4D1D78FD9301949186CFB7F9DCC8 /* BaseRow.swift */; };
+		806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D8C99C135F5ED766DC802021A85284 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B2F88F296C18ED042CA6683C096FED /* bloom.cc in Sources */ = {isa = PBXBuildFile; fileRef = 23DB201D87BCB9FA18F10B6DD7D50893 /* bloom.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32EFAE906C7101F69DF89D84A0AC20C2 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		827BD4C80F28C2F7E9521461DA5CBDAE /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636CC6A762205F9738E747692004951 /* RuleURL.swift */; };
+		86C6461CE7D075918E8055EEEAB8DD9B /* comparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2596CB48083CAC49BCFD8EB8F270FC25 /* comparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8917DDD0229FBC4E79A391CA873A2C54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		89B4C2A70E4B1F5A9258306953482824 /* format.cc in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD1199216CB664392D79CECB16CBB9 /* format.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		8C250D47795FC94150C176E0A599DB0D /* SearchTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25CFB293D07ED1F72AEA658C606AD0 /* SearchTextField-dummy.m */; };
+		8E0CD7E74AD5BCADF64B04A3B554E5BD /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = F79CE79081EDACA0F2B06D5A701A3BA1 /* logging.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		8E610F054B0F5FDBBB26323A0C73F4F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		987A9AA62B48BC871C21106E68F9257E /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93EC01674E0A670A64BD4C592F60658 /* RuleEmail.swift */; };
-		9926EF73DC7EFCBD50D322671328B24F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446CE105EFB59FC18E3D2169D29CA58 /* Cell.swift */; };
-		99BC63A28EB55DCDC2CA8EAC1886E077 /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE6252B5D1F954A63D8DFDEE6A7779 /* StepperRow.swift */; };
-		9CD46DF12CFA5C561B75EF20B95EECD0 /* PickerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078AFCBC6850D27C1AD428F819140E0F /* PickerInputRow.swift */; };
-		A0E6C2F2A364C6349BD2B79F520A8958 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8F873F0D31C0CD06C0FA4E0942BF6 /* Helpers.swift */; };
-		A38A545D1ADAFAB39F6A28B499D9AAB9 /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65623C5B6BEA2362348EE07F299D583C /* GenericMultipleSelectorRow.swift */; };
-		A5B27A12053041F38D47538E48678881 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950DF440942E782D602FDDF5DBD67A03 /* Validation.swift */; };
-		AA0CDD726F8156D06FDFE3C6FAB27C52 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A384BC4F1BCD3BC3CDB7C9A1814B06 /* ButtonRow.swift */; };
-		AA7012D4A2E0818B5D6C2BAA5DFA3CD2 /* RuleEqualsToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958F76406259AF99F70CFA3DAFEF4610 /* RuleEqualsToRow.swift */; };
+		95AE4EC1D6EB584B4A7534E771FC5CAD /* comparator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2AFDA75E3F98748769A955418CF5037C /* comparator.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		987A9AA62B48BC871C21106E68F9257E /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF458AF4725009E882EE89087D047B /* RuleEmail.swift */; };
+		9926EF73DC7EFCBD50D322671328B24F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F76B69994873FA224475D96933E5AE /* Cell.swift */; };
+		9929FEFF60EDF5B9A0031CF4B9D32EF9 /* db_impl.cc in Sources */ = {isa = PBXBuildFile; fileRef = E08A983B7B312BCECB87054ECFF16943 /* db_impl.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		9986CC9E01511FC62F0ABC784A53EB5D /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 373366C9E4E3358D19B46EFC491A2C95 /* c.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99BC63A28EB55DCDC2CA8EAC1886E077 /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35452F479E8320F0F970DA8675BBDAB0 /* StepperRow.swift */; };
+		99DA21B2C6FB8420A1E3EEFF779FE465 /* filter_policy.h in Headers */ = {isa = PBXBuildFile; fileRef = 90796BDA8284333913ABAC9DFB8F24AF /* filter_policy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CD46DF12CFA5C561B75EF20B95EECD0 /* PickerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99070A1BD31E3481C3A7B4D89A3198C3 /* PickerInputRow.swift */; };
+		9D52E861FC807967C5A48EB614E4D1C8 /* write_batch.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB04E4B2158CB7274F863E6DE22A50 /* write_batch.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		9F71D8386222CCE3F3D0D3C2DC28630F /* db_iter.cc in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFAE74AC8F64F840CFA327E08BC13 /* db_iter.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		A0E6C2F2A364C6349BD2B79F520A8958 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49821AC34557BD8488E751B67389CFCB /* Helpers.swift */; };
+		A38A545D1ADAFAB39F6A28B499D9AAB9 /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F830ED6DE173B08CB4C54BCB79D976 /* GenericMultipleSelectorRow.swift */; };
+		A5B27A12053041F38D47538E48678881 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EE693110C25973D8EEFCD2C984468D /* Validation.swift */; };
+		A8E52A3115C5E49142D1A79026A12DE7 /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A68660133B7FDBF50C2FD68B87A0AC /* options.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0CDD726F8156D06FDFE3C6FAB27C52 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08541555C038FC4737CC148F03320EF3 /* ButtonRow.swift */; };
+		AA7012D4A2E0818B5D6C2BAA5DFA3CD2 /* RuleEqualsToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076495F7446F86E93386EF9D93272A8 /* RuleEqualsToRow.swift */; };
+		AAEE6E8C825B98FA7832B91205758C44 /* table_cache.cc in Sources */ = {isa = PBXBuildFile; fileRef = DE6EC68ADFFFAAD712E69B9C4A2A5C85 /* table_cache.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		AD4F2483D406378D6C2D6F4302F39B6F /* JBDatePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E20AEF540C7338E61110282918DEFE /* JBDatePickerManager.swift */; };
 		AD5D905ABDE0ED57B623A541EB1DBC20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		B3B5B10201D9BA6470173163A6F6725E /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33AE62E8495F495DE7EB251F381D9A /* SelectorAlertController.swift */; };
-		B5BA32808AFF5DC9C2723CD85931B9DB /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF22CE446511411E8C809B694DB44C /* TextAreaRow.swift */; };
-		BB04DAD5C6DCAE93C15FED1090520610 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2CB30D0B05E43A7472CED6E2A433D /* RuleRequired.swift */; };
-		BD6FEBF93A8FB23057B38BC52342AF19 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8B4D7E82551A5A9AA14CC16CB2E722A /* Eureka.bundle */; };
-		BFE53EDC99E6B10F19E85ECBD01FB33E /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B9E3DBC2C25F93D4567FC02768EDF /* RowType.swift */; };
-		C20780B4458380116B7C81F2B8237240 /* SearchTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC618C6AC1A0A24CEF3DDF9159A3055C /* SearchTextField-dummy.m */; };
-		C657B4C0DFB6C3BE1119C1BB8CAD4C78 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70ACC918AFB00AD9FFA6B388D9C716 /* RuleLength.swift */; };
-		CCAB89C5B0F52B0F69DBED084DDFCFBB /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAA7E9691F42FAA32B6DE57B0F0F87 /* OptionsRow.swift */; };
-		D9284875BF00A2033E41A8252CE907A5 /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BF87E40D758DF2A9A34ADFA959617 /* SelectableSection.swift */; };
-		DB5214501DA0045F69B3F336F0AB11E8 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C338EC33E070521A5A6C253B06EFE5 /* SelectorRow.swift */; };
-		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B27ED60E281818239F0B3DA85E3822F /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE6DF70A452BF20CB858BA7072AAE3EA /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F057F6C3AE55DB908BE624312CE16 /* RowProtocols.swift */; };
-		E0946CE4B110F2A64041FAB63546FB48 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65CFFFCF5A1DC7F988CC0F03B61431 /* RuleRange.swift */; };
-		E490A481C69CE189A0814626B1251FB4 /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99EADFE8F04B30526BA56FF8BECE61C /* RuleClosure.swift */; };
-		E585A7898FC181529FD2704BEF4CE992 /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B43F8631280A8F811C476C6F8CABF9 /* DecimalFormatter.swift */; };
-		E92B5113A74D07D38C8137460AE0E3C7 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFFD38838C394657EC2F38286E3C5B3 /* RuleRegExp.swift */; };
-		F1681F8D16AD91A13187576F524783A8 /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CBF3FA751E082A8106AA0BCBBD5D3F /* HeaderFooterView.swift */; };
-		F2095372A5BB341F1B5469F634EA6687 /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEFBD377E8B27478B766A55980D670 /* FieldsRow.swift */; };
-		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 33256D91A99813B2B9D38E2B34C1F20F /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 123830CFBF76C4887BB9EF0AC5EFE9F7 /* GoogleToolboxForMac-dummy.m */; };
-		FC505268B5A20F0F00D3BC0A9FF66F99 /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF108FDCD77B2649D682FD8280AF2DB /* SelectableRowType.swift */; };
-		FF0168C08BB3555924897006B4AD36DA /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B7E9AD01E11DC399126CF62507AC8 /* InlineRowType.swift */; };
+		AD95D49A515726964A1B02DFA62A488E /* env_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 21FA6465E5ABC79E35E22002CCED6DC8 /* env_posix.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		AFB685276FBA4324E9860CE5F240A09C /* write_batch.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2F528A022E880ED5ACAF473EF72431 /* write_batch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3B5B10201D9BA6470173163A6F6725E /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE30B5A3332A9A156B14EE7FF6C39E7 /* SelectorAlertController.swift */; };
+		B5BA32808AFF5DC9C2723CD85931B9DB /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705D99B6B89BBD5472ECB1A5AE5EE23 /* TextAreaRow.swift */; };
+		B5EDA7BAAD480CAC4C44F513A66F6029 /* dbformat.cc in Sources */ = {isa = PBXBuildFile; fileRef = F9B3DEC679BA91632CA4365514965305 /* dbformat.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		B792906BE2FF6D4AD5C4741A33CC9406 /* status.h in Headers */ = {isa = PBXBuildFile; fileRef = 80E623D27846F7B1C70CEAC17D47A23A /* status.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B84E5EDC520912257FC9B9C67CF9C63C /* table_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = A51B335BB041B3454AB9A1348E382EC0 /* table_builder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB04DAD5C6DCAE93C15FED1090520610 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E8DE6AEC20C2793811766E40C640F /* RuleRequired.swift */; };
+		BD6FEBF93A8FB23057B38BC52342AF19 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F5F2B33439078B839C8E02D3AD7A3 /* Eureka.bundle */; };
+		BF612B7010E4F35AF64295DD5D2DF856 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27D1D31ADFA9FF9031D4C1E9EF62ED7 /* SearchTextField.swift */; };
+		BFE53EDC99E6B10F19E85ECBD01FB33E /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA42B2820B620243297F46056C8941 /* RowType.swift */; };
+		C1AB93F7A505EB0707FEAF2B67CF5CA3 /* version_set.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAAF1C1AC780F13AE30FF9B32544C7 /* version_set.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		C22ED42B4F2A5B3EE842D2CA96D43FE3 /* iterator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 893FB08174332F048641C457BC2B5358 /* iterator.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		C23C8A46061E0F6E98CF81C92D436FCA /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 100201550367099DF84CBE110A888A20 /* iterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C27DC138FD935906180AA144EDCB395E /* status.cc in Sources */ = {isa = PBXBuildFile; fileRef = 349413A03C71271C015E027CF13397DA /* status.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		C37A3A9842FC6D80BE5DB9F3B4061D85 /* JBDatePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A602CCD238F9D976E493E5CAB6C191 /* JBDatePickerViewDelegate.swift */; };
+		C657B4C0DFB6C3BE1119C1BB8CAD4C78 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3426F4914BBF49814D4FC549BF64BCF /* RuleLength.swift */; };
+		C90A36C827A3EC34C469BB19A61FB419 /* dumpfile.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF9FAE1A12A66089EB3E859A5197C76A /* dumpfile.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		C942D4FE8861EE7C5CED905233079F4E /* options.cc in Sources */ = {isa = PBXBuildFile; fileRef = 85EE80C15A960B9D723C398BC8416569 /* options.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		CCAB89C5B0F52B0F69DBED084DDFCFBB /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F861ADE0A17B2F6FEE8408EAC7A3A3B /* OptionsRow.swift */; };
+		CDC1B10687FCC1A8048DD1550616B0B2 /* JBDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA08068A094FE41DBB2D4A9F3E6678C /* JBDate.swift */; };
+		CF8915AED2A0B61AAE493ADAC4D24290 /* dumpfile.h in Headers */ = {isa = PBXBuildFile; fileRef = F705C5FD3B3364E70B927D22BB0FBD1F /* dumpfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D050304FB4DBC057FD90E8EE131DCB4D /* crc32c.cc in Sources */ = {isa = PBXBuildFile; fileRef = EF1A920FC2C2A9CF240DDF8774243CF3 /* crc32c.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		D3F6541618506ECC5CF8996A4B9761B6 /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 1EA296A63E1DB185B284376E5851AD05 /* hash.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		D44CC7B58840C688EFB3AFF599F653A1 /* memtable.cc in Sources */ = {isa = PBXBuildFile; fileRef = B36DAFECFEDF09BB9F328378E894C50B /* memtable.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		D6678F8B200ACF8A11AD54F2AD03547C /* repair.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FFBDDDA859D7950996E645C70EFB7 /* repair.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		D9284875BF00A2033E41A8252CE907A5 /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4973D3423E4A667FA78868E08C045 /* SelectableSection.swift */; };
+		DB1AFD2DA4A274361F9FA6E3F662029E /* JBDatePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1ADD3E75BDEBD7B915DC657C38A30D /* JBDatePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB5214501DA0045F69B3F336F0AB11E8 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09820DA86BFC14F2A16528B81B8ED57C /* SelectorRow.swift */; };
+		DB721CCD4AC8D96FD2C6B38F8E2CD6DE /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = 696DA8594523ADF084ADDD55DD0DFF87 /* db.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E066BE39904D7DBEB5CDEF5D072AE9 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE6DF70A452BF20CB858BA7072AAE3EA /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BDC5912F75CDBDB25E92A428AF812 /* RowProtocols.swift */; };
+		E0946CE4B110F2A64041FAB63546FB48 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA8E96A8627591546871D3E5E51DC8 /* RuleRange.swift */; };
+		E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = AFEF66203C50441B7F4FDED18662D3E9 /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3A5FB21F51A0656D8901CAF7FBAB984 /* SearchTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31AAA7BAB06B257D39DA53926AAAB1A8 /* SearchTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E490A481C69CE189A0814626B1251FB4 /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648D2D2E377CD53FA6447E1EE956B7F /* RuleClosure.swift */; };
+		E585A7898FC181529FD2704BEF4CE992 /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD738EE3F9D5D501B4788B2538FA03CD /* DecimalFormatter.swift */; };
+		E92B5113A74D07D38C8137460AE0E3C7 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358355630E649629C53A003B8BFDA78 /* RuleRegExp.swift */; };
+		F1681F8D16AD91A13187576F524783A8 /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A35D09FC66CA1F11CF961D41C9A3D7C /* HeaderFooterView.swift */; };
+		F1B1ED7B6A820856D76A875B6734AAC0 /* JBDatePickerContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B3B7CA3CF47D0AF9876907440A3810 /* JBDatePickerContentVC.swift */; };
+		F2095372A5BB341F1B5469F634EA6687 /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D388A57F32193A8A3B0D9EFCD6744AC /* FieldsRow.swift */; };
+		F4E63919A2CB8632DF6E324D6AA8956E /* filename.cc in Sources */ = {isa = PBXBuildFile; fileRef = 17A9C07628D4A405B77FFC379DC24A9B /* filename.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		F6057B5160CBD92A652F4C7D12D8EC39 /* testutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9566F49E59E30216AB0B47C5B677C4F7 /* testutil.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C64FCB294FE440A045845C72BCFC879 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB9588E408D380936F361C3CBD9ECCF /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9EB5603BA22EB5E572F859BCAB92045 /* JBDatePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 253C201BB4D43F18A9F1CF8F5AF30977 /* JBDatePicker-dummy.m */; };
+		F9F60E54082685C75223F08A6D78E6E3 /* JBDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94414220D82DA07402A1F5FE7C67F5DE /* JBDatePickerView.swift */; };
+		FAAA2B9029AB4916752A729905EF4C42 /* JBDatePickerMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FABEC2EB21CC3B458B9F6DEA35D1E62 /* JBDatePickerMonthView.swift */; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C91628C4E4775C3F6DDD494321647326 /* GoogleToolboxForMac-dummy.m */; };
+		FC505268B5A20F0F00D3BC0A9FF66F99 /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0E85E956CC500674B904FFD75E6E46 /* SelectableRowType.swift */; };
+		FF0168C08BB3555924897006B4AD36DA /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CFCDD72D0B9DF7FFEEA6B29AFB5E98 /* InlineRowType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A988C4D29FCBD6E05C20F287134D0D0 /* PBXContainerItemProxy */ = {
+		4A8260CA4CE60BA148F192E7AF0F4029 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
-			remoteInfo = GoogleToolboxForMac;
+			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
+			remoteInfo = nanopb;
 		};
-		96ACAF702E61C5CFA16648430C66145F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 35AC48C67309DB4C783BB23450BC59DE;
-			remoteInfo = SearchTextField;
-		};
-		EC2ADCB6D56350EB34E4F43359D0CC4F /* PBXContainerItemProxy */ = {
+		636F6B2ED4EAA00650F321A9E9BC740F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 675A114988AE198732ED4AD726408964;
 			remoteInfo = Eureka;
 		};
+		8FEC17728A3264AC441D435903706AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B35BD94A493D33F8DD32253E2DAF06DA;
+			remoteInfo = SearchTextField;
+		};
+		AC89C7A79B542B1962130179B0C6660F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		AF8ECCE195F94079FA110E586D4E96E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 266AE1506DAD13D34C0725E909C0C476;
+			remoteInfo = "leveldb-library";
+		};
+		DE3EBE2016C20E19711D7565FFCA3E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A01A78E1415B1103149D782482AE955F;
+			remoteInfo = JBDatePicker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B43F8631280A8F811C476C6F8CABF9 /* DecimalFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalFormatter.swift; path = Source/Rows/Common/DecimalFormatter.swift; sourceTree = "<group>"; };
-		022699BA0C532520067CC71A8129ADC3 /* DateFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFieldRow.swift; path = Source/Rows/Common/DateFieldRow.swift; sourceTree = "<group>"; };
-		078AFCBC6850D27C1AD428F819140E0F /* PickerInputRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInputRow.swift; path = Source/Rows/PickerInputRow.swift; sourceTree = "<group>"; };
-		08BE6252B5D1F954A63D8DFDEE6A7779 /* StepperRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepperRow.swift; path = Source/Rows/StepperRow.swift; sourceTree = "<group>"; };
-		0E460012B0791AAF2ED0B0EE99355DC6 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Eureka.modulemap; sourceTree = "<group>"; };
+		00BA8E96A8627591546871D3E5E51DC8 /* RuleRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRange.swift; path = Source/Validations/RuleRange.swift; sourceTree = "<group>"; };
+		05A5CC364237DAEDEB37907909C0884E /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Core/Row.swift; sourceTree = "<group>"; };
+		062384012632ABC2F76D0E7A507CE9CF /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		066BDC5912F75CDBDB25E92A428AF812 /* RowProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowProtocols.swift; path = Source/Core/RowProtocols.swift; sourceTree = "<group>"; };
+		08541555C038FC4737CC148F03320EF3 /* ButtonRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRow.swift; path = Source/Rows/ButtonRow.swift; sourceTree = "<group>"; };
+		08A5ECCD5B1EF060CDEDB11E09BD7002 /* log_reader.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_reader.cc; path = db/log_reader.cc; sourceTree = "<group>"; };
+		09820DA86BFC14F2A16528B81B8ED57C /* SelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorRow.swift; path = Source/Rows/Common/SelectorRow.swift; sourceTree = "<group>"; };
+		098B373AC64EF639636C2C268D49E8A6 /* slice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = slice.h; path = include/leveldb/slice.h; sourceTree = "<group>"; };
+		0C66DEBDAD69C862093EB72A58AE3075 /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
+		0D0E219277C03F523F71FC8E24E70A33 /* arena.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = arena.cc; path = util/arena.cc; sourceTree = "<group>"; };
+		0E4019B7C8AF30AC86E55FDC4308C422 /* SegmentedRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedRow.swift; path = Source/Rows/SegmentedRow.swift; sourceTree = "<group>"; };
+		100201550367099DF84CBE110A888A20 /* iterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator.h; path = include/leveldb/iterator.h; sourceTree = "<group>"; };
 		10DEE9045F3C98C4832EA545B4213A3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1132378A01E6172DEB463976417ABF3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1143E273FCF57CD56960DE63B0169F87 /* Pods_ASA_Health_Clinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ASA_Health_Clinic.framework; path = "Pods-ASA Health Clinic.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		123830CFBF76C4887BB9EF0AC5EFE9F7 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		15950A16CE5DE5CD4448BD3BDF93A99A /* DatePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerRow.swift; path = Source/Rows/DatePickerRow.swift; sourceTree = "<group>"; };
-		16AF1B47E69854F5412ACB5E4C6D2D06 /* SegmentedRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedRow.swift; path = Source/Rows/SegmentedRow.swift; sourceTree = "<group>"; };
-		172A310BCB669AE7B85D666601D8584E /* RuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleURL.swift; path = Source/Validations/RuleURL.swift; sourceTree = "<group>"; };
-		19EA5AEA64B31B87D43673603E1EC052 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
-		1BCCBFE95CC771FFE8049DA53ADB6C4D /* LabelRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelRow.swift; path = Source/Rows/LabelRow.swift; sourceTree = "<group>"; };
-		1BFF22CE446511411E8C809B694DB44C /* TextAreaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAreaRow.swift; path = Source/Rows/TextAreaRow.swift; sourceTree = "<group>"; };
-		1E1DB52506841E2ED10FB761F86D87FB /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		112ACF7F2F8A3B61A6611FF9E6888DDB /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
+		11B2A6AD4C56521E40290BA53C39079D /* LabelRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelRow.swift; path = Source/Rows/LabelRow.swift; sourceTree = "<group>"; };
+		11B3DF2BD99F3A8301D748F2AB97B141 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		1271417E711BE67DF4455B338D317066 /* table.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table.cc; path = table/table.cc; sourceTree = "<group>"; };
+		1501EDC2CD44F7B53C8DB9F9E247841B /* leveldb-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "leveldb-library-dummy.m"; sourceTree = "<group>"; };
+		17A9C07628D4A405B77FFC379DC24A9B /* filename.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filename.cc; path = db/filename.cc; sourceTree = "<group>"; };
+		17D8C99C135F5ED766DC802021A85284 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
+		17EE57CBB21AE40AC1C4A893135200A3 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		191E3382DB71F144B83EA03E80523BD9 /* cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cache.h; path = include/leveldb/cache.h; sourceTree = "<group>"; };
+		19C7A9FCE19E79F821DDD90A7CC369D0 /* FieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldRow.swift; path = Source/Rows/Common/FieldRow.swift; sourceTree = "<group>"; };
+		1CBD1199216CB664392D79CECB16CBB9 /* format.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = format.cc; path = table/format.cc; sourceTree = "<group>"; };
+		1D388A57F32193A8A3B0D9EFCD6744AC /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
+		1E1CA94DF8104AD4C1FD7054274E2F9A /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = leveldb.framework; path = "leveldb-library.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA296A63E1DB185B284376E5851AD05 /* hash.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = hash.cc; path = util/hash.cc; sourceTree = "<group>"; };
 		1ED4F8C3DE67DE24B1C42A6845220241 /* Pods-ASA Health Clinic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ASA Health Clinic-dummy.m"; sourceTree = "<group>"; };
-		1F57D3098FE910E284CAFFA505E20325 /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
-		20A2AC7AFB88BAF7BB781E827E841751 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Core/Section.swift; sourceTree = "<group>"; };
-		214CED6AB54ECB27CA37F6BA8107EA20 /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
-		21DEFBD377E8B27478B766A55980D670 /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
-		2ACAA7E9691F42FAA32B6DE57B0F0F87 /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
-		2DAD9D12AB98801CD35293F8F78FF3B1 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
-		2F2B09C9B05410D3775A6D818C55CDC0 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
-		30000B2CE634CF124E0B9BE1A964382D /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
-		33256D91A99813B2B9D38E2B34C1F20F /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
-		332F057F6C3AE55DB908BE624312CE16 /* RowProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowProtocols.swift; path = Source/Core/RowProtocols.swift; sourceTree = "<group>"; };
-		33A384BC4F1BCD3BC3CDB7C9A1814B06 /* ButtonRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRow.swift; path = Source/Rows/ButtonRow.swift; sourceTree = "<group>"; };
-		3A5B5FC35E804A55D981F3C9F55B23DA /* DateInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineRow.swift; path = Source/Rows/DateInlineRow.swift; sourceTree = "<group>"; };
-		3A70370202B6B77C36C82B3D7AC3057C /* SearchTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SearchTextField-prefix.pch"; sourceTree = "<group>"; };
+		1F02360D159EDC4058B91AEBE8D423B2 /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
+		1FABEC2EB21CC3B458B9F6DEA35D1E62 /* JBDatePickerMonthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerMonthView.swift; path = JBDatePicker/Classes/JBDatePickerMonthView.swift; sourceTree = "<group>"; };
+		21676E7817B1CB0859276143DD370AF2 /* ListCheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListCheckRow.swift; path = Source/Rows/SelectableRows/ListCheckRow.swift; sourceTree = "<group>"; };
+		21FA6465E5ABC79E35E22002CCED6DC8 /* env_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = env_posix.cc; path = util/env_posix.cc; sourceTree = "<group>"; };
+		222A34518C1971C6DE92A12DFDC286CB /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234849737A0F04A188129F703D0A3317 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C0A2D34AA46B8F93010B65A6F53F2C /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
+		23DB201D87BCB9FA18F10B6DD7D50893 /* bloom.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = bloom.cc; path = util/bloom.cc; sourceTree = "<group>"; };
+		253C201BB4D43F18A9F1CF8F5AF30977 /* JBDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JBDatePicker-dummy.m"; sourceTree = "<group>"; };
+		2596CB48083CAC49BCFD8EB8F270FC25 /* comparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = comparator.h; path = include/leveldb/comparator.h; sourceTree = "<group>"; };
+		25F830ED6DE173B08CB4C54BCB79D976 /* GenericMultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericMultipleSelectorRow.swift; path = Source/Rows/Common/GenericMultipleSelectorRow.swift; sourceTree = "<group>"; };
+		26D60B28C8BD154ADED265F9A3E8201A /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Core/Section.swift; sourceTree = "<group>"; };
+		2705D99B6B89BBD5472ECB1A5AE5EE23 /* TextAreaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAreaRow.swift; path = Source/Rows/TextAreaRow.swift; sourceTree = "<group>"; };
+		279EC155AB6C1BFB1B3BC7750C93BA64 /* RowControllerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowControllerType.swift; path = Source/Core/RowControllerType.swift; sourceTree = "<group>"; };
+		2A84E4DF7B37B6A7AD77E1CA583B92AB /* leveldb-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "leveldb-library.xcconfig"; sourceTree = "<group>"; };
+		2AFDA75E3F98748769A955418CF5037C /* comparator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = comparator.cc; path = util/comparator.cc; sourceTree = "<group>"; };
+		2BA664E7F0F833774915B1511F6694E1 /* DateInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineRow.swift; path = Source/Rows/DateInlineRow.swift; sourceTree = "<group>"; };
+		2DFB04E4B2158CB7274F863E6DE22A50 /* write_batch.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = write_batch.cc; path = db/write_batch.cc; sourceTree = "<group>"; };
+		2DFDB1FD534466281A870B0629B35117 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Eureka.modulemap; sourceTree = "<group>"; };
+		2E25CFB293D07ED1F72AEA658C606AD0 /* SearchTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SearchTextField-dummy.m"; sourceTree = "<group>"; };
+		2EDE4D7BB0EB5CB293324D6A4981D38C /* coding.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = coding.cc; path = util/coding.cc; sourceTree = "<group>"; };
+		2FB0668DACB2471A12278B66D455CC6A /* two_level_iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = two_level_iterator.cc; path = table/two_level_iterator.cc; sourceTree = "<group>"; };
+		3072D0FE8E8A6C4F0CA01F5A01A48B96 /* Pods_ASA_Health_Clinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ASA_Health_Clinic.framework; path = "Pods-ASA Health Clinic.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31AAA7BAB06B257D39DA53926AAAB1A8 /* SearchTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SearchTextField-umbrella.h"; sourceTree = "<group>"; };
+		32CFCDD72D0B9DF7FFEEA6B29AFB5E98 /* InlineRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InlineRowType.swift; path = Source/Core/InlineRowType.swift; sourceTree = "<group>"; };
+		32EFAE906C7101F69DF89D84A0AC20C2 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		349413A03C71271C015E027CF13397DA /* status.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = status.cc; path = util/status.cc; sourceTree = "<group>"; };
+		35452F479E8320F0F970DA8675BBDAB0 /* StepperRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepperRow.swift; path = Source/Rows/StepperRow.swift; sourceTree = "<group>"; };
+		3653FCA1B91756EC538B144D277F1C6A /* JBDatePickerWeekView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerWeekView.swift; path = JBDatePicker/Classes/JBDatePickerWeekView.swift; sourceTree = "<group>"; };
+		373366C9E4E3358D19B46EFC491A2C95 /* c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c.h; path = include/leveldb/c.h; sourceTree = "<group>"; };
+		3A98B2B72DEABDA476842D415FC6C71B /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		3C943B847B42F4CA0C1A6B22EC0E86A1 /* builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = builder.cc; path = db/builder.cc; sourceTree = "<group>"; };
+		3D0F5F2B33439078B839C8E02D3AD7A3 /* Eureka.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Eureka.bundle; path = Source/Resources/Eureka.bundle; sourceTree = "<group>"; };
 		3EE898C0949BF10DA6CEB6A4DCC2B6AF /* Pods-ASA Health Clinic-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ASA Health Clinic-frameworks.sh"; sourceTree = "<group>"; };
-		4429B0642E5B706B268B7C90892ECBB8 /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
-		4460D1B65136D4D794F078351BA42902 /* MultipleSelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorViewController.swift; path = Source/Rows/Controllers/MultipleSelectorViewController.swift; sourceTree = "<group>"; };
-		4548C892C3CE997BAF4BF78A504B952C /* BaseRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRow.swift; path = Source/Core/BaseRow.swift; sourceTree = "<group>"; };
+		3F861ADE0A17B2F6FEE8408EAC7A3A3B /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
+		3F9BBB7312F8317824829DAB25B7C78D /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
+		3FCD78487A88DBF3602B352C86EC527A /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
+		42E868BF9DB5CA366DE064759841BF0C /* port_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = port_posix.cc; path = port/port_posix.cc; sourceTree = "<group>"; };
+		42F50FFD00805BA92681D1F951276E18 /* leveldb-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "leveldb-library-prefix.pch"; sourceTree = "<group>"; };
+		43BCBDD02F272ABEB4B028E08DED6974 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		45B3C70FAFAFB6D79DCE9BE8D1DDC9A5 /* PickerInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInlineRow.swift; path = Source/Rows/PickerInlineRow.swift; sourceTree = "<group>"; };
 		465C8A2D538974E9B6966DACF51028B6 /* Pods-ASA Health Clinic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ASA Health Clinic.modulemap"; sourceTree = "<group>"; };
-		4678E90E3B168DB1AEE458561E2BB3A7 /* RowControllerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowControllerType.swift; path = Source/Core/RowControllerType.swift; sourceTree = "<group>"; };
-		49B345EE67E6B0F93D721FBF0F6B82FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B173CDB577B327092B3D63C396922FD /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
-		4B27ED60E281818239F0B3DA85E3822F /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		4D65CFFFCF5A1DC7F988CC0F03B61431 /* RuleRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRange.swift; path = Source/Validations/RuleRange.swift; sourceTree = "<group>"; };
-		4E33AE62E8495F495DE7EB251F381D9A /* SelectorAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorAlertController.swift; path = Source/Rows/Controllers/SelectorAlertController.swift; sourceTree = "<group>"; };
-		4EC0447B2BDEDDA95C71EB9568ABD35E /* NavigationAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationAccessoryView.swift; path = Source/Core/NavigationAccessoryView.swift; sourceTree = "<group>"; };
-		51AAE9089D2F3D0A0707685E8BCF7709 /* SearchTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SearchTextField-umbrella.h"; sourceTree = "<group>"; };
-		54850D746E7965CA92E5B7AF5233FD28 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5596B61C9437E175AEFE0B6BAAB3D293 /* PopoverSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopoverSelectorRow.swift; path = Source/Rows/PopoverSelectorRow.swift; sourceTree = "<group>"; };
-		58B5ED51C1C87C7DD49A13199DEBFD15 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		622B75A73C7FE2DC29169A7FB13D9882 /* MultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorRow.swift; path = Source/Rows/MultipleSelectorRow.swift; sourceTree = "<group>"; };
-		63C338EC33E070521A5A6C253B06EFE5 /* SelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorRow.swift; path = Source/Rows/Common/SelectorRow.swift; sourceTree = "<group>"; };
-		65623C5B6BEA2362348EE07F299D583C /* GenericMultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericMultipleSelectorRow.swift; path = Source/Rows/Common/GenericMultipleSelectorRow.swift; sourceTree = "<group>"; };
-		6DFE5E840C0BCB9EFF91A82BF564222C /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
-		714BF87E40D758DF2A9A34ADFA959617 /* SelectableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableSection.swift; path = Source/Core/SelectableSection.swift; sourceTree = "<group>"; };
+		48D1D25ACC0379D31BA737C675D1EF38 /* cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cache.cc; path = util/cache.cc; sourceTree = "<group>"; };
+		497DFEBF4F5E58A9B25432EEE8BC549B /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		49821AC34557BD8488E751B67389CFCB /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Core/Helpers.swift; sourceTree = "<group>"; };
+		4CBAAF1C1AC780F13AE30FF9B32544C7 /* version_set.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = version_set.cc; path = db/version_set.cc; sourceTree = "<group>"; };
+		4E5DF24E78B598A28816781914EC0943 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D60BBC720851DD8B6F22E838BBE21F /* JBDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JBDatePicker-prefix.pch"; sourceTree = "<group>"; };
+		52CA219C9C0ADF6E8C472AC7DE118C5A /* block_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = block_builder.cc; path = table/block_builder.cc; sourceTree = "<group>"; };
+		5890600BC837FCB01A0ABE9BE20260E9 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		589D51802498FDC29CF59076A553365D /* JBFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBFont.swift; path = JBDatePicker/Classes/JBFont.swift; sourceTree = "<group>"; };
+		5C64FCB294FE440A045845C72BCFC879 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		5C9FF905621225087F31F3CF69A3BB06 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		5CE8C00AC6BB2095BABC6280C8FC4BA4 /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
+		5DDB1FC835AF15B5E5249B8D27C37415 /* filter_policy.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_policy.cc; path = util/filter_policy.cc; sourceTree = "<group>"; };
+		5FC75C0EEA67A6C4902C7E3F7713B50A /* block.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = block.cc; path = table/block.cc; sourceTree = "<group>"; };
+		60E76617428200D719A7151ADC94C948 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core/Core.swift; sourceTree = "<group>"; };
+		6292ACE15FEBAAC677FC7BD97E1EB031 /* leveldb-library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "leveldb-library.modulemap"; sourceTree = "<group>"; };
+		640CECBD35DC43CC7EB6FD93C548E967 /* env.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env.h; path = include/leveldb/env.h; sourceTree = "<group>"; };
+		655BFE5980FA53FDD297B6D0F2A17D69 /* SearchTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SearchTextField.modulemap; sourceTree = "<group>"; };
+		65B78C0AB5CFC2DB778DD547C3D6D6EB /* merger.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = merger.cc; path = table/merger.cc; sourceTree = "<group>"; };
+		696DA8594523ADF084ADDD55DD0DFF87 /* db.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db.h; path = include/leveldb/db.h; sourceTree = "<group>"; };
+		6AD4973D3423E4A667FA78868E08C045 /* SelectableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableSection.swift; path = Source/Core/SelectableSection.swift; sourceTree = "<group>"; };
+		6AE30B5A3332A9A156B14EE7FF6C39E7 /* SelectorAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorAlertController.swift; path = Source/Rows/Controllers/SelectorAlertController.swift; sourceTree = "<group>"; };
+		6C5FF3E529B3889AA16A8BAACE5AA685 /* JBDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JBDatePicker.modulemap; sourceTree = "<group>"; };
+		6ECA42B2820B620243297F46056C8941 /* RowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowType.swift; path = Source/Core/RowType.swift; sourceTree = "<group>"; };
+		6EE2576E246C1770CE9A91F224391B78 /* PopoverSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopoverSelectorRow.swift; path = Source/Rows/PopoverSelectorRow.swift; sourceTree = "<group>"; };
+		704B70884CA41BA8626B4E42F59A8C78 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
 		71F144B61807245ADA7A98EFEE00BBCA /* Pods-ASA Health Clinic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ASA Health Clinic-umbrella.h"; sourceTree = "<group>"; };
-		77FA809565D6C24FC0239D8C036505B8 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		7AF108FDCD77B2649D682FD8280AF2DB /* SelectableRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableRowType.swift; path = Source/Core/SelectableRowType.swift; sourceTree = "<group>"; };
-		7C188D2A6BFE8EF5BE2F73E5D01B1782 /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
-		805CAC6F6550EED7B310653FE1C06AC2 /* FieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldRow.swift; path = Source/Rows/Common/FieldRow.swift; sourceTree = "<group>"; };
-		80D1FC53A7EBEF9B06DC774E3CF6EEDD /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		84BD074D7972E7B7BA9A8ACB822F4A75 /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
-		8701EDE43E7BAF1ED5D36E2712F00B7F /* DateInlineFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineFieldRow.swift; path = Source/Rows/Common/DateInlineFieldRow.swift; sourceTree = "<group>"; };
-		87613BF624928B03ABFD54486747A2C2 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Core/Operators.swift; sourceTree = "<group>"; };
-		917435224893E82FA9BE5C6C9FECE508 /* ListCheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListCheckRow.swift; path = Source/Rows/SelectableRows/ListCheckRow.swift; sourceTree = "<group>"; };
+		72F89A2D312F672A0754C86D3B8868A0 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		743408C43039B298E6E89ECD1E011383 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74476DA4AED0BE10C4CDDFAB5E71B3D0 /* MultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorRow.swift; path = Source/Rows/MultipleSelectorRow.swift; sourceTree = "<group>"; };
+		7CC216B06EBE25A1CF857673D810ED57 /* SearchTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SearchTextField.xcconfig; sourceTree = "<group>"; };
+		7CE6EA8B1D8011A82EE3C5CDEDE0DCAB /* NavigationAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationAccessoryView.swift; path = Source/Core/NavigationAccessoryView.swift; sourceTree = "<group>"; };
+		7F7411D79E06AF1F32C8A98430945500 /* PickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerRow.swift; path = Source/Rows/PickerRow.swift; sourceTree = "<group>"; };
+		80E623D27846F7B1C70CEAC17D47A23A /* status.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status.h; path = include/leveldb/status.h; sourceTree = "<group>"; };
+		83C79FE0092D680B308B99B93A2B974B /* JBDateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDateExtension.swift; path = JBDatePicker/Classes/JBDateExtension.swift; sourceTree = "<group>"; };
+		85EE80C15A960B9D723C398BC8416569 /* options.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = options.cc; path = util/options.cc; sourceTree = "<group>"; };
+		8673EB5162DDB0999B6881C4EEDDCA20 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		87D453840C8F843898017A629E8B0688 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
+		893FB08174332F048641C457BC2B5358 /* iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.cc; path = table/iterator.cc; sourceTree = "<group>"; };
+		89E0AD4F1440F2F05568A161787FB1DE /* log_writer.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_writer.cc; path = db/log_writer.cc; sourceTree = "<group>"; };
+		8A35D09FC66CA1F11CF961D41C9A3D7C /* HeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderFooterView.swift; path = Source/Core/HeaderFooterView.swift; sourceTree = "<group>"; };
+		8FF2CE7E2B6664B7F09016ABBB30966D /* version_edit.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = version_edit.cc; path = db/version_edit.cc; sourceTree = "<group>"; };
+		90796BDA8284333913ABAC9DFB8F24AF /* filter_policy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filter_policy.h; path = include/leveldb/filter_policy.h; sourceTree = "<group>"; };
+		91705A74DFBE1A7C48C6876A6BC51206 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
+		92CCC3215D53C66315A47919A352967A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		9358355630E649629C53A003B8BFDA78 /* RuleRegExp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRegExp.swift; path = Source/Validations/RuleRegExp.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		950DF440942E782D602FDDF5DBD67A03 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Core/Validation.swift; sourceTree = "<group>"; };
-		958F76406259AF99F70CFA3DAFEF4610 /* RuleEqualsToRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEqualsToRow.swift; path = Source/Validations/RuleEqualsToRow.swift; sourceTree = "<group>"; };
-		982F5F1F56740A916179BB11B59CBD47 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
-		9D4944F865AA09D4EC5474D1F00759AA /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
-		9FE560610DA3067EFDD36907A6B7C81D /* SearchTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SearchTextField.modulemap; sourceTree = "<group>"; };
-		A2C87B26BC0C32BBEC9DB1474D218394 /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
-		A2FBE8E0F5A6AB9A2625694B0598401A /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Core/Row.swift; sourceTree = "<group>"; };
+		93A602CCD238F9D976E493E5CAB6C191 /* JBDatePickerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerViewDelegate.swift; path = JBDatePicker/Classes/JBDatePickerViewDelegate.swift; sourceTree = "<group>"; };
+		94414220D82DA07402A1F5FE7C67F5DE /* JBDatePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerView.swift; path = JBDatePicker/Classes/JBDatePickerView.swift; sourceTree = "<group>"; };
+		94CF458AF4725009E882EE89087D047B /* RuleEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEmail.swift; path = Source/Validations/RuleEmail.swift; sourceTree = "<group>"; };
+		9566F49E59E30216AB0B47C5B677C4F7 /* testutil.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = testutil.cc; path = util/testutil.cc; sourceTree = "<group>"; };
+		963B4D1D78FD9301949186CFB7F9DCC8 /* BaseRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRow.swift; path = Source/Core/BaseRow.swift; sourceTree = "<group>"; };
+		99070A1BD31E3481C3A7B4D89A3198C3 /* PickerInputRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInputRow.swift; path = Source/Rows/PickerInputRow.swift; sourceTree = "<group>"; };
+		9B7E8DE6AEC20C2793811766E40C640F /* RuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRequired.swift; path = Source/Validations/RuleRequired.swift; sourceTree = "<group>"; };
+		9B827610A485F932AFEB467682023FF0 /* SearchTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SearchTextField-prefix.pch"; sourceTree = "<group>"; };
+		9D7FFBDDDA859D7950996E645C70EFB7 /* repair.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = repair.cc; path = db/repair.cc; sourceTree = "<group>"; };
+		A06553EE1F9808DAAB523383F7B14ADE /* JBDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JBDatePicker.framework; path = JBDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D9D22A6238F9285221849E5877696E /* histogram.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = histogram.cc; path = util/histogram.cc; sourceTree = "<group>"; };
+		A1777E6E848084C30218DBE955D2F9E8 /* table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table.h; path = include/leveldb/table.h; sourceTree = "<group>"; };
+		A27D1D31ADFA9FF9031D4C1E9EF62ED7 /* SearchTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchTextField.swift; path = SearchTextField/Classes/SearchTextField.swift; sourceTree = "<group>"; };
+		A2DF85E6690B355644DF44169D2CA920 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
 		A355AFDEFA327BBF1656E28B8CC99705 /* Pods-ASA Health Clinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASA Health Clinic.release.xcconfig"; sourceTree = "<group>"; };
 		A390B6022BAA318E657B8B9D12803399 /* Pods-ASA Health Clinic-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ASA Health Clinic-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A7BD0639F25A3F6BA13F18016B1B118D /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
-		A8B4D7E82551A5A9AA14CC16CB2E722A /* Eureka.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Eureka.bundle; path = Source/Resources/Eureka.bundle; sourceTree = "<group>"; };
-		A9CBF3FA751E082A8106AA0BCBBD5D3F /* HeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderFooterView.swift; path = Source/Core/HeaderFooterView.swift; sourceTree = "<group>"; };
-		AA0F50DE8D14C1912CEF57DE67F4844C /* SearchTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SearchTextField.framework; path = SearchTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF9F4D38046614F13BFBFF174288B70B /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core/Core.swift; sourceTree = "<group>"; };
-		B1CF966DF0F2F8054852E72A90A4D387 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
-		B560111794D53CA88FDB7AF04AC1827F /* ButtonRowWithPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRowWithPresent.swift; path = Source/Rows/ButtonRowWithPresent.swift; sourceTree = "<group>"; };
+		A3A68660133B7FDBF50C2FD68B87A0AC /* options.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = options.h; path = include/leveldb/options.h; sourceTree = "<group>"; };
+		A51B335BB041B3454AB9A1348E382EC0 /* table_builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table_builder.h; path = include/leveldb/table_builder.h; sourceTree = "<group>"; };
+		A5CF9C9FC497D478551F58DFA89B487C /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
+		A636CC6A762205F9738E747692004951 /* RuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleURL.swift; path = Source/Validations/RuleURL.swift; sourceTree = "<group>"; };
+		A648D2D2E377CD53FA6447E1EE956B7F /* RuleClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleClosure.swift; path = Source/Validations/RuleClosure.swift; sourceTree = "<group>"; };
+		A75C26E0A5DE17E55A81D2D08E22D574 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A97F34BE74FE05C1657C9AD52450C50F /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
+		AC7ED136633FABDFC9DD5A37E83B866C /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		AD738EE3F9D5D501B4788B2538FA03CD /* DecimalFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalFormatter.swift; path = Source/Rows/Common/DecimalFormatter.swift; sourceTree = "<group>"; };
+		AFEF66203C50441B7F4FDED18662D3E9 /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
+		B351FFD24E949B7F5EAA7C618A88113D /* DateFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFieldRow.swift; path = Source/Rows/Common/DateFieldRow.swift; sourceTree = "<group>"; };
+		B36DAFECFEDF09BB9F328378E894C50B /* memtable.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = memtable.cc; path = db/memtable.cc; sourceTree = "<group>"; };
 		B58F6C63EF29B1EFB679D55E5B92E194 /* Pods-ASA Health Clinic-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ASA Health Clinic-acknowledgements.plist"; sourceTree = "<group>"; };
+		B600195A3C98084BCFBACE7598AF9629 /* ButtonRowWithPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRowWithPresent.swift; path = Source/Rows/ButtonRowWithPresent.swift; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B80877EA1B2FD1BECD78636B7624DBCE /* SearchTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchTextField.swift; path = SearchTextField/Classes/SearchTextField.swift; sourceTree = "<group>"; };
-		B93EC01674E0A670A64BD4C592F60658 /* RuleEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEmail.swift; path = Source/Validations/RuleEmail.swift; sourceTree = "<group>"; };
+		B725BE9C64C963172B612F4E83A4F1F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE64785008FA31F764CC658973C29FF /* Pods-ASA Health Clinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ASA Health Clinic.debug.xcconfig"; sourceTree = "<group>"; };
-		BBE2CB30D0B05E43A7472CED6E2A433D /* RuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRequired.swift; path = Source/Validations/RuleRequired.swift; sourceTree = "<group>"; };
-		BC618C6AC1A0A24CEF3DDF9159A3055C /* SearchTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SearchTextField-dummy.m"; sourceTree = "<group>"; };
+		BB0E85E956CC500674B904FFD75E6E46 /* SelectableRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableRowType.swift; path = Source/Core/SelectableRowType.swift; sourceTree = "<group>"; };
+		BC793C8DFD1441DDA71859C8FEDE8D79 /* JBDatePickerWeekDaysView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerWeekDaysView.swift; path = JBDatePicker/Classes/JBDatePickerWeekDaysView.swift; sourceTree = "<group>"; };
+		BDB15E30F984365E43411E9B118466FB /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
+		BE1ADD3E75BDEBD7B915DC657C38A30D /* JBDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JBDatePicker-umbrella.h"; sourceTree = "<group>"; };
 		BE2F53B3A078DE868EEF0E5BFE77DE1E /* Pods-ASA Health Clinic-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ASA Health Clinic-resources.sh"; sourceTree = "<group>"; };
-		C9ED2F882D021DB4DEC9FB82CD6D24B3 /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
-		CF1B7E9AD01E11DC399126CF62507AC8 /* InlineRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InlineRowType.swift; path = Source/Core/InlineRowType.swift; sourceTree = "<group>"; };
-		CFFFD38838C394657EC2F38286E3C5B3 /* RuleRegExp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRegExp.swift; path = Source/Validations/RuleRegExp.swift; sourceTree = "<group>"; };
-		D1A8F873F0D31C0CD06C0FA4E0942BF6 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Core/Helpers.swift; sourceTree = "<group>"; };
+		BF476B86133E9C069155CB815B452B19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00704CC06D10A4F7D3D8B6A2725B044 /* JBDatePickerSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerSelectionView.swift; path = JBDatePicker/Classes/JBDatePickerSelectionView.swift; sourceTree = "<group>"; };
+		C0EE693110C25973D8EEFCD2C984468D /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Core/Validation.swift; sourceTree = "<group>"; };
+		C213BAEB4B052378F4739CFA38617082 /* JBDatePickerDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerDayView.swift; path = JBDatePicker/Classes/JBDatePickerDayView.swift; sourceTree = "<group>"; };
+		C2A4EF6CF203CED78AF5701BD1600347 /* testharness.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = testharness.cc; path = util/testharness.cc; sourceTree = "<group>"; };
+		C3ECDAD8A87F6F8D54EFBB61F330C611 /* MultipleSelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorViewController.swift; path = Source/Rows/Controllers/MultipleSelectorViewController.swift; sourceTree = "<group>"; };
+		C4B28D29812AB26C09EE11FD7BE081A0 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = nanopb.modulemap; sourceTree = "<group>"; };
+		C50D5691E414E2C2EDBF55705EDFCC40 /* DateInlineFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineFieldRow.swift; path = Source/Rows/Common/DateInlineFieldRow.swift; sourceTree = "<group>"; };
+		C53FD838D75AFAD14CB4D82B88E96B1D /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
+		C636107477F3EABC4D6804F3626B2545 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		C69F2AB3BE0920C2B8905D3F19FBC8E9 /* table_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table_builder.cc; path = table/table_builder.cc; sourceTree = "<group>"; };
+		C798CB0703DA8B28AE03C97588166CCF /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		C82E495C5F52B4AB22CF57954C425E2F /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Core/Operators.swift; sourceTree = "<group>"; };
+		C8C808DD02414BF26E31092E1D2A742E /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91628C4E4775C3F6DDD494321647326 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		C9FC58633ACB080F58F886F508DB4C27 /* leveldb-library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "leveldb-library-umbrella.h"; sourceTree = "<group>"; };
+		CB5BFA95CEB2D32A2BED61B4B3633A2E /* env.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = env.cc; path = util/env.cc; sourceTree = "<group>"; };
+		CDA08068A094FE41DBB2D4A9F3E6678C /* JBDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDate.swift; path = JBDatePicker/Classes/JBDate.swift; sourceTree = "<group>"; };
+		D6E20AEF540C7338E61110282918DEFE /* JBDatePickerManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerManager.swift; path = JBDatePicker/Classes/JBDatePickerManager.swift; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D99EADFE8F04B30526BA56FF8BECE61C /* RuleClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleClosure.swift; path = Source/Validations/RuleClosure.swift; sourceTree = "<group>"; };
-		D9ADC927EE5BAD1634037C3F694F543B /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
-		D9D60997B85D2D92E00FC60BCD3EC1A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E446CE105EFB59FC18E3D2169D29CA58 /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
-		EA32B0F02482DF8235877B180F23967E /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
-		EDFF1FDCB6CE02D73DA98A2CDF0EACF1 /* PickerInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInlineRow.swift; path = Source/Rows/PickerInlineRow.swift; sourceTree = "<group>"; };
-		EE70ACC918AFB00AD9FFA6B388D9C716 /* RuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleLength.swift; path = Source/Validations/RuleLength.swift; sourceTree = "<group>"; };
-		EE772293B0601D1B816007D2CFABD200 /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
-		EF88A2DF5FD3232F41C0114B1D2437CB /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		EFCC0DC51CB4F41A473C5E7B6E9B151E /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Source/Core/Form.swift; sourceTree = "<group>"; };
-		F20B9E3DBC2C25F93D4567FC02768EDF /* RowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowType.swift; path = Source/Core/RowType.swift; sourceTree = "<group>"; };
-		F42791FE67F4B9A6F22282185A292025 /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
-		FE43CB6F053D58562673C95D6324FE8D /* PickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerRow.swift; path = Source/Rows/PickerRow.swift; sourceTree = "<group>"; };
-		FE520D6208ACA59922F452B9C1BE5025 /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
-		FEFB972F8EE33499B9E9A25E9C8B264D /* SearchTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SearchTextField.xcconfig; sourceTree = "<group>"; };
+		DA2984E4C6A94D340F04AF0A380A0026 /* SearchTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SearchTextField.framework; path = SearchTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC3458591286F0A203578220DD26E51B /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Source/Core/Form.swift; sourceTree = "<group>"; };
+		DD4C86C948C360ECD40E6C4435E9DE3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE2F528A022E880ED5ACAF473EF72431 /* write_batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = write_batch.h; path = include/leveldb/write_batch.h; sourceTree = "<group>"; };
+		DE6EC68ADFFFAAD712E69B9C4A2A5C85 /* table_cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table_cache.cc; path = db/table_cache.cc; sourceTree = "<group>"; };
+		DEA54555F8044F24F7CA51A40821CC4E /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
+		DEB2D69D3C3D0C1235EE2D4E2EB71611 /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
+		E076495F7446F86E93386EF9D93272A8 /* RuleEqualsToRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEqualsToRow.swift; path = Source/Validations/RuleEqualsToRow.swift; sourceTree = "<group>"; };
+		E0828E53A125E2E1BC1DF68857AA7F55 /* JBDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JBDatePicker.xcconfig; sourceTree = "<group>"; };
+		E08A983B7B312BCECB87054ECFF16943 /* db_impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = db_impl.cc; path = db/db_impl.cc; sourceTree = "<group>"; };
+		E2F76B69994873FA224475D96933E5AE /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
+		E7B3B7CA3CF47D0AF9876907440A3810 /* JBDatePickerContentVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerContentVC.swift; path = JBDatePicker/Classes/JBDatePickerContentVC.swift; sourceTree = "<group>"; };
+		E7BA5D3D0B554F5601F27359C2092D2A /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
+		EAA6E383367C93760B2D7BB91FD48EA5 /* DatePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerRow.swift; path = Source/Rows/DatePickerRow.swift; sourceTree = "<group>"; };
+		EB4B6AF726A0189F4EBF5BD77F866574 /* JBDatePickerEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JBDatePickerEnums.swift; path = JBDatePicker/Classes/JBDatePickerEnums.swift; sourceTree = "<group>"; };
+		EE6EFAE74AC8F64F840CFA327E08BC13 /* db_iter.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = db_iter.cc; path = db/db_iter.cc; sourceTree = "<group>"; };
+		EE6FC3263A25675C2738D6271BFD5EFD /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
+		EF1A920FC2C2A9CF240DDF8774243CF3 /* crc32c.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = crc32c.cc; path = util/crc32c.cc; sourceTree = "<group>"; };
+		F06A6472E3087F5C286AC977258E92CA /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		F3426F4914BBF49814D4FC549BF64BCF /* RuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleLength.swift; path = Source/Validations/RuleLength.swift; sourceTree = "<group>"; };
+		F5E066BE39904D7DBEB5CDEF5D072AE9 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		F705C5FD3B3364E70B927D22BB0FBD1F /* dumpfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dumpfile.h; path = include/leveldb/dumpfile.h; sourceTree = "<group>"; };
+		F79CE79081EDACA0F2B06D5A701A3BA1 /* logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = logging.cc; path = util/logging.cc; sourceTree = "<group>"; };
+		F94BD1B5756C97CEB5496D9D156DA28B /* c.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = c.cc; path = db/c.cc; sourceTree = "<group>"; };
+		F9B3DEC679BA91632CA4365514965305 /* dbformat.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dbformat.cc; path = db/dbformat.cc; sourceTree = "<group>"; };
+		FCB9588E408D380936F361C3CBD9ECCF /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
+		FE1608D7C136DD37D4A56CC401DCD3D3 /* leveldb_main.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = leveldb_main.cc; path = db/leveldb_main.cc; sourceTree = "<group>"; };
+		FEAA1242009B43E60C34C2BF31E0860D /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
+		FF9FAE1A12A66089EB3E859A5197C76A /* dumpfile.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dumpfile.cc; path = db/dumpfile.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		40371A84C9B5547B22C8AD3826046488 /* Frameworks */ = {
+		23CBB5DB803EC4180549CB570499DE8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A278685CB21EB79D6F55374922701BF /* Foundation.framework in Frameworks */,
+				4EE0A86B88D2F153FAA07930D1621379 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57B3DB363EC1B2B2B97DF2E823E41D22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0083F26FD1186BBB612FFA4187BD32D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		971041836592E28ADEEDA495A96A62A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +458,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F132D234D2D20E64EF42AE7392BA2115 /* Frameworks */ = {
+		9E9BD0BD17E6E6FD347218BBD4E73B3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EB7CFB026E245B5D9597E22FD651E6 /* Foundation.framework in Frameworks */,
+				5447DE2944F0605CB9A6B9239F9D4760 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6BD36B779B43FE88E78A5FAA2FA80AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8917DDD0229FBC4E79A391CA873A2C54 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,60 +485,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D886E8E562138EC0BEB0785C10938CF /* Frameworks */ = {
+		09AEC1235C6203C22F234FDCBBF503B0 /* GoogleToolboxForMac */ = {
 			isa = PBXGroup;
 			children = (
-				77FA809565D6C24FC0239D8C036505B8 /* FirebaseCore.framework */,
-				A7BD0639F25A3F6BA13F18016B1B118D /* FirebaseCoreDiagnostics.framework */,
-				B1CF966DF0F2F8054852E72A90A4D387 /* FirebaseNanoPB.framework */,
+				F2E1523134AF97488805C74AC589A4DD /* Defines */,
+				C43705172D1B7BD14D6DBBC7509E8C25 /* NSData+zlib */,
+				0BFC480616B59AF11E2FC66AA00BEA3B /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		0BFC480616B59AF11E2FC66AA00BEA3B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A98B2B72DEABDA476842D415FC6C71B /* GoogleToolboxForMac.modulemap */,
+				AC7ED136633FABDFC9DD5A37E83B866C /* GoogleToolboxForMac.xcconfig */,
+				C91628C4E4775C3F6DDD494321647326 /* GoogleToolboxForMac-dummy.m */,
+				C636107477F3EABC4D6804F3626B2545 /* GoogleToolboxForMac-prefix.pch */,
+				32EFAE906C7101F69DF89D84A0AC20C2 /* GoogleToolboxForMac-umbrella.h */,
+				DD4C86C948C360ECD40E6C4435E9DE3B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		13521A22BB415AC380CD767B2FCCB542 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				3793C958495CFB0C46556E43D6FC9C7D /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		17A95559BC8EC4D3B929E907972A12AD /* decode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = decode;
+			sourceTree = "<group>";
+		};
+		220B9AC4CE88EAE74E007EC2C8B981EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43BCBDD02F272ABEB4B028E08DED6974 /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		25715F0CBB4CF0D3F4F9FD56DCB0BBDB /* Resources */ = {
+		22176503BB9180E4883E3D135097811A /* encode */ = {
 			isa = PBXGroup;
 			children = (
-				A8B4D7E82551A5A9AA14CC16CB2E722A /* Eureka.bundle */,
 			);
-			name = Resources;
+			name = encode;
 			sourceTree = "<group>";
 		};
-		3F0AF7A33E994EB9743D6D3C98949A45 /* FirebaseInstanceID */ = {
+		3793C958495CFB0C46556E43D6FC9C7D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4E063E85EA169B1E3393E77C5AF358A2 /* Frameworks */,
-			);
-			name = FirebaseInstanceID;
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		3F25C43C5FEC9D64ACCD5F4F6AD0A999 /* FirebaseCore */ = {
-			isa = PBXGroup;
-			children = (
-				0D886E8E562138EC0BEB0785C10938CF /* Frameworks */,
-			);
-			name = FirebaseCore;
-			path = FirebaseCore;
-			sourceTree = "<group>";
-		};
-		3F7C2A71C31F661F0B133D00F1C64022 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0E460012B0791AAF2ED0B0EE99355DC6 /* Eureka.modulemap */,
-				F42791FE67F4B9A6F22282185A292025 /* Eureka.xcconfig */,
-				C9ED2F882D021DB4DEC9FB82CD6D24B3 /* Eureka-dummy.m */,
-				EA32B0F02482DF8235877B180F23967E /* Eureka-prefix.pch */,
-				2F2B09C9B05410D3775A6D818C55CDC0 /* Eureka-umbrella.h */,
-				49B345EE67E6B0F93D721FBF0F6B82FF /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Eureka";
-			sourceTree = "<group>";
-		};
-		4212FC5057EAD2DDE9E3A18B9B9FB016 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				D9ADC927EE5BAD1634037C3F694F543B /* Firebase.h */,
+				11B3DF2BD99F3A8301D748F2AB97B141 /* Firebase.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -350,31 +584,100 @@
 			path = "Target Support Files/Pods-ASA Health Clinic";
 			sourceTree = "<group>";
 		};
-		4E063E85EA169B1E3393E77C5AF358A2 /* Frameworks */ = {
+		558C041955D6E39196F6E1B715F59FAD /* leveldb-library */ = {
 			isa = PBXGroup;
 			children = (
-				58B5ED51C1C87C7DD49A13199DEBFD15 /* FirebaseInstanceID.framework */,
+				0D0E219277C03F523F71FC8E24E70A33 /* arena.cc */,
+				5FC75C0EEA67A6C4902C7E3F7713B50A /* block.cc */,
+				52CA219C9C0ADF6E8C472AC7DE118C5A /* block_builder.cc */,
+				23DB201D87BCB9FA18F10B6DD7D50893 /* bloom.cc */,
+				3C943B847B42F4CA0C1A6B22EC0E86A1 /* builder.cc */,
+				F94BD1B5756C97CEB5496D9D156DA28B /* c.cc */,
+				373366C9E4E3358D19B46EFC491A2C95 /* c.h */,
+				48D1D25ACC0379D31BA737C675D1EF38 /* cache.cc */,
+				191E3382DB71F144B83EA03E80523BD9 /* cache.h */,
+				2EDE4D7BB0EB5CB293324D6A4981D38C /* coding.cc */,
+				2AFDA75E3F98748769A955418CF5037C /* comparator.cc */,
+				2596CB48083CAC49BCFD8EB8F270FC25 /* comparator.h */,
+				EF1A920FC2C2A9CF240DDF8774243CF3 /* crc32c.cc */,
+				696DA8594523ADF084ADDD55DD0DFF87 /* db.h */,
+				E08A983B7B312BCECB87054ECFF16943 /* db_impl.cc */,
+				EE6EFAE74AC8F64F840CFA327E08BC13 /* db_iter.cc */,
+				F9B3DEC679BA91632CA4365514965305 /* dbformat.cc */,
+				FF9FAE1A12A66089EB3E859A5197C76A /* dumpfile.cc */,
+				F705C5FD3B3364E70B927D22BB0FBD1F /* dumpfile.h */,
+				CB5BFA95CEB2D32A2BED61B4B3633A2E /* env.cc */,
+				640CECBD35DC43CC7EB6FD93C548E967 /* env.h */,
+				21FA6465E5ABC79E35E22002CCED6DC8 /* env_posix.cc */,
+				17A9C07628D4A405B77FFC379DC24A9B /* filename.cc */,
+				BDB15E30F984365E43411E9B118466FB /* filter_block.cc */,
+				5DDB1FC835AF15B5E5249B8D27C37415 /* filter_policy.cc */,
+				90796BDA8284333913ABAC9DFB8F24AF /* filter_policy.h */,
+				1CBD1199216CB664392D79CECB16CBB9 /* format.cc */,
+				1EA296A63E1DB185B284376E5851AD05 /* hash.cc */,
+				A0D9D22A6238F9285221849E5877696E /* histogram.cc */,
+				893FB08174332F048641C457BC2B5358 /* iterator.cc */,
+				100201550367099DF84CBE110A888A20 /* iterator.h */,
+				FE1608D7C136DD37D4A56CC401DCD3D3 /* leveldb_main.cc */,
+				08A5ECCD5B1EF060CDEDB11E09BD7002 /* log_reader.cc */,
+				89E0AD4F1440F2F05568A161787FB1DE /* log_writer.cc */,
+				F79CE79081EDACA0F2B06D5A701A3BA1 /* logging.cc */,
+				B36DAFECFEDF09BB9F328378E894C50B /* memtable.cc */,
+				65B78C0AB5CFC2DB778DD547C3D6D6EB /* merger.cc */,
+				85EE80C15A960B9D723C398BC8416569 /* options.cc */,
+				A3A68660133B7FDBF50C2FD68B87A0AC /* options.h */,
+				42E868BF9DB5CA366DE064759841BF0C /* port_posix.cc */,
+				9D7FFBDDDA859D7950996E645C70EFB7 /* repair.cc */,
+				098B373AC64EF639636C2C268D49E8A6 /* slice.h */,
+				349413A03C71271C015E027CF13397DA /* status.cc */,
+				80E623D27846F7B1C70CEAC17D47A23A /* status.h */,
+				1271417E711BE67DF4455B338D317066 /* table.cc */,
+				A1777E6E848084C30218DBE955D2F9E8 /* table.h */,
+				C69F2AB3BE0920C2B8905D3F19FBC8E9 /* table_builder.cc */,
+				A51B335BB041B3454AB9A1348E382EC0 /* table_builder.h */,
+				DE6EC68ADFFFAAD712E69B9C4A2A5C85 /* table_cache.cc */,
+				C2A4EF6CF203CED78AF5701BD1600347 /* testharness.cc */,
+				9566F49E59E30216AB0B47C5B677C4F7 /* testutil.cc */,
+				2FB0668DACB2471A12278B66D455CC6A /* two_level_iterator.cc */,
+				8FF2CE7E2B6664B7F09016ABBB30966D /* version_edit.cc */,
+				4CBAAF1C1AC780F13AE30FF9B32544C7 /* version_set.cc */,
+				2DFB04E4B2158CB7274F863E6DE22A50 /* write_batch.cc */,
+				DE2F528A022E880ED5ACAF473EF72431 /* write_batch.h */,
+				B02934CB5D6E290CE07F599645065908 /* Support Files */,
 			);
-			name = Frameworks;
+			name = "leveldb-library";
+			path = "leveldb-library";
 			sourceTree = "<group>";
 		};
-		5E6573C338A56043AB9C46B351582F77 /* NSData+zlib */ = {
+		600421E2178049DD9AAB9ED997DF927C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B27ED60E281818239F0B3DA85E3822F /* GTMNSData+zlib.h */,
-				33256D91A99813B2B9D38E2B34C1F20F /* GTMNSData+zlib.m */,
+				222A34518C1971C6DE92A12DFDC286CB /* Eureka.framework */,
+				C8C808DD02414BF26E31092E1D2A742E /* GoogleToolboxForMac.framework */,
+				A06553EE1F9808DAAB523383F7B14ADE /* JBDatePicker.framework */,
+				1E1CA94DF8104AD4C1FD7054274E2F9A /* leveldb.framework */,
+				4E5DF24E78B598A28816781914EC0943 /* nanopb.framework */,
+				3072D0FE8E8A6C4F0CA01F5A01A48B96 /* Pods_ASA_Health_Clinic.framework */,
+				DA2984E4C6A94D340F04AF0A380A0026 /* SearchTextField.framework */,
 			);
-			name = "NSData+zlib";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		6A2EF58B6ED30F6C934B4829E44A1817 /* SearchTextField */ = {
+		64A2B5E65A394FF73158DF3C99979FEC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B80877EA1B2FD1BECD78636B7624DBCE /* SearchTextField.swift */,
-				924E955D5844C9637E365ADF5DEB9C4E /* Support Files */,
+				3D0F5F2B33439078B839C8E02D3AD7A3 /* Eureka.bundle */,
 			);
-			name = SearchTextField;
-			path = SearchTextField;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6897010E8FD287C637B550E49426E9FC /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				9A1B0F48DFE9D1BF747ACE848D957F15 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
 		6D601C45816CD65A2F7DED3310306C8D /* Targets Support Files */ = {
@@ -385,188 +688,314 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		74AF4513E34C1B87EC1228BEAE8432AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B725BE9C64C963172B612F4E83A4F1F1 /* Info.plist */,
+				C4B28D29812AB26C09EE11FD7BE081A0 /* nanopb.modulemap */,
+				A97F34BE74FE05C1657C9AD52450C50F /* nanopb.xcconfig */,
+				91705A74DFBE1A7C48C6876A6BC51206 /* nanopb-dummy.m */,
+				704B70884CA41BA8626B4E42F59A8C78 /* nanopb-prefix.pch */,
+				FCB9588E408D380936F361C3CBD9ECCF /* nanopb-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/nanopb";
+			sourceTree = "<group>";
+		};
+		75B20AE148881042C861BABA97C2CCEB /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				5890600BC837FCB01A0ABE9BE20260E9 /* pb.h */,
+				062384012632ABC2F76D0E7A507CE9CF /* pb_common.c */,
+				17D8C99C135F5ED766DC802021A85284 /* pb_common.h */,
+				5C9FF905621225087F31F3CF69A3BB06 /* pb_decode.c */,
+				A5CF9C9FC497D478551F58DFA89B487C /* pb_decode.h */,
+				F06A6472E3087F5C286AC977258E92CA /* pb_encode.c */,
+				AFEF66203C50441B7F4FDED18662D3E9 /* pb_encode.h */,
+				17A95559BC8EC4D3B929E907972A12AD /* decode */,
+				22176503BB9180E4883E3D135097811A /* encode */,
+				74AF4513E34C1B87EC1228BEAE8432AD /* Support Files */,
+			);
+			name = nanopb;
+			path = nanopb;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				A086211EBBB686388EFCF7CEFF198BBE /* Pods */,
-				C6B0A43E6E94AE80884AADBAA8360D00 /* Products */,
+				B4CA49B03FC2EAE5959FDD6810769127 /* Pods */,
+				600421E2178049DD9AAB9ED997DF927C /* Products */,
 				6D601C45816CD65A2F7DED3310306C8D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		924E955D5844C9637E365ADF5DEB9C4E /* Support Files */ = {
+		83C78961A11D2A98F1BC8E8C750C1164 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D9D60997B85D2D92E00FC60BCD3EC1A6 /* Info.plist */,
-				9FE560610DA3067EFDD36907A6B7C81D /* SearchTextField.modulemap */,
-				FEFB972F8EE33499B9E9A25E9C8B264D /* SearchTextField.xcconfig */,
-				BC618C6AC1A0A24CEF3DDF9159A3055C /* SearchTextField-dummy.m */,
-				3A70370202B6B77C36C82B3D7AC3057C /* SearchTextField-prefix.pch */,
-				51AAE9089D2F3D0A0707685E8BCF7709 /* SearchTextField-umbrella.h */,
+				A75C26E0A5DE17E55A81D2D08E22D574 /* Info.plist */,
+				6C5FF3E529B3889AA16A8BAACE5AA685 /* JBDatePicker.modulemap */,
+				E0828E53A125E2E1BC1DF68857AA7F55 /* JBDatePicker.xcconfig */,
+				253C201BB4D43F18A9F1CF8F5AF30977 /* JBDatePicker-dummy.m */,
+				51D60BBC720851DD8B6F22E838BBE21F /* JBDatePicker-prefix.pch */,
+				BE1ADD3E75BDEBD7B915DC657C38A30D /* JBDatePicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JBDatePicker";
+			sourceTree = "<group>";
+		};
+		86AF988B55354A23F0C33557E6F8C0CB /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				220B9AC4CE88EAE74E007EC2C8B981EA /* Frameworks */,
+			);
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		8DF27FB236FA18453389F71ECFCF88B8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF476B86133E9C069155CB815B452B19 /* Info.plist */,
+				655BFE5980FA53FDD297B6D0F2A17D69 /* SearchTextField.modulemap */,
+				7CC216B06EBE25A1CF857673D810ED57 /* SearchTextField.xcconfig */,
+				2E25CFB293D07ED1F72AEA658C606AD0 /* SearchTextField-dummy.m */,
+				9B827610A485F932AFEB467682023FF0 /* SearchTextField-prefix.pch */,
+				31AAA7BAB06B257D39DA53926AAAB1A8 /* SearchTextField-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SearchTextField";
 			sourceTree = "<group>";
 		};
-		A086211EBBB686388EFCF7CEFF198BBE /* Pods */ = {
+		93FA4D2F8B38DD262B3E29D75C4F32CD /* JBDatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				C1AC5981A8A91F9EE3A809ADF01E6DC9 /* Eureka */,
-				F6E458BBBF664D14FCEACE40A8515118 /* Firebase */,
-				DA9BCE4690D6B182296BD1B69B6F5EA1 /* FirebaseAnalytics */,
-				3F25C43C5FEC9D64ACCD5F4F6AD0A999 /* FirebaseCore */,
-				3F0AF7A33E994EB9743D6D3C98949A45 /* FirebaseInstanceID */,
-				F624EEC2FD03C434381661EBFE7275BD /* GoogleToolboxForMac */,
-				6A2EF58B6ED30F6C934B4829E44A1817 /* SearchTextField */,
+				CDA08068A094FE41DBB2D4A9F3E6678C /* JBDate.swift */,
+				83C79FE0092D680B308B99B93A2B974B /* JBDateExtension.swift */,
+				E7B3B7CA3CF47D0AF9876907440A3810 /* JBDatePickerContentVC.swift */,
+				C213BAEB4B052378F4739CFA38617082 /* JBDatePickerDayView.swift */,
+				EB4B6AF726A0189F4EBF5BD77F866574 /* JBDatePickerEnums.swift */,
+				D6E20AEF540C7338E61110282918DEFE /* JBDatePickerManager.swift */,
+				1FABEC2EB21CC3B458B9F6DEA35D1E62 /* JBDatePickerMonthView.swift */,
+				C00704CC06D10A4F7D3D8B6A2725B044 /* JBDatePickerSelectionView.swift */,
+				94414220D82DA07402A1F5FE7C67F5DE /* JBDatePickerView.swift */,
+				93A602CCD238F9D976E493E5CAB6C191 /* JBDatePickerViewDelegate.swift */,
+				BC793C8DFD1441DDA71859C8FEDE8D79 /* JBDatePickerWeekDaysView.swift */,
+				3653FCA1B91756EC538B144D277F1C6A /* JBDatePickerWeekView.swift */,
+				589D51802498FDC29CF59076A553365D /* JBFont.swift */,
+				83C78961A11D2A98F1BC8E8C750C1164 /* Support Files */,
+			);
+			name = JBDatePicker;
+			path = JBDatePicker;
+			sourceTree = "<group>";
+		};
+		9A1B0F48DFE9D1BF747ACE848D957F15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92CCC3215D53C66315A47919A352967A /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A846292D5CBFAABD44D468E5B4999B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				497DFEBF4F5E58A9B25432EEE8BC549B /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A02F76D17048B6BDD5FA5D487E9471CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72F89A2D312F672A0754C86D3B8868A0 /* FirebaseCore.framework */,
+				8673EB5162DDB0999B6881C4EEDDCA20 /* FirebaseCoreDiagnostics.framework */,
+				17EE57CBB21AE40AC1C4A893135200A3 /* FirebaseNanoPB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B02934CB5D6E290CE07F599645065908 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				743408C43039B298E6E89ECD1E011383 /* Info.plist */,
+				6292ACE15FEBAAC677FC7BD97E1EB031 /* leveldb-library.modulemap */,
+				2A84E4DF7B37B6A7AD77E1CA583B92AB /* leveldb-library.xcconfig */,
+				1501EDC2CD44F7B53C8DB9F9E247841B /* leveldb-library-dummy.m */,
+				42F50FFD00805BA92681D1F951276E18 /* leveldb-library-prefix.pch */,
+				C9FC58633ACB080F58F886F508DB4C27 /* leveldb-library-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/leveldb-library";
+			sourceTree = "<group>";
+		};
+		B4CA49B03FC2EAE5959FDD6810769127 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1BBDD03E213A2C6A09BAB7A8BF4E88B /* Eureka */,
+				13521A22BB415AC380CD767B2FCCB542 /* Firebase */,
+				6897010E8FD287C637B550E49426E9FC /* FirebaseAnalytics */,
+				ED1CB4FDE5065F3D39284EF5AB744B80 /* FirebaseCore */,
+				86AF988B55354A23F0C33557E6F8C0CB /* FirebaseDatabase */,
+				FE89D0E4EC2043B73910537E071B292D /* FirebaseInstanceID */,
+				09AEC1235C6203C22F234FDCBBF503B0 /* GoogleToolboxForMac */,
+				93FA4D2F8B38DD262B3E29D75C4F32CD /* JBDatePicker */,
+				558C041955D6E39196F6E1B715F59FAD /* leveldb-library */,
+				75B20AE148881042C861BABA97C2CCEB /* nanopb */,
+				ED8A7C1C21E7A6D5C0DA2EB5BEED278B /* SearchTextField */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B1D3EB30891B996BE105F5FEA2D9E439 /* Defines */ = {
+		C1BBDD03E213A2C6A09BAB7A8BF4E88B /* Eureka */ = {
 			isa = PBXGroup;
 			children = (
-				80D1FC53A7EBEF9B06DC774E3CF6EEDD /* GTMDefines.h */,
-			);
-			name = Defines;
-			sourceTree = "<group>";
-		};
-		C1AC5981A8A91F9EE3A809ADF01E6DC9 /* Eureka */ = {
-			isa = PBXGroup;
-			children = (
-				EE772293B0601D1B816007D2CFABD200 /* ActionSheetRow.swift */,
-				4429B0642E5B706B268B7C90892ECBB8 /* AlertRow.swift */,
-				4548C892C3CE997BAF4BF78A504B952C /* BaseRow.swift */,
-				33A384BC4F1BCD3BC3CDB7C9A1814B06 /* ButtonRow.swift */,
-				B560111794D53CA88FDB7AF04AC1827F /* ButtonRowWithPresent.swift */,
-				E446CE105EFB59FC18E3D2169D29CA58 /* Cell.swift */,
-				9D4944F865AA09D4EC5474D1F00759AA /* CellType.swift */,
-				1F57D3098FE910E284CAFFA505E20325 /* CheckRow.swift */,
-				AF9F4D38046614F13BFBFF174288B70B /* Core.swift */,
-				022699BA0C532520067CC71A8129ADC3 /* DateFieldRow.swift */,
-				8701EDE43E7BAF1ED5D36E2712F00B7F /* DateInlineFieldRow.swift */,
-				3A5B5FC35E804A55D981F3C9F55B23DA /* DateInlineRow.swift */,
-				15950A16CE5DE5CD4448BD3BDF93A99A /* DatePickerRow.swift */,
-				30000B2CE634CF124E0B9BE1A964382D /* DateRow.swift */,
-				00B43F8631280A8F811C476C6F8CABF9 /* DecimalFormatter.swift */,
-				805CAC6F6550EED7B310653FE1C06AC2 /* FieldRow.swift */,
-				21DEFBD377E8B27478B766A55980D670 /* FieldsRow.swift */,
-				EFCC0DC51CB4F41A473C5E7B6E9B151E /* Form.swift */,
-				65623C5B6BEA2362348EE07F299D583C /* GenericMultipleSelectorRow.swift */,
-				A9CBF3FA751E082A8106AA0BCBBD5D3F /* HeaderFooterView.swift */,
-				D1A8F873F0D31C0CD06C0FA4E0942BF6 /* Helpers.swift */,
-				CF1B7E9AD01E11DC399126CF62507AC8 /* InlineRowType.swift */,
-				1BCCBFE95CC771FFE8049DA53ADB6C4D /* LabelRow.swift */,
-				917435224893E82FA9BE5C6C9FECE508 /* ListCheckRow.swift */,
-				622B75A73C7FE2DC29169A7FB13D9882 /* MultipleSelectorRow.swift */,
-				4460D1B65136D4D794F078351BA42902 /* MultipleSelectorViewController.swift */,
-				4EC0447B2BDEDDA95C71EB9568ABD35E /* NavigationAccessoryView.swift */,
-				87613BF624928B03ABFD54486747A2C2 /* Operators.swift */,
-				2ACAA7E9691F42FAA32B6DE57B0F0F87 /* OptionsRow.swift */,
-				EDFF1FDCB6CE02D73DA98A2CDF0EACF1 /* PickerInlineRow.swift */,
-				078AFCBC6850D27C1AD428F819140E0F /* PickerInputRow.swift */,
-				FE43CB6F053D58562673C95D6324FE8D /* PickerRow.swift */,
-				5596B61C9437E175AEFE0B6BAAB3D293 /* PopoverSelectorRow.swift */,
-				84BD074D7972E7B7BA9A8ACB822F4A75 /* PresenterRowType.swift */,
-				982F5F1F56740A916179BB11B59CBD47 /* Protocols.swift */,
-				A2C87B26BC0C32BBEC9DB1474D218394 /* PushRow.swift */,
-				A2FBE8E0F5A6AB9A2625694B0598401A /* Row.swift */,
-				4678E90E3B168DB1AEE458561E2BB3A7 /* RowControllerType.swift */,
-				332F057F6C3AE55DB908BE624312CE16 /* RowProtocols.swift */,
-				F20B9E3DBC2C25F93D4567FC02768EDF /* RowType.swift */,
-				D99EADFE8F04B30526BA56FF8BECE61C /* RuleClosure.swift */,
-				B93EC01674E0A670A64BD4C592F60658 /* RuleEmail.swift */,
-				958F76406259AF99F70CFA3DAFEF4610 /* RuleEqualsToRow.swift */,
-				EE70ACC918AFB00AD9FFA6B388D9C716 /* RuleLength.swift */,
-				4D65CFFFCF5A1DC7F988CC0F03B61431 /* RuleRange.swift */,
-				CFFFD38838C394657EC2F38286E3C5B3 /* RuleRegExp.swift */,
-				BBE2CB30D0B05E43A7472CED6E2A433D /* RuleRequired.swift */,
-				172A310BCB669AE7B85D666601D8584E /* RuleURL.swift */,
-				20A2AC7AFB88BAF7BB781E827E841751 /* Section.swift */,
-				16AF1B47E69854F5412ACB5E4C6D2D06 /* SegmentedRow.swift */,
-				7AF108FDCD77B2649D682FD8280AF2DB /* SelectableRowType.swift */,
-				714BF87E40D758DF2A9A34ADFA959617 /* SelectableSection.swift */,
-				4E33AE62E8495F495DE7EB251F381D9A /* SelectorAlertController.swift */,
-				63C338EC33E070521A5A6C253B06EFE5 /* SelectorRow.swift */,
-				FE520D6208ACA59922F452B9C1BE5025 /* SelectorViewController.swift */,
-				214CED6AB54ECB27CA37F6BA8107EA20 /* SliderRow.swift */,
-				08BE6252B5D1F954A63D8DFDEE6A7779 /* StepperRow.swift */,
-				7C188D2A6BFE8EF5BE2F73E5D01B1782 /* SwitchRow.swift */,
-				1BFF22CE446511411E8C809B694DB44C /* TextAreaRow.swift */,
-				950DF440942E782D602FDDF5DBD67A03 /* Validation.swift */,
-				25715F0CBB4CF0D3F4F9FD56DCB0BBDB /* Resources */,
-				3F7C2A71C31F661F0B133D00F1C64022 /* Support Files */,
+				C53FD838D75AFAD14CB4D82B88E96B1D /* ActionSheetRow.swift */,
+				0C66DEBDAD69C862093EB72A58AE3075 /* AlertRow.swift */,
+				963B4D1D78FD9301949186CFB7F9DCC8 /* BaseRow.swift */,
+				08541555C038FC4737CC148F03320EF3 /* ButtonRow.swift */,
+				B600195A3C98084BCFBACE7598AF9629 /* ButtonRowWithPresent.swift */,
+				E2F76B69994873FA224475D96933E5AE /* Cell.swift */,
+				112ACF7F2F8A3B61A6611FF9E6888DDB /* CellType.swift */,
+				EE6FC3263A25675C2738D6271BFD5EFD /* CheckRow.swift */,
+				60E76617428200D719A7151ADC94C948 /* Core.swift */,
+				B351FFD24E949B7F5EAA7C618A88113D /* DateFieldRow.swift */,
+				C50D5691E414E2C2EDBF55705EDFCC40 /* DateInlineFieldRow.swift */,
+				2BA664E7F0F833774915B1511F6694E1 /* DateInlineRow.swift */,
+				EAA6E383367C93760B2D7BB91FD48EA5 /* DatePickerRow.swift */,
+				FEAA1242009B43E60C34C2BF31E0860D /* DateRow.swift */,
+				AD738EE3F9D5D501B4788B2538FA03CD /* DecimalFormatter.swift */,
+				19C7A9FCE19E79F821DDD90A7CC369D0 /* FieldRow.swift */,
+				1D388A57F32193A8A3B0D9EFCD6744AC /* FieldsRow.swift */,
+				DC3458591286F0A203578220DD26E51B /* Form.swift */,
+				25F830ED6DE173B08CB4C54BCB79D976 /* GenericMultipleSelectorRow.swift */,
+				8A35D09FC66CA1F11CF961D41C9A3D7C /* HeaderFooterView.swift */,
+				49821AC34557BD8488E751B67389CFCB /* Helpers.swift */,
+				32CFCDD72D0B9DF7FFEEA6B29AFB5E98 /* InlineRowType.swift */,
+				11B2A6AD4C56521E40290BA53C39079D /* LabelRow.swift */,
+				21676E7817B1CB0859276143DD370AF2 /* ListCheckRow.swift */,
+				74476DA4AED0BE10C4CDDFAB5E71B3D0 /* MultipleSelectorRow.swift */,
+				C3ECDAD8A87F6F8D54EFBB61F330C611 /* MultipleSelectorViewController.swift */,
+				7CE6EA8B1D8011A82EE3C5CDEDE0DCAB /* NavigationAccessoryView.swift */,
+				C82E495C5F52B4AB22CF57954C425E2F /* Operators.swift */,
+				3F861ADE0A17B2F6FEE8408EAC7A3A3B /* OptionsRow.swift */,
+				45B3C70FAFAFB6D79DCE9BE8D1DDC9A5 /* PickerInlineRow.swift */,
+				99070A1BD31E3481C3A7B4D89A3198C3 /* PickerInputRow.swift */,
+				7F7411D79E06AF1F32C8A98430945500 /* PickerRow.swift */,
+				6EE2576E246C1770CE9A91F224391B78 /* PopoverSelectorRow.swift */,
+				1F02360D159EDC4058B91AEBE8D423B2 /* PresenterRowType.swift */,
+				A2DF85E6690B355644DF44169D2CA920 /* Protocols.swift */,
+				DEA54555F8044F24F7CA51A40821CC4E /* PushRow.swift */,
+				05A5CC364237DAEDEB37907909C0884E /* Row.swift */,
+				279EC155AB6C1BFB1B3BC7750C93BA64 /* RowControllerType.swift */,
+				066BDC5912F75CDBDB25E92A428AF812 /* RowProtocols.swift */,
+				6ECA42B2820B620243297F46056C8941 /* RowType.swift */,
+				A648D2D2E377CD53FA6447E1EE956B7F /* RuleClosure.swift */,
+				94CF458AF4725009E882EE89087D047B /* RuleEmail.swift */,
+				E076495F7446F86E93386EF9D93272A8 /* RuleEqualsToRow.swift */,
+				F3426F4914BBF49814D4FC549BF64BCF /* RuleLength.swift */,
+				00BA8E96A8627591546871D3E5E51DC8 /* RuleRange.swift */,
+				9358355630E649629C53A003B8BFDA78 /* RuleRegExp.swift */,
+				9B7E8DE6AEC20C2793811766E40C640F /* RuleRequired.swift */,
+				A636CC6A762205F9738E747692004951 /* RuleURL.swift */,
+				26D60B28C8BD154ADED265F9A3E8201A /* Section.swift */,
+				0E4019B7C8AF30AC86E55FDC4308C422 /* SegmentedRow.swift */,
+				BB0E85E956CC500674B904FFD75E6E46 /* SelectableRowType.swift */,
+				6AD4973D3423E4A667FA78868E08C045 /* SelectableSection.swift */,
+				6AE30B5A3332A9A156B14EE7FF6C39E7 /* SelectorAlertController.swift */,
+				09820DA86BFC14F2A16528B81B8ED57C /* SelectorRow.swift */,
+				DEB2D69D3C3D0C1235EE2D4E2EB71611 /* SelectorViewController.swift */,
+				23C0A2D34AA46B8F93010B65A6F53F2C /* SliderRow.swift */,
+				35452F479E8320F0F970DA8675BBDAB0 /* StepperRow.swift */,
+				3FCD78487A88DBF3602B352C86EC527A /* SwitchRow.swift */,
+				2705D99B6B89BBD5472ECB1A5AE5EE23 /* TextAreaRow.swift */,
+				C0EE693110C25973D8EEFCD2C984468D /* Validation.swift */,
+				64A2B5E65A394FF73158DF3C99979FEC /* Resources */,
+				F29FF083389A7EBDF22BB21838B6F576 /* Support Files */,
 			);
 			name = Eureka;
 			path = Eureka;
 			sourceTree = "<group>";
 		};
-		C6B0A43E6E94AE80884AADBAA8360D00 /* Products */ = {
+		C43705172D1B7BD14D6DBBC7509E8C25 /* NSData+zlib */ = {
 			isa = PBXGroup;
 			children = (
-				54850D746E7965CA92E5B7AF5233FD28 /* Eureka.framework */,
-				1E1DB52506841E2ED10FB761F86D87FB /* GoogleToolboxForMac.framework */,
-				1143E273FCF57CD56960DE63B0169F87 /* Pods_ASA_Health_Clinic.framework */,
-				AA0F50DE8D14C1912CEF57DE67F4844C /* SearchTextField.framework */,
+				F5E066BE39904D7DBEB5CDEF5D072AE9 /* GTMNSData+zlib.h */,
+				5C64FCB294FE440A045845C72BCFC879 /* GTMNSData+zlib.m */,
 			);
-			name = Products;
+			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
-		CE441DE10048521132EB635E28432AD8 /* Support Files */ = {
+		ED1CB4FDE5065F3D39284EF5AB744B80 /* FirebaseCore */ = {
 			isa = PBXGroup;
 			children = (
-				19EA5AEA64B31B87D43673603E1EC052 /* GoogleToolboxForMac.modulemap */,
-				6DFE5E840C0BCB9EFF91A82BF564222C /* GoogleToolboxForMac.xcconfig */,
-				123830CFBF76C4887BB9EF0AC5EFE9F7 /* GoogleToolboxForMac-dummy.m */,
-				4B173CDB577B327092B3D63C396922FD /* GoogleToolboxForMac-prefix.pch */,
-				2DAD9D12AB98801CD35293F8F78FF3B1 /* GoogleToolboxForMac-umbrella.h */,
-				1132378A01E6172DEB463976417ABF3D /* Info.plist */,
+				A02F76D17048B6BDD5FA5D487E9471CA /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		ED8A7C1C21E7A6D5C0DA2EB5BEED278B /* SearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A27D1D31ADFA9FF9031D4C1E9EF62ED7 /* SearchTextField.swift */,
+				8DF27FB236FA18453389F71ECFCF88B8 /* Support Files */,
+			);
+			name = SearchTextField;
+			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		F29FF083389A7EBDF22BB21838B6F576 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DFDB1FD534466281A870B0629B35117 /* Eureka.modulemap */,
+				5CE8C00AC6BB2095BABC6280C8FC4BA4 /* Eureka.xcconfig */,
+				E7BA5D3D0B554F5601F27359C2092D2A /* Eureka-dummy.m */,
+				3F9BBB7312F8317824829DAB25B7C78D /* Eureka-prefix.pch */,
+				87D453840C8F843898017A629E8B0688 /* Eureka-umbrella.h */,
+				234849737A0F04A188129F703D0A3317 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GoogleToolboxForMac";
+			path = "../Target Support Files/Eureka";
 			sourceTree = "<group>";
 		};
-		DA9BCE4690D6B182296BD1B69B6F5EA1 /* FirebaseAnalytics */ = {
+		F2E1523134AF97488805C74AC589A4DD /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				EB2FAA760570189A6124462A37F14E11 /* Frameworks */,
+				C798CB0703DA8B28AE03C97588166CCF /* GTMDefines.h */,
 			);
-			name = FirebaseAnalytics;
-			path = FirebaseAnalytics;
+			name = Defines;
 			sourceTree = "<group>";
 		};
-		EB2FAA760570189A6124462A37F14E11 /* Frameworks */ = {
+		FE89D0E4EC2043B73910537E071B292D /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				EF88A2DF5FD3232F41C0114B1D2437CB /* FirebaseAnalytics.framework */,
+				9A846292D5CBFAABD44D468E5B4999B8 /* Frameworks */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F624EEC2FD03C434381661EBFE7275BD /* GoogleToolboxForMac */ = {
-			isa = PBXGroup;
-			children = (
-				B1D3EB30891B996BE105F5FEA2D9E439 /* Defines */,
-				5E6573C338A56043AB9C46B351582F77 /* NSData+zlib */,
-				CE441DE10048521132EB635E28432AD8 /* Support Files */,
-			);
-			name = GoogleToolboxForMac;
-			path = GoogleToolboxForMac;
-			sourceTree = "<group>";
-		};
-		F6E458BBBF664D14FCEACE40A8515118 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				4212FC5057EAD2DDE9E3A18B9B9FB016 /* Core */,
-			);
-			name = Firebase;
-			path = Firebase;
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0A559C391F8B5B68E64E03C4E2346979 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E2E110C874BB451DB4FE2A2A77665F6 /* Pods-ASA Health Clinic-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A0A878EDCDB144BF8B8DAE7D7EB76B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A5FB21F51A0656D8901CAF7FBAB984 /* SearchTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F412B9DD67AD97FE17C6F9513349CCA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -575,19 +1004,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A3158590FAC9AB6E3E4E63703BA321C /* Headers */ = {
+		4547B9AF8085A499AA35614798F8F9E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B6B95E4A3B3A9C5E8D6F8BE6E3F3BD /* Pods-ASA Health Clinic-umbrella.h in Headers */,
+				F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */,
+				392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */,
+				806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */,
+				29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */,
+				E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5156E57DE90734EBA8A6C66930CB021 /* Headers */ = {
+		4F5AD80A6529F1784C66D08848D45806 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				488217E153BA99BBB3566A4BFD2177B3 /* SearchTextField-umbrella.h in Headers */,
+				9986CC9E01511FC62F0ABC784A53EB5D /* c.h in Headers */,
+				54890BD1E2AF8DB9B6E358500A55023D /* cache.h in Headers */,
+				86C6461CE7D075918E8055EEEAB8DD9B /* comparator.h in Headers */,
+				DB721CCD4AC8D96FD2C6B38F8E2CD6DE /* db.h in Headers */,
+				CF8915AED2A0B61AAE493ADAC4D24290 /* dumpfile.h in Headers */,
+				5E7B49E285BBD4B124883D9A7CC31FC4 /* env.h in Headers */,
+				99DA21B2C6FB8420A1E3EEFF779FE465 /* filter_policy.h in Headers */,
+				C23C8A46061E0F6E98CF81C92D436FCA /* iterator.h in Headers */,
+				3ACFA6137866703C21475E04A029CB9E /* leveldb-library-umbrella.h in Headers */,
+				A8E52A3115C5E49142D1A79026A12DE7 /* options.h in Headers */,
+				3E387084411D1D4DEE888C969BEDF409 /* slice.h in Headers */,
+				B792906BE2FF6D4AD5C4741A33CC9406 /* status.h in Headers */,
+				6C4F51DAD5CA08C061556297785DF320 /* table.h in Headers */,
+				B84E5EDC520912257FC9B9C67CF9C63C /* table_builder.h in Headers */,
+				AFB685276FBA4324E9860CE5F240A09C /* write_batch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EF441EFD94F191D0A5162165ACA9EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1AFD2DA4A274361F9FA6E3F662029E /* JBDatePicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,24 +1073,47 @@
 			);
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
-			productReference = 1E1DB52506841E2ED10FB761F86D87FB /* GoogleToolboxForMac.framework */;
+			productReference = C8C808DD02414BF26E31092E1D2A742E /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		35AC48C67309DB4C783BB23450BC59DE /* SearchTextField */ = {
+		266AE1506DAD13D34C0725E909C0C476 /* leveldb-library */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E2FFDB48A94B49B24B586DC37084E8F /* Build configuration list for PBXNativeTarget "SearchTextField" */;
+			buildConfigurationList = 914E592EC84693F67DA72C8D357B2B00 /* Build configuration list for PBXNativeTarget "leveldb-library" */;
 			buildPhases = (
-				2C4238B8B8DAC243782AE82ADC655A30 /* Sources */,
-				F132D234D2D20E64EF42AE7392BA2115 /* Frameworks */,
-				D5156E57DE90734EBA8A6C66930CB021 /* Headers */,
+				3971CB309244795FFAA6344DD6B1AAB3 /* Sources */,
+				57B3DB363EC1B2B2B97DF2E823E41D22 /* Frameworks */,
+				4F5AD80A6529F1784C66D08848D45806 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SearchTextField;
-			productName = SearchTextField;
-			productReference = AA0F50DE8D14C1912CEF57DE67F4844C /* SearchTextField.framework */;
+			name = "leveldb-library";
+			productName = "leveldb-library";
+			productReference = 1E1CA94DF8104AD4C1FD7054274E2F9A /* leveldb.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		59A896D20EED29E16AB407393A3A4107 /* Pods-ASA Health Clinic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D950F4603F7AC40D28014F6F052638E1 /* Build configuration list for PBXNativeTarget "Pods-ASA Health Clinic" */;
+			buildPhases = (
+				9ADDB8196CC8EFF422FD1BC49AC5CC99 /* Sources */,
+				9E9BD0BD17E6E6FD347218BBD4E73B3B /* Frameworks */,
+				0A559C391F8B5B68E64E03C4E2346979 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CC3BDA793D585DA3C0E04724BFE81A7 /* PBXTargetDependency */,
+				230BB81BAF4EF93FEA59A720B9D6482C /* PBXTargetDependency */,
+				7632F0A8E3706C236271D935619A94BF /* PBXTargetDependency */,
+				0714ABAC5E9E0637E87AA4A6AA0BC874 /* PBXTargetDependency */,
+				AFD8658FA7D51F0FCD9B2CA6F06AB23C /* PBXTargetDependency */,
+				38C99FB74E5B1B319B37F6EECC7F6B43 /* PBXTargetDependency */,
+			);
+			name = "Pods-ASA Health Clinic";
+			productName = "Pods-ASA Health Clinic";
+			productReference = 3072D0FE8E8A6C4F0CA01F5A01A48B96 /* Pods_ASA_Health_Clinic.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		675A114988AE198732ED4AD726408964 /* Eureka */ = {
@@ -653,27 +1131,58 @@
 			);
 			name = Eureka;
 			productName = Eureka;
-			productReference = 54850D746E7965CA92E5B7AF5233FD28 /* Eureka.framework */;
+			productReference = 222A34518C1971C6DE92A12DFDC286CB /* Eureka.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		86D618A0DCBB05018D86EDD65A44859D /* Pods-ASA Health Clinic */ = {
+		A01A78E1415B1103149D782482AE955F /* JBDatePicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9315A2444ACE4AE48C2397CAEFD9D919 /* Build configuration list for PBXNativeTarget "Pods-ASA Health Clinic" */;
+			buildConfigurationList = EC0822936AF96B1C54E578B7F63AC254 /* Build configuration list for PBXNativeTarget "JBDatePicker" */;
 			buildPhases = (
-				E1DFA040845440713EEFBC2AB0021C73 /* Sources */,
-				40371A84C9B5547B22C8AD3826046488 /* Frameworks */,
-				3A3158590FAC9AB6E3E4E63703BA321C /* Headers */,
+				73765D8A7D1F7FBFD43E9438272CB35A /* Sources */,
+				23CBB5DB803EC4180549CB570499DE8A /* Frameworks */,
+				98EF441EFD94F191D0A5162165ACA9EA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DBC6AB6BF144FEB0507FDF284F1AFA0A /* PBXTargetDependency */,
-				AC1F14FEB025D1D97CDE56C39BCDD5E9 /* PBXTargetDependency */,
-				5B01C8FBC00FCDA4513F6ADE4FBD2026 /* PBXTargetDependency */,
 			);
-			name = "Pods-ASA Health Clinic";
-			productName = "Pods-ASA Health Clinic";
-			productReference = 1143E273FCF57CD56960DE63B0169F87 /* Pods_ASA_Health_Clinic.framework */;
+			name = JBDatePicker;
+			productName = JBDatePicker;
+			productReference = A06553EE1F9808DAAB523383F7B14ADE /* JBDatePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B35BD94A493D33F8DD32253E2DAF06DA /* SearchTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8BC7C7108D1D1F4F84923C7AB42E0DE /* Build configuration list for PBXNativeTarget "SearchTextField" */;
+			buildPhases = (
+				34344A8CB73558BC2140B29E658D9C00 /* Sources */,
+				D6BD36B779B43FE88E78A5FAA2FA80AC /* Frameworks */,
+				18A0A878EDCDB144BF8B8DAE7D7EB76B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchTextField;
+			productName = SearchTextField;
+			productReference = DA2984E4C6A94D340F04AF0A380A0026 /* SearchTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F118B0FA84AC9116AB2E480C302C3999 /* Build configuration list for PBXNativeTarget "nanopb" */;
+			buildPhases = (
+				238527BE8D494586023F2A2B8A60D242 /* Sources */,
+				971041836592E28ADEEDA495A96A62A2 /* Frameworks */,
+				4547B9AF8085A499AA35614798F8F9E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nanopb;
+			productName = nanopb;
+			productReference = 4E5DF24E78B598A28816781914EC0943 /* nanopb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -693,14 +1202,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C6B0A43E6E94AE80884AADBAA8360D00 /* Products */;
+			productRefGroup = 600421E2178049DD9AAB9ED997DF927C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				675A114988AE198732ED4AD726408964 /* Eureka */,
 				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
-				86D618A0DCBB05018D86EDD65A44859D /* Pods-ASA Health Clinic */,
-				35AC48C67309DB4C783BB23450BC59DE /* SearchTextField */,
+				A01A78E1415B1103149D782482AE955F /* JBDatePicker */,
+				266AE1506DAD13D34C0725E909C0C476 /* leveldb-library */,
+				E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */,
+				59A896D20EED29E16AB407393A3A4107 /* Pods-ASA Health Clinic */,
+				B35BD94A493D33F8DD32253E2DAF06DA /* SearchTextField */,
 			);
 		};
 /* End PBXProject section */
@@ -717,12 +1229,73 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C4238B8B8DAC243782AE82ADC655A30 /* Sources */ = {
+		238527BE8D494586023F2A2B8A60D242 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C20780B4458380116B7C81F2B8237240 /* SearchTextField-dummy.m in Sources */,
-				74BD9203C17A8DE34342BC761EA83E92 /* SearchTextField.swift in Sources */,
+				468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */,
+				3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */,
+				54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */,
+				55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34344A8CB73558BC2140B29E658D9C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C250D47795FC94150C176E0A599DB0D /* SearchTextField-dummy.m in Sources */,
+				BF612B7010E4F35AF64295DD5D2DF856 /* SearchTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3971CB309244795FFAA6344DD6B1AAB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51B84030D06E6B1C3375FB71F0612364 /* arena.cc in Sources */,
+				1EA9996D9020398F975487C9103E140E /* block.cc in Sources */,
+				42FDBB7475BC1A17F60A13CCDE6096C7 /* block_builder.cc in Sources */,
+				80B2F88F296C18ED042CA6683C096FED /* bloom.cc in Sources */,
+				40AE193577948028931B056CB5BE1ADF /* builder.cc in Sources */,
+				6F238FE66F71E88653786B278656014B /* c.cc in Sources */,
+				2B90CB94CFE6F6CCEBE0EB676A71BD13 /* cache.cc in Sources */,
+				7724AB82912200ABE007D11912B87A38 /* coding.cc in Sources */,
+				95AE4EC1D6EB584B4A7534E771FC5CAD /* comparator.cc in Sources */,
+				D050304FB4DBC057FD90E8EE131DCB4D /* crc32c.cc in Sources */,
+				9929FEFF60EDF5B9A0031CF4B9D32EF9 /* db_impl.cc in Sources */,
+				9F71D8386222CCE3F3D0D3C2DC28630F /* db_iter.cc in Sources */,
+				B5EDA7BAAD480CAC4C44F513A66F6029 /* dbformat.cc in Sources */,
+				C90A36C827A3EC34C469BB19A61FB419 /* dumpfile.cc in Sources */,
+				61A759ACB33F1B36E8DF5820C4501E1A /* env.cc in Sources */,
+				AD95D49A515726964A1B02DFA62A488E /* env_posix.cc in Sources */,
+				F4E63919A2CB8632DF6E324D6AA8956E /* filename.cc in Sources */,
+				03718F446187F6B6DCD7102DF0FA950D /* filter_block.cc in Sources */,
+				27684AEE3CE8EC92BD10A75EDA95E9CF /* filter_policy.cc in Sources */,
+				89B4C2A70E4B1F5A9258306953482824 /* format.cc in Sources */,
+				D3F6541618506ECC5CF8996A4B9761B6 /* hash.cc in Sources */,
+				67A755AD63A1DFFDA48EDC07290352C3 /* histogram.cc in Sources */,
+				C22ED42B4F2A5B3EE842D2CA96D43FE3 /* iterator.cc in Sources */,
+				1BF604E8E4855A66F3881F2D8F02DF75 /* leveldb-library-dummy.m in Sources */,
+				4F5F8058B183F5789CF8CD6C03809E11 /* leveldb_main.cc in Sources */,
+				3722B0A47A23CB1CD0BF97ACC92BCB06 /* log_reader.cc in Sources */,
+				2C25559C91E2B7B7E6A12BB7FBD24DE6 /* log_writer.cc in Sources */,
+				8E0CD7E74AD5BCADF64B04A3B554E5BD /* logging.cc in Sources */,
+				D44CC7B58840C688EFB3AFF599F653A1 /* memtable.cc in Sources */,
+				103B81B64D962998B6529C5337838ABE /* merger.cc in Sources */,
+				C942D4FE8861EE7C5CED905233079F4E /* options.cc in Sources */,
+				0BA4D54443387CF1A167625FE36106A3 /* port_posix.cc in Sources */,
+				D6678F8B200ACF8A11AD54F2AD03547C /* repair.cc in Sources */,
+				C27DC138FD935906180AA144EDCB395E /* status.cc in Sources */,
+				19E045482C9D7F419F49E2C72BA14758 /* table.cc in Sources */,
+				01172B05F6100D760B41B50743043DC3 /* table_builder.cc in Sources */,
+				AAEE6E8C825B98FA7832B91205758C44 /* table_cache.cc in Sources */,
+				1C5172100CE7433A48E417D8A9E4812F /* testharness.cc in Sources */,
+				F6057B5160CBD92A652F4C7D12D8EC39 /* testutil.cc in Sources */,
+				5B04F9D7ED4A892CEA1593A2D9857000 /* two_level_iterator.cc in Sources */,
+				571D656B418A4D5523F19C3F977FE268 /* version_edit.cc in Sources */,
+				C1AB93F7A505EB0707FEAF2B67CF5CA3 /* version_set.cc in Sources */,
+				9D52E861FC807967C5A48EB614E4D1C8 /* write_batch.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +1305,35 @@
 			files = (
 				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
 				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73765D8A7D1F7FBFD43E9438272CB35A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC1B10687FCC1A8048DD1550616B0B2 /* JBDate.swift in Sources */,
+				71011C9C5D422DB07D9BEEF2422227B0 /* JBDateExtension.swift in Sources */,
+				F9EB5603BA22EB5E572F859BCAB92045 /* JBDatePicker-dummy.m in Sources */,
+				F1B1ED7B6A820856D76A875B6734AAC0 /* JBDatePickerContentVC.swift in Sources */,
+				266DE0A813CE465574D1595647AB1CA2 /* JBDatePickerDayView.swift in Sources */,
+				118CFE0AAF1AE251D69C8AC1775FAB55 /* JBDatePickerEnums.swift in Sources */,
+				AD4F2483D406378D6C2D6F4302F39B6F /* JBDatePickerManager.swift in Sources */,
+				FAAA2B9029AB4916752A729905EF4C42 /* JBDatePickerMonthView.swift in Sources */,
+				59D2E01C5C229CA54BE5DCE9C4881AF0 /* JBDatePickerSelectionView.swift in Sources */,
+				F9F60E54082685C75223F08A6D78E6E3 /* JBDatePickerView.swift in Sources */,
+				C37A3A9842FC6D80BE5DB9F3B4061D85 /* JBDatePickerViewDelegate.swift in Sources */,
+				1E4FC7304D41CF6C829D3BC645676925 /* JBDatePickerWeekDaysView.swift in Sources */,
+				146661DAA790C18C6FD756AEAFE42503 /* JBDatePickerWeekView.swift in Sources */,
+				2DEAA2FC7CA49FF6EF86A4635AA81214 /* JBFont.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ADDB8196CC8EFF422FD1BC49AC5CC99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C287B1151ADCDAD33C30EC8928CC90E /* Pods-ASA Health Clinic-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,38 +1405,148 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1DFA040845440713EEFBC2AB0021C73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25B4E7F73B40192A7ED366F580C8E31A /* Pods-ASA Health Clinic-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B01C8FBC00FCDA4513F6ADE4FBD2026 /* PBXTargetDependency */ = {
+		0714ABAC5E9E0637E87AA4A6AA0BC874 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SearchTextField;
-			target = 35AC48C67309DB4C783BB23450BC59DE /* SearchTextField */;
-			targetProxy = 96ACAF702E61C5CFA16648430C66145F /* PBXContainerItemProxy */;
+			target = B35BD94A493D33F8DD32253E2DAF06DA /* SearchTextField */;
+			targetProxy = 8FEC17728A3264AC441D435903706AC6 /* PBXContainerItemProxy */;
 		};
-		AC1F14FEB025D1D97CDE56C39BCDD5E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleToolboxForMac;
-			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
-			targetProxy = 6A988C4D29FCBD6E05C20F287134D0D0 /* PBXContainerItemProxy */;
-		};
-		DBC6AB6BF144FEB0507FDF284F1AFA0A /* PBXTargetDependency */ = {
+		0CC3BDA793D585DA3C0E04724BFE81A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Eureka;
 			target = 675A114988AE198732ED4AD726408964 /* Eureka */;
-			targetProxy = EC2ADCB6D56350EB34E4F43359D0CC4F /* PBXContainerItemProxy */;
+			targetProxy = 636F6B2ED4EAA00650F321A9E9BC740F /* PBXContainerItemProxy */;
+		};
+		230BB81BAF4EF93FEA59A720B9D6482C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = AC89C7A79B542B1962130179B0C6660F /* PBXContainerItemProxy */;
+		};
+		38C99FB74E5B1B319B37F6EECC7F6B43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
+			targetProxy = 4A8260CA4CE60BA148F192E7AF0F4029 /* PBXContainerItemProxy */;
+		};
+		7632F0A8E3706C236271D935619A94BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JBDatePicker;
+			target = A01A78E1415B1103149D782482AE955F /* JBDatePicker */;
+			targetProxy = DE3EBE2016C20E19711D7565FFCA3E1D /* PBXContainerItemProxy */;
+		};
+		AFD8658FA7D51F0FCD9B2CA6F06AB23C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "leveldb-library";
+			target = 266AE1506DAD13D34C0725E909C0C476 /* leveldb-library */;
+			targetProxy = AF8ECCE195F94079FA110E586D4E96E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		01B0074ED80D95D81D5567E1265F8781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC216B06EBE25A1CF857673D810ED57 /* SearchTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SearchTextField/SearchTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SearchTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SearchTextField/SearchTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SearchTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		032EF92B18E6E6C9EBDA0026FDE65D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A84E4DF7B37B6A7AD77E1CA583B92AB /* leveldb-library.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/leveldb-library/leveldb-library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/leveldb-library/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/leveldb-library/leveldb-library.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = leveldb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		05DD489EAA33AC2317E2842BAFB6AB30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97F34BE74FE05C1657C9AD52450C50F /* nanopb.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/nanopb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = nanopb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -881,7 +1593,7 @@
 		};
 		4E3BB37312E5D4518EDFAD78B7C89440 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DFE5E840C0BCB9EFF91A82BF564222C /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = AC7ED136633FABDFC9DD5A37E83B866C /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -912,7 +1624,177 @@
 			};
 			name = Release;
 		};
-		6B1C4A2FD1606199FE3A5496A8F12FBB /* Release */ = {
+		6999D8ED48D00AA89598D2E481A5739D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A84E4DF7B37B6A7AD77E1CA583B92AB /* leveldb-library.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/leveldb-library/leveldb-library-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/leveldb-library/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/leveldb-library/leveldb-library.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = leveldb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75D882502B7B07FE86109B73712E900C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97F34BE74FE05C1657C9AD52450C50F /* nanopb.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/nanopb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = nanopb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DA1A6DDA2806AED4B07201AE4CC0C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC216B06EBE25A1CF857673D810ED57 /* SearchTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SearchTextField/SearchTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SearchTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SearchTextField/SearchTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SearchTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A04482AA5B9187AA74DFB5B0C3A4C23C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0828E53A125E2E1BC1DF68857AA7F55 /* JBDatePicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JBDatePicker/JBDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JBDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JBDatePicker/JBDatePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JBDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE88C678AEE4C2372629E0A23239EECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CE8C00AC6BB2095BABC6280C8FC4BA4 /* Eureka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eureka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B5B8BCEC59BC472914D1DEBF189036A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A355AFDEFA327BBF1656E28B8CC99705 /* Pods-ASA Health Clinic.release.xcconfig */;
 			buildSettings = {
@@ -950,42 +1832,7 @@
 			};
 			name = Release;
 		};
-		AE88C678AEE4C2372629E0A23239EECF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F42791FE67F4B9A6F22282185A292025 /* Eureka.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Eureka/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Eureka;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BD724F44B7F19DD01AE2A30EB848989F /* Debug */ = {
+		B9F6F2D24974D9AE5A5A707237EABA53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAE64785008FA31F764CC658973C29FF /* Pods-ASA Health Clinic.debug.xcconfig */;
 			buildSettings = {
@@ -1024,9 +1871,44 @@
 			};
 			name = Debug;
 		};
+		BD0BE328B5F8A4A1A99135B3A8F58DD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0828E53A125E2E1BC1DF68857AA7F55 /* JBDatePicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JBDatePicker/JBDatePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JBDatePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JBDatePicker/JBDatePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JBDatePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		BE9B55DCDA299EAE202F6DB76CAA485A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DFE5E840C0BCB9EFF91A82BF564222C /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = AC7ED136633FABDFC9DD5A37E83B866C /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1057,44 +1939,9 @@
 			};
 			name = Debug;
 		};
-		CA77CC35D0B91736449C2082AB61AFE0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEFB972F8EE33499B9E9A25E9C8B264D /* SearchTextField.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SearchTextField/SearchTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SearchTextField/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SearchTextField/SearchTextField.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SearchTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		D46BD71F55A5058116376C24D476C855 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F42791FE67F4B9A6F22282185A292025 /* Eureka.xcconfig */;
+			baseConfigurationReference = 5CE8C00AC6BB2095BABC6280C8FC4BA4 /* Eureka.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1174,40 +2021,6 @@
 			};
 			name = Debug;
 		};
-		EA99F166F8E903229DB196354AD6EBA7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEFB972F8EE33499B9E9A25E9C8B264D /* SearchTextField.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SearchTextField/SearchTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SearchTextField/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SearchTextField/SearchTextField.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SearchTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1229,20 +2042,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E2FFDB48A94B49B24B586DC37084E8F /* Build configuration list for PBXNativeTarget "SearchTextField" */ = {
+		914E592EC84693F67DA72C8D357B2B00 /* Build configuration list for PBXNativeTarget "leveldb-library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CA77CC35D0B91736449C2082AB61AFE0 /* Debug */,
-				EA99F166F8E903229DB196354AD6EBA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9315A2444ACE4AE48C2397CAEFD9D919 /* Build configuration list for PBXNativeTarget "Pods-ASA Health Clinic" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD724F44B7F19DD01AE2A30EB848989F /* Debug */,
-				6B1C4A2FD1606199FE3A5496A8F12FBB /* Release */,
+				6999D8ED48D00AA89598D2E481A5739D /* Debug */,
+				032EF92B18E6E6C9EBDA0026FDE65D9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1252,6 +2056,42 @@
 			buildConfigurations = (
 				BE9B55DCDA299EAE202F6DB76CAA485A /* Debug */,
 				4E3BB37312E5D4518EDFAD78B7C89440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8BC7C7108D1D1F4F84923C7AB42E0DE /* Build configuration list for PBXNativeTarget "SearchTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DA1A6DDA2806AED4B07201AE4CC0C5F /* Debug */,
+				01B0074ED80D95D81D5567E1265F8781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D950F4603F7AC40D28014F6F052638E1 /* Build configuration list for PBXNativeTarget "Pods-ASA Health Clinic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9F6F2D24974D9AE5A5A707237EABA53 /* Debug */,
+				B5B8BCEC59BC472914D1DEBF189036A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC0822936AF96B1C54E578B7F63AC254 /* Build configuration list for PBXNativeTarget "JBDatePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD0BE328B5F8A4A1A99135B3A8F58DD1 /* Debug */,
+				A04482AA5B9187AA74DFB5B0C3A4C23C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F118B0FA84AC9116AB2E480C302C3999 /* Build configuration list for PBXNativeTarget "nanopb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05DD489EAA33AC2317E2842BAFB6AB30 /* Debug */,
+				75D882502B7B07FE86109B73712E900C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,6 +17,10 @@ class TimeSlotTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bookingTwoText: SearchTextField!
     
+    @IBOutlet weak var infoButtonOne: UIButton!
+    
+    @IBOutlet weak var infoButtonTwo: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

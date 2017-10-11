@@ -13,10 +13,13 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
+    
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
         // Override point for customization after application launch.
         let tabBarController = self.window!.rootViewController as! UITabBarController
         let splitViewController = tabBarController.customizableViewControllers?[0] as! UISplitViewController
@@ -26,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
         
         tabBarController.selectedIndex = 1
-        FirebaseApp.configure()
+        
         // Do some additional configuration if needed here
         return true
     }
